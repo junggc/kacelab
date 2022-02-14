@@ -7,7 +7,7 @@
 			<a href="#ms3"><span>Considerate</span>고객 입장에서 생각하는 서비스</a>
 		</div>
 		<div class="contTxt">
-			<div><div> 업계 경력 15년 이상</div></div>
+			<div><div>분야별 업계 경력 15년 이상</div></div>
 			<div><div>프로젝트 전문가그룹</div></div>
 			<div><div>K.ACELAB만의 방법론으로</div></div>
 			<div><div>접근합니다.</div></div>
