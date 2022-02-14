@@ -254,39 +254,5 @@
 	<div id="btnContact"><a href="../contact.php"><span>Request Projects &amp; Operation</span></a></div>
 	<a href="javascript:goTop();" id="btnTop">TOP</a>
 
-
-	<div class="layerPopup1">
-		<div class="layerBox">
-			
-			<div class="cont">
-				<img src="../resources/images/teens.png">
-			</div>
-			<a href="#" class="btnClose">닫기</a>
-			<a href="#" class="btnTodayHide">오늘 하루 보지 않기</a>
-		</div>
-	</div>
-
-	<script>
-			/* Javascript */
-		var $layerPopup = $('.layerPopup1');
-		var $btnLayerPopupClose = $('.layerPopup1 .btnClose');
-		var $btnLayerPopupTodayHide = $('.layerPopup1 .btnTodayHide');
-		
-		//레이어팝업 닫기 버튼 클릭
-
-		$btnLayerPopupClose.click(function(){
-			$('.layerPopup1').hide();
-		});
-		
-
-		//레이어팝업 비노출
-		function layerPopupHide(state){
-			$layerPopup.style.display = 'none'
-			if(state === 1){
-				//cookie처리
-			}
-		}
-	</script>
-
 <?php include_once $_SERVER['DOCUMENT_ROOT']."/inc/contents_footer.php";?>  
 

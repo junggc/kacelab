@@ -254,5 +254,105 @@
 	<div id="btnContact"><a href="../contact.php"><span>Request Projects &amp; Operation</span></a></div>
 	<a href="javascript:goTop();" id="btnTop">TOP</a>
 
+
+	<div class="layerPopup1">
+		<div class="layerBox">
+			
+			<div class="cont">
+				<img src="../resources/images/teens.png">
+			</div>
+			<a href="#" class="btnClose">닫기</a>
+			<a href="#" class="btnTodayHide">오늘 하루 보지 않기</a>
+		</div>
+	</div>
+
+<script>
+    /* Javascript */
+    var $layerPopup = $('.layerPopup1');
+    var $btnLayerPopupClose = $('.layerPopup1 .btnClose');
+    var $btnLayerPopupTodayHide = $('.layerPopup1 .btnTodayHide');
+
+
+
+    //레이어팝업 닫기 버튼 클릭
+    $btnLayerPopupClose.click(function(){
+        $('.layerPopup1').hide();
+    });
+
+
+    //레이어팝업 비노출   (팝업창 1개당 1개)
+    $btnLayerPopupTodayHide.click(function(){
+        setCookie( "kacelab1", 'done', 1);
+        $('.layerPopup1').hide();
+    });
+
+
+
+    // 쿠키 만들기
+
+    function setCookie(name, value, expiredays){
+        var todayDate = new Date();
+        todayDate.setDate( todayDate.getDate() + expiredays );
+        document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+
+    }
+
+
+
+    //쿠키값 가져오기( 가져다씀)
+    function getCookie(name) {
+        var nameOfCookie=name+"=";
+        var a=0;
+        while(a<=document.cookie.length) {
+            var b=(a+nameOfCookie.length);
+            if(document.cookie.substring(a,b)==nameOfCookie) {
+                if((endOfCookie=document.cookie.indexOf(";",b))==-1)
+                    endOfCookie=document.cookie.length;
+                return unescape(document.cookie.substring(b,endOfCookie));
+            }
+            a=document.cookie.indexOf(" ",a) +1;
+            if(a==0)
+                break;
+        }
+        return "";
+    }
+
+
+    // alert(getCookie('kacelab1'));
+
+
+
+    //쿠키값 판단해서 done 일 경우 숨기기 유지
+
+    if(getCookie('kacelab1')=="done"){
+        $('.layerPopup1').hide();
+    }
+
+</script>
+
+//<!--	<script>-->
+//<!--			/* Javascript */-->
+//<!--		var $layerPopup = $('.layerPopup1');-->
+//<!--		var $btnLayerPopupClose = $('.layerPopup1 .btnClose');-->
+//<!--		var $btnLayerPopupTodayHide = $('.layerPopup1 .btnTodayHide');-->
+//<!--		-->
+//<!--		//레이어팝업 닫기 버튼 클릭-->
+//<!---->
+//<!--		$btnLayerPopupClose.click(function(){-->
+//<!--			$('.layerPopup1').hide();-->
+//<!--		});-->
+//<!--		-->
+//<!---->
+//<!--		//레이어팝업 비노출-->
+//<!--		function layerPopupHide(state){-->
+//<!--			$layerPopup.style.display = 'none'-->
+//<!--			if(state === 1){-->
+//<!--				//cookie처리-->
+//<!--			}-->
+//<!--		}-->
+//<!--	</script>-->
+
+
+
 <?php include_once $_SERVER['DOCUMENT_ROOT']."/inc/contents_footer.php";?>  
 
