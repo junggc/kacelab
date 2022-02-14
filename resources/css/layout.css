@@ -931,19 +931,20 @@ html.mHidden {overflow:hidden;}
 
 }
 
-@media all and (max-width: 750px) {
-	
-}
+
 /* CSS */
 .contents {margin:0 auto; max-width:800px;}
 .contents .title {margin:10px 0; font-size:25px; font-weight:600; text-align:center;}
 .contents p {line-height:20px; font-size:14px;}
 
 
-.layerPopup1 .layerBox {position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); padding:30px; background:#fff; border-radius:6px; z-index:100;}
+.layerPopup1 .layerBox {position:fixed; left:50%; top:53.75%; transform:translate(-50%, -50%); padding:30px; background:#fff; border-radius:6px; z-index:10000;}
 .layerPopup1 .layerBox .title {margin-bottom:10px; padding-bottom:10px; font-weight:600; border-bottom:1px solid #d9d9d9;}
 .layerPopup1 .layerBox .cont {margin-bottom:40px;}
 .layerPopup1 .layerBox p {line-height:20px; font-size:13px;}
 .layerPopup1 .layerBox .btnClose {display:inline-block; padding:6px 12px; float:right; color:#444; font-size:12px; text-decoration:underline;}
 .layerPopup1 .layerBox .btnTodayHide {font-size:13px; font-weight:600; text-decoration:underline;}
 
+@media all and (max-width: 1020px) {
+.layerPopup1{display: none !important;}
+}
