@@ -1,0 +1,1427 @@
+
+<!-- DEBUG-VIEW START 2 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!-- DEBUG-VIEW START 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>PSI Management System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=1550"/>
+    <meta name="keywords" content="PSI"/>
+    <meta name="format-detection" content="telephone=no, address=no, email=no"/>
+    <meta property="og:title" content="PSI"/>
+    <meta property="og:site_name" content="PSI"/>
+    <link href="./resources/admin/css/KoPubDotum.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/print.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/Chart.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./resources/admin/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/Chart.min.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/chartjs-plugin-datalabels.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <div id="browser" style="display:none;">
+        <div class="infobox">
+            <a href="#none" onclick="$('#browser').hide();$.cookie('browser', 'done', {expires:1});" title="브라우저 관련 팝업 닫기" class="brower_close"><span>닫기</span></a>
+            <h2>브라우저를 <span>업그레이드</span> 해주세요</h2>
+            <p>본 사이트는 익스플로러11, 크롬, 파이어폭스 브라우저에 최적화 되어 있습니다. <br/>지금 사용하고 계시는 브라우저는 곧 지원이 중단되므로<br/>최신 버전으로 업그레이드하시거나 최신
+                브라우저를 이용해 주세요.</p>
+            <ul>
+                <li class="ie">
+                    <a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank" title="새창이동"><span>인터넷익스플로러11</span></a>
+                </li>
+                <li class="ff"><a href="http://www.mozilla.or.kr/" target="_blank" title="새창이동"><span>파이어폭스</span></a>
+                </li>
+                <li class="cr">
+                    <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank" title="새창이동"><span>크롬</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="report">
+		<div class="reportType1 type2">
+			<div class="page">
+				<div class="subpage" id="cover">
+					<div class="coverpage">
+						<div class="confi">Confidential</div>
+						<div class="coverlogo"><img src="./resources/admin/images/report_neo3_cover_01.png" alt="big5 report" /></div>
+						<div class="perInfo">
+							<div class="inner">
+								<dl>
+									<dt>이 &nbsp;&nbsp;&nbsp;&nbsp; 름</dt>
+									<dd>test1</dd>
+								</dl>
+								<dl>
+									<dt>생년월일</dt>
+									<dd>900101</dd>
+								</dl>
+								 <dl>
+									<dt>검사일자</dt>
+									<dd>2021. 01. 12</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="confi2">
+							본 보고서는 ㈜피에스아이컨설팅이 허가한 관계자에게만 사용이 제한되며, 모든 지적 재산권은 ㈜피에스아이컨설팅에 있습니다.
+							<div class="copy">Copyright ⓒ PSI Consulting All Rights Reserved</div>
+						</div>
+					</div>
+				</div>
+				<div class="subpage break" id="spage1">
+					<div class="name">test1 님</div>
+					<div class="cont">
+						<h2><sup>NEO-3</sup> Big5 검사 개요</h2>
+						<dl class="format">
+							<dt><sup>NEO-3</sup> Big5 검사 소개</dt>
+							<dd>
+								<p>Big5는 심리학계에서 가장 정통한 성격모델인 5요인모델(Five Factor Model)을 바탕으로 Paul. T. Costa, Tr과 Robert. R. McCrae(1989)가 개발한 검사로 전 세계적으로 가장 널리 사용되고 있는 성격검사 중 하나입니다. 그 중에서도 <sup>NEO-3</sup> Big5 검사는 직장 상황에서의 성격 특성을 진단하기 위해 고안되었습니다.</p>
+								<p>성격(Personality)은 유전적·환경적 요인에 의해 형성된 개인의 특징적인 사고, 정서, 행동 패턴을 의미합니다. <br />이러한 성격은 개인의 삶 전반에 영향을 미치게 되고 시간이나 상황에 따라 쉽게 변하지 않기 때문에 개인을 이해하고 변화시키는 과정에서 매우 중요한 요소로 활용되고 있습니다. 본 검사를 통해 자신의 성격특성을 명확하게 이해함으로써 직장 생활 속에서 성과와 만족, 성장을 극대화하는 데 도움을 얻을 수 있습니다.</p>
+								<p><sup>NEO-3</sup> Big5 검사는 피에스아이컨설팅이 저작권을 갖고 국내 타당화를 통해 각 기업 및 개인들에게 보급하고 있습니다.</p>
+							</dd>
+							<dt><sup>NEO-3</sup> Big5 검사 모델</dt>
+							<dd>
+								<p><sup>NEO-3</sup> Big5 모델은 인간의 성격특성을 심리적 민감성, 내향/외향성, 인지적 개방성, 대인수용성, 목표 지향성의  5개 요인으로 정의하고 있으며, 각 요인을 보다 세부적으로 구분한 23개의 하위척도를 포함하고 있습니다. </p>
+								<div class="bigTb">
+									<table>
+										<caption class="hidden">NEO-3 Big5 검사 모델</caption>
+										<colgroup>
+											<col width="21%" />
+											<col width="15%" />
+											<col width="*" />
+											<col width="27%" />
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">심리적 민감성<div>Negative Sensitivity</div></th>
+											<td>N</td>
+											<td>업무 수행과정에서 부정적 감정에 대응하는 <br />패턴</td>
+											<td>
+												<div class="type1">
+													<div>걱정</div>
+													<div>분노</div>
+													<div>관점</div>
+													<div>회복</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">내향/외향성<div>Extraversion</div></th>
+											<td>E</td>
+											<td>업무 수행 시 내·외부 고객과의 상호작용 <br />및 사회적 적응 패턴</td>
+											<td>
+												<div class="type2">
+													<div>친근</div>
+													<div>사교</div>
+													<div>활동</div>
+													<div>주도</div>
+													<div>타인 신뢰</div>
+													<div>재치</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">인지적 개방성<div>Openness to Experience</div></th>
+											<td>O</td>
+											<td>어떤 일을 할 때 새로운 방식이나 경험에 <br />대해 개방적인 정도</td>
+											<td>
+												<div class="type1">
+													<div>상상</div>
+													<div>복잡</div>
+													<div>변화</div>
+													<div>시야</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">대인수용성<div>Agreeableness</div></th>
+											<td>A</td>
+											<td>타인을 이해하고 공감하고자 하는 태도</td>
+											<td>
+												<div class="type2">
+													<div>배려</div>
+													<div>순응</div>
+													<div>겸손</div>
+													<div>유보</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">목표 지향성<div>Conscientiousness</div></th>
+											<td>C</td>
+											<td>목표를 추구하는 과정에서의 자기관리 및 <br />통제경향</td>
+											<td>
+												<div class="type1">
+													<div>철저</div>
+													<div>구조</div>
+													<div>성취</div>
+													<div>집중</div>
+													<div>계획</div>
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="paging"><sup>NEO-3</sup> Big5  ㅣ<div>1</div></div>
+				</div>
+				<div class="subpage break" id="spage2">
+					<div class="name">test1 님</div>
+					<div class="cont">
+						<h2><sup>NEO-3</sup> Big5 검사 해석</h2>
+						<dl class="format">
+							<dt><sup>NEO-3</sup> Big5 검사 결과의 이해</dt>
+							<dd>
+								<p><sup>NEO-3</sup> Big5 검사의 5개 요인 및 23개 하위척도 별 점수는 <strong>대한민국 사람들의 보편적인 성격 특성에 비해 자신이 그 특성을 얼마나 많이 혹은 적게 가지고 있는지를 나타내는 상대점수인 T점수로 제시</strong>됩니다. </p>
+								<p>T점수는 평균이 50, 표준편차가 10인 점수로 자신의 점수가 전체 평균에서 어느 정도 높고 낮은지를 상대적으로 비교해볼 수 있습니다. 즉, 사람들의 보편적인 특성을 50점으로 보고, 자신이 평균에 비해서 해당 특성을 더 많이 가지고 있을수록 50점 보다 높아지게 되고, 더 적게 가지고 있을수록 50점 보다 낮아지게 됩니다. 예를 들어, '내향/외향성’ 점수가 30점인 경우, 평균보다 덜 외향적(혹은 더 내향적)이라는 의미입니다. </p>
+								<p>많은 쪽이든 적은 쪽이든 평균으로부터 멀어질수록 해당 요인 및 척도의 특징이 더욱 분명하게 드러나며, 각 요인 및 척도가 가지는 장점 뿐 아니라 상대적인 부작용도 커지면서 행동으로 표출될 가능성이 높아 집니다. </p>
+								<p>성격, 지능, 가치관 등과 같은 인간의 심리적 현상을 포함한 대부분의 측정치는 아래의 그래프와 같이 중앙에 집중하는 경향이 있습니다. <br />각 점수 범위의 성격해석 및 규준집단 내 분포비율은 아래와 같습니다.</p>
+								<div class="graph_big5">
+									<div class="img"><img src="./resources/admin/images/img_big5_01.png" /></div>
+									<div class="bigTb2">
+										<table>
+											<caption class="hidden">NEO-3 Big5 검사 결과의 이해</caption>
+											<colgroup>
+												<col width="20%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<tbody>
+											<tr>
+												<th scope="row">점수 해석</th>
+												<td><div>35점 이하</div>매우 약함</td>
+												<td><div>35~45점</div>약함</td>
+												<td><div>45~55점</div>보통</td>
+												<td><div>55~65점</div>강함</td>
+												<td><div>65점 이상</div>매우 강함</td>
+											</tr>
+											<tr>
+												<th scope="row">규준집단 내 비율</th>
+												<td>약 7%</td>
+												<td>약 24%</td>
+												<td>약 38%</td>
+												<td>약 24%</td>
+												<td>약 7%</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</dd>
+							<dt>결과 해석 시 주의사항 및 응답 편향</dt>
+							<dd>
+								<ul class="noti type2">
+									<li><sup>NEO-3</sup> Big5 검사 점수가 귀하의 업무 성과 수준을 의미하는 것은 아닙니다. 본 검사에서는 업무 역량이 발휘되는 데 필요한 성격 특성 수준을 나타내고 있습니다. 검사 결과를 통해 자신이 지니고 있는 성격의 구체적인 특성을 이해하고, 성격 특성과 조직에서의 역할과 업무를 통합적으로 고려하여 업무전략을 수립하는 것이 바람직합니다.</li>
+									<li><sup>NEO-3</sup> Big5 검사의 타당도 척도에서 진단대상자의 응답왜곡이 감지되는 경우, 검사결과의 신뢰성 및 타당성 여부가 의심되는 상황이므로 결과해석에 유의해야 합니다.</li>
+								</ul>
+								<div class="bigTb3 type2">
+									<table>
+										<caption class="hidden">결과 해석 시 주의사항 및 응답 편향</caption>
+										<colgroup>
+											<col width="15%" />
+											<col width="*" />
+											<col width="15%" />
+										</colgroup>
+										<thead>
+											<th scope="col">척도</th>
+											<th scope="col">해석</th>
+											<th scope="col">해당여부</th>
+										</thead>
+										<tbody>
+										<tr>
+											<th scope="row">동의 경향</th>
+											<td>지나치게 긍정적으로 응답하는 경향이 있음, 자신을 긍정적으로 보이고자 하는 의도가 있거나, <br />지나친 긴장이나 방어적 태도가 반영되었을 가능성이 있음</td>
+											<td><div class="neo_chk on">해당여부</div></td>
+										</tr>
+										<tr>
+											<th scope="row">비동의 경향</th>
+											<td>지나치게 부정적으로 답변하는 경향이 있음, 자신에 대한 기준이 높거나 자신감이 부족한 태도가 <br />반영되었을 가능성이 있음</td>
+											<td><div class="neo_chk">해당여부</div></td>
+										</tr>
+										<tr>
+											<th scope="row">중간응답 경향</th>
+											<td>지나치게 중간 응답을 선호하는 경향이 있음</td>
+											<td><div class="neo_chk on">해당여부</div></td>
+										</tr>
+										<tr>
+											<th scope="row">극단적 응답경향</th>
+											<td>좌우 양단의 극단적인 응답을 선호하는 경향이 있음</td>
+											<td><div class="neo_chk">해당여부</div></td>
+										</tr>
+										<tr>
+											<th scope="row">반복응답 경향</th>
+											<td>지나치게 반복적으로 같은 응답하는 경향이 있음</td>
+											<td><div class="neo_chk">해당여부</div></td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="paging"><sup>NEO-3</sup> Big5  ㅣ<div>2</div></div>
+				</div>
+				<div class="subpage break" id="spage3">
+					<div class="name">test1 님</div>
+					<div class="cont">
+						<h2><sup>NEO-3</sup> Big5 검사 5요인 프로파일</h2>
+						<div class="format2" style="padding-top:10px;">귀하의 <sup>NEO-3</sup> Big5 검사 5요인에 대한 종합 프로파일 결과를 확인 할 수 있습니다.</div>
+						<div class="neo3range">
+							<div class="ttArea abClear">
+								<div class="per">
+									<div class="percent abClear">
+										<div>7%</div>
+										<div>24%</div>
+										<div>38%</div>
+										<div>24%</div>
+										<div>7%</div>
+									</div>
+									<div class="point">
+										<div><span>--</span><div class="p1">35</div></div>
+										<div><span>-</span><div class="p2">45</div></div>
+										<div><span>=</span><div class="p3">50</div></div>
+										<div><span>+</span><div class="p4">55</div></div>
+										<div><span>++</span><div class="p5">65</div></div>
+									</div>
+								</div>
+							</div>
+							<div class="rangeTb">
+								<table>
+									<caption class="hidden">NEO-3 검사 5요인 프로파일</caption>
+									<colgroup>
+										<col width="140px" />
+										<col width="187px" />
+										<col width="208px" />
+										<col width="172px" />
+									</colgroup>
+									<tbody>
+									<tr class="type type_n">
+										<th scope="row" rowspan="2">
+											<dl>
+												<dt>
+													<span>N</span>
+													<div>
+														<div>Need for Stability</div>
+														심리적 민감성
+													</div>
+												</dt>
+												<dd>
+													<ul>
+														<li>불안, 당혹, 분노 등 다양한 불쾌 감정에 대응하는 패턴을 나타낸다.</li>
+														<li>스트레스 유발인자에 대한 민감성과 충동 통제 스타일 등이 주된 영역이다.</li>
+														<li>일반인들이 다양한 상황에서 적응하는 패턴을 의미한다.</li>
+													</ul>
+												</dd>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:39px;">35</div>
+												<!--
+													point
+													35 : 39px
+													45 : 170px
+													55 : 378px
+													 65 : 509px
+												-->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_n">
+										<td>
+											<div class="cont_box">
+												스트레스가 많은 업무 환경에서도 차분하고, 안정적이며, 한결같은 방식으로 반응한다.
+												스트레스나 죄책감을 잘 느끼지 않으며, 문제가 발생하면 신속하게 문제해결 관점으로 돌입하여 합리적이고 분석적인 방식을 취할 수 있다.
+												너무 느긋하고 무기력하며, 둔감하고 세심하지 않은, 문제의 심각성을 모르는 사람으로 보여질 수도 있다.
+											</div>
+										</td>
+										<td>
+											<div class="cont_box mine">
+												평소에는 차분하고, 안정적이다. 그러나 생각하지 못한 의외의 상황이나 응급 상황, 또는 압박을 받는 스트레스 환경에서는 걱정, 화, 우울 등의 모습을 보일 수 있다. 기본적으로 직장에서 발생하는 스트레스를 다루는 어느 정도의 탄력성을 가지고 있다. 힘든 일이 발생하면, 일상적인 활동을 다시 시작하거나 문제해결 관점으로 들어가기 전에 약간의 시간이 필요하다.
+											</div>
+										</td>
+										<td>
+											<div class="cont_box">
+												대부분의 상황에서 예민하고, 걱정이 많으며, 흥분하는 경향이 있다. 업무 수행 과정에서 다른 사람들보다 더 스트레스를 많이 받으며, 지나칠 정도로 비관적일 수 있다. 다른 사람들이 일으킨 문제에 책임감을 느낄 수 있다. 스트레스 상황에서 불안하고 긴장하며, 화가 나거나 우울한 모습으로 보일 수 있다. 일상적인 모습이나 문제해결을 위해 회복할 시간이 다른 사람들보다 많이 필요하다.
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row" rowspan="2">
+											<dl>
+												<dt>
+													<span>N</span>
+													<div>
+														<div>Extraversion</div>
+														내향/외향성
+													</div>
+												</dt>
+												<dd>
+													<ul>
+														<li>사교의 강도 뿐 아니라 사회적 적응의 폭, 선호하는 환경 자극의 특징을 의미한다.</li>
+														<li>자기표현이나 독자적 세계 추구 패턴 등이 주된 준거가 된다. 특히 업무수행시의 상호 작용 패턴과 밀접하며, 직업 흥미나 적성에 영향을 많이 미친다.</li>
+													</ul>
+												</dd>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:50%;">50</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<td>
+											<div class="cont_box">
+												혼자 일하는 것을 선호한다. 대체로 진지하고, 회의적이며, 조용하다. 말하는 것보다 쓰는 것을 더 선호하는 사람이다. 개인적으로 혼자 하는 업무를 즐긴다. <br />
+												차갑고, 냉정하며, 속을 알기 어려운 사람, 혼자 있기를 좋아하는 사람으로 비춰질 수 있다. 감각 자극이 매우 적으며 활동적이지 않은 업무 환경을 선호한다. 
+											</div>
+										</td>
+										<td>
+											<div class="cont_box mine">
+												혼자 일하다가 다른 사람들과 함께 일하는 상황으로 쉽게 전환하는 편이다. 업무환경에서 중간 정도의 감각 자극을 편안해 하기 때문에 항상 사람들과 함께 있어야 하거나 완전히 혼자 있어야 하는 환경 모두에서 불만족스러울 수 있다. 외향적인 사람들에게는 내향적으로, 내향적인 사람들에게는 외향적으로 비춰질 수 있다.
+											</div>
+										</td>
+										<td>
+											<div class="cont_box">
+												사람들에게 둘러싸여 있거나 함께 활동하는 것을 선호한다. 기본적으로 말하는 것을 좋아하고, 열정적이며 사교적이다. 따뜻하고 다른 사람들을 잘 믿으며 재미를 추구한다. 공식적, 비공식적으로 리더가 되는 경우가 많으며, 강한 감각 자극을 편안하게 받아들인다. 너무 말이 많은 사람으로 비춰질 수 있고, 대화를 지배하려는 경향 때문에 경청 스킬이 부족해 보일 수 있다.
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_o">
+										<th scope="row" rowspan="2">
+											<dl>
+												<dt>
+													<span>O</span>
+													<div>
+														<div>Openness to Experience</div>
+														인지적 개방성
+													</div>
+												</dt>
+												<dd>
+													<ul>
+														<li>다양한 경험에 대한 인식과 개방적, 수용적 자세를 의미한다.   즉 지적 호기심, 새로움에 대한 접근, 다양한 가치에 대한 추구, 정서적 센스 등에 대한 행동 패턴을 의미한다.</li>
+													</ul>
+												</dd>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:70%;">60</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_o">
+										<td>
+											<div class="cont_box">
+												관련 직무나 특정 주제에 대해 전문가 수준의 지식을 확보하려는 경향이 있다.  항상 '지금-여기'에 집중하여, 매우 현실적인 관점을 가지고 있다. 실용적이고 전략적이며 효율적인 방식으로 업무에 접근한다. 
+												상대적으로 반복적인 활동을 편안해 한다. 보수적이고, 사고의 폭이 좁으며, 자신만의 방식을 고수하는 완고한 사람으로 보일 수 있다. 검증된 경험과 전통적인 방법을 선호한다. 
+											</div>
+										</td>
+										<td>
+											<div class="cont_box">
+												다소 현실적인 경향이 있지만, 타당한 근거가 있다고 판단되면 새로운 시도를 고려하기도 한다. 
+												창의적이거나 호기심이 많다는 소리를 듣지는 않지만 가끔 이러한 특성들이 나타나기도 한다.
+												또한 다른 사람들이 낸 좋은 아이디어를 적용해서 더 발전시키기도 한다. 혁신과 효율성 모두 가치있게 생각하지만, 어느 쪽도 절대적 가치가 있다고 2021-10-13생각하지는 않는다.
+											</div>
+										</td>
+										<td>
+											<div class="cont_box mine">
+												다양한 흥미와 관심사를 가지는 경향이 있다. 최신 기술과 새로운 아이디어를 좋아한다. 미래에 대해 생각하고 새로운 경험을 추구한다. 자신을 전략적 사고자, 창조자, 상상력이 풍부하거나 예술적인 사람이라고 표현한다. 
+												대부분의 사람들보다 자유롭고, 이론과 개념적 사고를 즐긴다. 비현실적이고 쉽게 지루해 하는 사람으로 비춰질 수 있다.
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_a">
+										<th scope="row" rowspan="2">
+											<dl>
+												<dt>
+													<span>A</span>
+													<div>
+														<div>Agreeableness</div>
+														대인 수용성
+													</div>
+												</dt>
+												<dd>
+													<ul>
+														<li>타인에 대한 태도나 수용, 애정과 지지 및 자기 개방의 패턴을 나타낸다.</li>
+														<li>일반적 상황의 경우 수용적인 사람이 더 건강하게 인식되고 선호되는 경향이 있지만, 대립이나 갈등 등의 상황에서는 오히려 비효율적일 수 있다.</li>
+													</ul>
+												</dd>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:50%;">50</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_a">
+										<td>
+											<div class="cont_box">
+												다른 사람들과 방어적이며, 경쟁적인 방식으로 관계를 맺는 경향이 있다. 독립적으로 사고하고, 자신의 관심사를 보호하거나 자신이 옳다는 것을 확실히 하거나, 상대를 이기기 위해 다소 공격적으로 대응한다. 
+												확인되지 않은 정보는 받아들이지 않는다. 다른 사람들에게 적대적이고, 무례하며 자기중심적이고 팀 플레이가 어려운 사람으로 보일 수 있다. 
+											</div>
+										</td>
+										<td>
+											<div class="cont_box mine">
+												경쟁적인 상황과 협조적인 상황을 쉽게 오가며, win-win 전략을 사용하는 경향이 있다. 자신의 정체성에 대해 명확하게 인식하고 있으며, 지나치게 의존적이지도 독립적이지도 않다. 
+												팀을 이루든 개인적으로 하든 일을 잘해 낸다. 양측이 타협하는 데 도움을 주려고 노력하다 보니, 최악의 경우에는 어느 편에도 속하지 않은 '양다리를 걸치는 사람'이라는 인상을 줄 수 도 있다. 
+											</div>
+										</td>
+										<td>
+											<div class="cont_box">
+												다른 사람들의 권위에 관대하고, 호의적이며, 수용적인 경향이 있다.
+												협조적이고, 쉽게 다른 사람들의 의견을 따르며, 조화를 추구하는 팀 플레이어처럼 보일 수 있다. 상대방이 이기거나 자신보다 더 많은 것을 얻어가도록 허용한다. 
+												순진하고, 순종적이고, 갈등을 회피하고, 의존적이며 지조가 없는 사람으로 보일 수 있다. 
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<th scope="row" rowspan="2">
+											<dl>
+												<dt>
+													<span>C</span>
+													<div>
+														<div>Conscientiousness</div>
+														목표 지향성
+													</div>
+												</dt>
+												<dd>
+													<ul>
+														<li>목표 지향적인 자기관리 및 통제 경향을 나타낸다.</li>
+														<li>합리적 계획, 조직, 실행과정에서 수행 패턴에 영향을 미친다. </li>
+														<li>경력 성장의 패턴과 성과 효율뿐 아니라 사회적 적응 전반에 관련된다.</li>
+													</ul>
+												</dd>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:50%;">50</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<td>
+											<div class="cont_box">
+												목표달성에 여유를 가지고  개방적인 자세로 접근한다.  멀티태스킹이 가능하고, 동시에 여러 프로젝트에 참여할 수 있다. 유연한 사람들의 마음은 병렬 프로세스와 같아 작동 중에 순서나 절차를 바꾸는 것이 얼마든지 가능하다. 이들은 미루는 사람이 되기 쉽다. 무책임하거나 조직적이지 않고 비생산적인 모습으로 비춰질 수 있다.
+											</div>
+										</td>
+										<td>
+											<div class="cont_box mine">
+												업무 요구와 개인적 니즈 간 균형을 유지하려는 경향이 있다. 전형적으로 병렬 프로세스와 직렬 프로세스를 같이 작동하며 쉽게 순서나 절차를 바꿀 수 있다. 유연한 사람보다는 더 야망이 있는 사람으로 보일 수 있지만, 집중하는 사람들 보다는 여가를 즐긴다. 때로는 충동적으로 기분을 내기 위해 목표에 집중하는 것을 잠시 내려놓을 수도 있다. 
+											</div>
+										</td>
+										<td>
+											<div class="cont_box">
+												부지런하고, 규범적이고, 신뢰할 수 있는 방식으로 목표를 달성하고자 한다. 
+												순차적이고 절차적인 방식으로 일한다. 
+												성취에 대한 의지가 강하며, 목표 달성을 위해 철저히 준비하고 면밀하게 계획을 세운다. 목표 달성을 위해 시간, 에너지, 자원을 집중한다. 강박적이고 위압적이며, 완고한 일중독자로 보일 수 있다. 
+											</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="paging"><sup>NEO-3</sup> Big5  ㅣ<div>3</div></div>
+				</div>
+				<div class="subpage break" id="spage4">
+					<div class="name">test1 님</div>
+					<div class="cont">
+						<h2><sup>NEO-3</sup> Big5 검사 하위척도 프로파일</h2>
+						<div class="format2" style="padding-top:10px;">귀하의 <sup>NEO-3</sup> Big5 검사 5요인을 구성하는 하위척도에 대한 세부결과를 확인할 수 있습니다. </div>
+						<div class="neo3range">
+							<div class="ttArea abClear">
+								<div class="per">
+									<div class="percent abClear">
+										<div>7%</div>
+										<div>24%</div>
+										<div>38%</div>
+										<div>24%</div>
+										<div>7%</div>
+									</div>
+									<div class="point">
+										<div><span>--</span><div class="p1">35</div></div>
+										<div><span>-</span><div class="p2">45</div></div>
+										<div><span>=</span><div class="p3">50</div></div>
+										<div><span>+</span><div class="p4">55</div></div>
+										<div><span>++</span><div class="p5">65</div></div>
+									</div>
+								</div>
+							</div>
+							<div class="rangeTb rangeTb2">
+								<table>
+									<caption class="hidden">NEO-3 검사 하위척도 프로파일</caption>
+									<colgroup>
+										<col width="140px" />
+										<col width="187px" />
+										<col width="208px" />
+										<col width="172px" />
+									</colgroup>
+									<tbody>
+									<tr class="type type_n">
+										<th scope="row">
+											<dl>
+												<dt>
+													<span>N</span>
+													<div>
+														심리적 민감성
+													</div>
+												</dt>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:378px;">55</div>
+												<!--
+													point
+													35 : 39px
+													45 : 170px
+													55 : 378px
+													65 : 509px
+												-->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_n">
+										<th scope="row">
+											<div class="type_tag">걱정</div>
+											<span>얼마나 걱정과 불안이 많은가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>대체적으로 태평스러움</div>
+												<div class="mine">때때로 걱정을 함</div>
+												<div>걱정을 자주함</div>
+												<div class="point" style="left:170px;">45</div>
+												<!--
+													point
+													35 : 39px
+													45 : 170px
+													55 : 378px
+													65 : 509px
+												-->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_n">
+										<th scope="row">
+											<div class="type_tag">분노</div>
+											<span>얼마나 자주 분노를 경험하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>대체적으로 차분함</div>
+												<div class="mine">때때로 화를 냄</div>
+												<div>자주 화를 냄</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_n">
+										<th scope="row">
+											<div class="type_tag">관점</div>
+											<span>상황을 어떻게 바라보는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div class="mine">대체적으로 낙관적임</div>
+												<div>현실적임</div>
+												<div>대체적으로 비관적임</div>
+												<div class="point" style="left:30%;">40</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_n">
+										<th scope="row">
+											<div class="type_tag">회복</div>
+											<span>스트레스 회복을 위해<br />시간이 얼마나 필요한가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>빠르게 회복함</div>
+												<div>회복 시간이 어느 정도 필요함</div>
+												<div class="mine" >회복하는 데 다소 많은 시간이 필요함</div>
+												<div class="point" style="left:80%;">65</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row">
+											<dl>
+												<dt>
+													<span>N</span>
+													<div>
+														내향/외향성
+													</div>
+												</dt>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:50%;">50</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row">
+											<div class="type_tag">친근</div>
+											<span>긍정적인 정서를<br />얼마나 표현하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>긍정적인 감정을 표현하지 않음</div>
+												<div class="mine">긍정적인 감정을 어느 정도 표현함</div>
+												<div>긍정적인 감정을 많이 표현함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row">
+											<div class="type_tag">사교</div>
+											<span>다른 사람들과 어울리는 것을<br />얼마나 선호하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>혼자 일하는 것을 선호함</div>
+												<div class="mine">종종 다른 사람들과 함께 하고자 함</div>
+												<div>다른 사람들과 함께 일하는 것을 선호함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row">
+											<div class="type_tag">활동</div>
+											<span>신체적으로 얼마나 <br />활동적인가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div class="mine">가만히 있거나 정적인 삶의 방식을 선호함</div>
+												<div>보통 수준의 활동 수준을 유지함</div>
+												<div>신체적으로 활발한 활동을 선호함</div>
+												<div class="point" style="left:30%;">40</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row">
+											<div class="type_tag">주도</div>
+											<span>다른 사람들을 얼마나 이끌려고 하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>다른 사람들로부터<br />독립적으로 지내는 것을 선호함</div>
+												<div>다른 사람들을 이끌며 책임지는 것을<br />어느 정도 받아들임</div>
+												<div class="mine" >다른 사람들을 이끌며<br />책임지는 것을 즐김</div>
+												<div class="point" style="left:80%;">65</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row">
+											<div class="type_tag">타인 신뢰</div>
+											<span>다른 사람들을 얼마나 믿는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>다른 사람들의 의도에 대해 회의적임</div>
+												<div class="mine">다른 사람들을 약간 신뢰함</div>
+												<div>다른 사람들을 쉽게 신뢰함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_e">
+										<th scope="row">
+											<div class="type_tag">재치</div>
+											<span>말할 때 다른 사람들을 얼마나<br />신경 쓰는가 </span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>결과를 고려하지 않고 생각한 것을<br />그대로 표현함</div>
+												<div class="mine">특별한 상황에 맞추어 단어를<br />선택하려고 노력함</div>
+												<div>상황에 맞는 적절한 단어를<br />주의 깊게 선택함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_o">
+										<th scope="row">
+											<dl>
+												<dt>
+													<span>O</span>
+													<div>
+														인지적 개방성
+													</div>
+												</dt>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:70%;">60</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_o">
+										<th scope="row">
+											<div class="type_tag">상상</div>
+											<span>계획하고 아이디어를 만드는 것을 <br />얼마나 선호하는가 </span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>계획을 실천함</div>
+												<div class="mine">새로운 아이디어 제시와<br />기존 계획 실천을 동등하게 함</div>
+												<div>새로운 계획과 아이디어를 많이 만들어냄</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_o">
+										<th scope="row">
+											<div class="type_tag">복잡</div>
+											<span>복잡한 것을 얼마나 <br />선호하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>단순함을 선호함</div>
+												<div class="mine">단순함과 복합적인 것의 균형을 추구함</div>
+												<div>복잡한 것을 추구함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_o">
+										<th scope="row">
+											<div class="type_tag">변화</div>
+											<span>변화를 얼마나 쉽게 받아들이는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div class="mine">현재 방법을 유지하기를 원함</div>
+												<div>변화를 어느 정도 받아들임</div>
+												<div>변화와 혁신을 쉽게 받아들임</div>
+												<div class="point" style="left:30%;">40</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_o">
+										<th scope="row">
+											<div class="type_tag">시야</div>
+											<span>세부적인 것을 얼마나 수용하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>세부적인 것에 주의를 기울임</div>
+												<div>필요한 경우, 세부적인 것에 집중함</div>
+												<div class="mine" >넓은 관점을 선호하고<br />세부적인 것을 거북해 함</div>
+												<div class="point" style="left:80%;">65</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="paging"><sup>NEO-3</sup> Big5  ㅣ<div>4</div></div>
+				</div>
+				<div class="subpage break" id="spage5">
+					<div class="name">test1 님</div>
+					<div class="cont">
+						<h2><sup>NEO-3</sup> Big5 검사 하위척도 프로파일</h2>
+						<div class="format2" style="padding-top:10px;">귀하의 <sup>NEO-3</sup> Big5 검사 5요인을 구성하는 하위척도에 대한 세부결과를 확인할 수 있습니다. </div>
+						<div class="neo3range">
+							<div class="ttArea abClear">
+								<div class="per">
+									<div class="percent abClear">
+										<div>7%</div>
+										<div>24%</div>
+										<div>38%</div>
+										<div>24%</div>
+										<div>7%</div>
+									</div>
+									<div class="point">
+										<div><span>--</span><div class="p1">35</div></div>
+										<div><span>-</span><div class="p2">45</div></div>
+										<div><span>=</span><div class="p3">50</div></div>
+										<div><span>+</span><div class="p4">55</div></div>
+										<div><span>++</span><div class="p5">65</div></div>
+									</div>
+								</div>
+							</div>
+							<div class="rangeTb rangeTb2">
+								<table>
+									<caption class="hidden">NEO-3 검사 하위척도 프로파일</caption>
+									<colgroup>
+										<col width="140px" />
+										<col width="187px" />
+										<col width="208px" />
+										<col width="172px" />
+									</colgroup>
+									<tbody>
+									<tr class="type type_a">
+										<th scope="row">
+											<dl>
+												<dt>
+													<span>A</span>
+													<div>
+														대인 수용성
+													</div>
+												</dt>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:50%;">50</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_a">
+										<th scope="row">
+											<div class="type_tag">배려</div>
+											<span>다른 사람을 위해 자신의 불편함을<br /> 얼마나 감수하는가 </span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>자신의 필요에 초점을 둠</div>
+												<div class="mine">자신과 다른 사람의 필요 사이에서 균형을 이룸</div>
+												<div>다른 사람의 필요나 욕구에 초점을 둠</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_a">
+										<th scope="row">
+											<div class="type_tag">순응</div>
+											<span>갈등을 어떻게 다루는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>경쟁과 갈등을 편안해 함</div>
+												<div class="mine">해결책을 추구함</div>
+												<div>조화를 추구함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_a">
+										<th scope="row">
+											<div class="type_tag">겸손</div>
+											<span>얼마나 인정받기를 원하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div class="mine">인정받기를 원함</div>
+												<div>어느 정도의 인정을 원함</div>
+												<div>인정받는 것을 불편해 함</div>
+												<div class="point" style="left:30%;">40</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_a">
+										<th scope="row">
+											<div class="type_tag">유보</div>
+											<span>자신의 의견을 얼마나 피력하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>항상 의견을 표현함</div>
+												<div>어느 정도 의견을 표현함</div>
+												<div class="mine" >의견을 표현하지 않음</div>
+												<div class="point" style="left:80%;">65</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<th scope="row">
+											<dl>
+												<dt>
+													<span>C</span>
+													<div>
+														목표 지향성
+													</div>
+												</dt>
+											</dl>
+										</th>
+										<td colspan="3">
+											<div class="bar">
+												<span></span>
+												<span></span>
+												<div class="point" style="left:50%;">50</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<th scope="row">
+											<div class="type_tag">철저</div>
+											<span>얼마나 완벽을 추구하는가</span><br /><br />
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>보완과 개선에 대한 욕구가 낮음</div>
+												<div class="mine">가끔 보완하고 개선하려 함</div>
+												<div>계속 보완하고 개선하며 완벽을 추구함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<th scope="row">
+											<div class="type_tag">구조</div>
+											<span>다른 사람들과 어울리는 것을<br />얼마나 선호하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>공식적인 체계가 없는 것을 편안해 함</div>
+												<div class="mine">경우에 따라 체계적인 것을 선호함</div>
+												<div>모든 것을 체계화하여 정리함</div>
+												<div class="point" style="left:50%;">50</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<th scope="row">
+											<div class="type_tag">성취</div>
+											<span>얼마나 높은 성취를 <br />요구하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div class="mine">현재의 성취 수준에 만족함</div>
+												<div>현재보다 조금 더 높은 성취수준을 지향함</div>
+												<div>더 큰 성취를 갈망함</div>
+												<div class="point" style="left:30%;">40</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<th scope="row">
+											<div class="type_tag">집중</div>
+											<span>집중을 얼마나 오래 유지할 수<br />있는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>여러 업무를 쉽게 바꾸며 일할 수 있음</div>
+												<div>업무들을 번갈아 일할 수 있음</div>
+												<div class="mine" >다른 일을 시작하기 전에<br />하던 것을 완수하고자 함</div>
+												<div class="point" style="left:80%;">65</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									<tr class="type type_c">
+										<th scope="row">
+											<div class="type_tag">계획</div>
+											<span>해야 할 일을 얼마나 계획하는가</span>
+										</th>
+										<td colspan="3">
+											<div class="bar2">
+												<div>보다 즉흥적인 방식으로 일함</div>
+												<div>어느 정도 계획을 세움</div>
+												<div class="mine" >모든 것을 계획함</div>
+												<div class="point" style="left:80%;">65</div><!-- (본인의 점수 - 25)*2% -->
+											</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<dl class="format">
+							<dt>결과요약</dt>
+							<dd>
+								<div class="bigTb4">
+									<table>
+										<caption class="hidden">NEO-3 Big5 검사 타당도 결과요약</caption>
+										<colgroup>
+											<col width="6%" />
+											<col width="9%" />
+											<col width="*" />
+											<col width="*" />
+											<col width="*" />
+											<col width="*" />
+											<col width="*" />
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col" colspan="2">5요인</th>
+											<th scope="col">
+												<div class="type type_n">N</div>
+												심리적 민감성
+											</th>
+											<th scope="col">
+												<div class="type type_e">E</div>
+												내향/외향성
+											</th>
+											<th scope="col">
+												<div class="type type_o">O</div>
+												인지적 개방성
+											</th>
+											<th scope="col">
+												<div class="type type_a">A</div>
+												대인 수용성
+											</th>
+											<th scope="col">
+												<div class="type type_c">C</div>
+												목표 지향성
+											</th>
+										</tr>
+										<tr>
+											<th scope="row" colspan="2">점수(T)</th>
+											<td>41</td>
+											<td>53</td>
+											<td>43</td>
+											<td>55</td>
+											<td>58</td>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<th scope="row" rowspan="5">하위척도</th>
+											<th scope="row">65점 이상</th>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td>
+												<ul>
+													<li>배려</li>
+													<li>순응</li>
+													<li>겸손</li>
+												</ul>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">65점 미만<div class="til">~</div>55점 이상</th>
+											<td>
+												<ul>
+													<li>걱정</li>
+													<li>분노</li>
+												</ul>
+											</td>
+											<td></td>
+											<td></td>
+											<td>
+												<ul>
+													<li>유보</li>
+												</ul>
+											</td>
+											<td>
+												<ul>
+													<li>철저</li>
+													<li>구조</li>
+													<li>성취</li>
+													<li>집중</li>
+													<li>계획</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">55점 미만<div class="til">~</div>45점 이상</th>
+											<td>
+												<ul>
+													<li>관심</li>
+													<li>회복</li>
+												</ul>
+											</td>
+											<td>
+												<ul>
+													<li>친근</li>
+													<li>사교</li>
+													<li>활동</li>
+													<li>주도</li>
+													<li>타인</li>
+													<li>신뢰</li>
+												</ul>
+											</td>
+											<td>
+												<ul>
+													<li>상상</li>
+													<li>복잡</li>
+													<li>변화</li>
+													<li>시야</li>
+												</ul>
+											</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">45점 미만<div class="til">~</div>35점 이상</th>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">35점 미만</th>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="paging"><sup>NEO-3</sup> Big5  ㅣ<div>5</div></div>
+				</div>
+				<div class="subpage break" id="spage6">
+					<div class="name">test1 님</div>
+					<div class="cont">
+						<h2><sup>NEO-3</sup> Big5 검사 행동스타일</h2>
+						<dl class="format">
+							<dt>자기통제 스타일</dt>
+							<dd>
+								<div class="big5_beh">
+									<div class="img">
+										<img src="./resources/admin/images/img_big5_02_n.svg" />
+										<div class="axis x">C</div>
+										<div class="axis y">N</div>
+										<div class="pointBox">
+											<div class="point" style="top:41%;left:58%;">설문자위치</div>
+										</div>
+										<div class="xy_title">
+											<div><span>N : </span>심리적 민감성</div>
+											<div><span>C : </span>규범지향성</div>
+										</div>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>N+ C-  욕구충실형</dt>
+											<dd>
+												자신의 내적 충동에 좌우되어 행동할 수 있으며, 충동이나 욕망을 통제할 수 있는 자제력이 부족하다. <br />
+												결과적으로 장기적인 최대 이익과는 거리가 있는 방식으로 행동할 수 있다. 특히 담배, 술, 약물 남용 등의 건강상 위험이 되는 습관을 보일 수 있다.
+											</dd>
+										</dl>
+										<dl class="f_right ">
+											<dt>N+ C+  통제추구형</dt>
+											<dd>
+												자신의 행동을 통제하려는 강한 욕구와 스트레스 취약성을 동시에 가지고 있다. <br />
+												작은 일에서 조차 실패를 용납하지 않으며 완벽을 추구한다. 이들이 수립한 목표는 비현실적이고 달성 불가능한 경우가 많기 때문에 죄책감을 쉽게 느끼고 스스로를 질책하며 강박적 모습을 보일 수 있다.
+											</dd>
+										</dl>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>N- C-  여유지향형</dt>
+											<dd>
+												자신의 행동을 철저히 통제해야 한다고 생각하지 않는다. <br />
+												매사 손쉬운 방법을 택하는 경향이 있으며, 실망스러운 결과에도 여유 있게 대처하며 안정적이다. <br />
+												강한 외부 압력이나 동기유발이 가능한 조건이 주어질 경우에만 주의를 기울이고 노력을 투입한다.
+											</dd>
+										</dl>
+										<dl class="f_right active">
+											<dt>N- C+  목표우선형</dt>
+											<dd>
+												자신의 목표에 대해 명확한 관점과 입장을 가지고 있으며, 어려운 상황 속에서도<br />목표를 달성하는 데 필요한 역량을 발휘하려고 노력한다.<br />
+												역경과 좌절을 잘 이겨내며, 설사 자신의 욕구가 만족스럽게 충족되지 못해도 잘 참아내고 계획실행을 포기하지 않는다.
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+							<dt>대인관계 스타일</dt>
+							<dd>
+								<div class="big5_beh">
+									<div class="img">
+										<img src="./resources/admin/images/img_big5_02_n.svg" />
+										<div class="axis x">A</div>
+										<div class="axis y">E</div>
+										<div class="pointBox">
+											<div class="point" style="top:53%;left:55%;">설문자위치</div>
+										</div>
+										<div class="xy_title">
+											<div><span>E : </span>내향/외향성</div>
+											<div><span>A : </span>대인수용성</div>
+										</div>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>E+ A-  리드형</dt>
+											<dd>
+												사회생활을 자신이 빛날 수 있는 무대라 생각하며 즐긴다. 사람들에게 지시나 요구를 하고 상대방은 이에 따라주는 상황을 즐기며, 의사결정을 직접 하는 역할에 특히 잘 맞는다.  스스로를 자랑스럽게 생각하며 자만할 수도 있지만, 사람들을 동참시켜 함께 일하도록 하는 역할을 잘 해낸다.
+											</dd>
+										</dl>
+										<dl class="f_right active">
+											<dt>E+ A+  친화형</dt>
+											<dd>
+												여러 사람이 함께하는 자리를 매우 좋아한다. 오래된 친구와 긴밀한 관계를 유지하면서도 동시에 새로운 사람에게 거리낌 없이 다가갈 수 있다. 따뜻하고 동정심이 많으며, 다른 사람의 이야기에 기꺼이 귀 기울이고 자신의 생각에 대해 이야기하는 것을 좋아한다.
+											</dd>
+										</dl>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>E- A-  경쟁형</dt>
+											<dd>
+												타인을 잠재적인 적으로 생각하는 경향이 있으며, 상대를 경계하고 거리를 두며 잘 어울리지 않는다. <br />
+												친해지기 보다는 존중 받기를 원하며, 자신의 사생활을 지키고자 한다. <br />
+												이들과 어울릴 때는 이들이 필요하다고 생각하는 정도의 거리를 유지하는 것이 좋다.
+											</dd>
+										</dl>
+										<dl class="f_right ">
+											<dt>E- A+  온유형</dt>
+											<dd>
+												자신을 잘 내세우지 않고 겸손하다. <br />
+												혼자 있는 것을 선호하지만, 다른 사람의 내적 욕구에 대해 공감을 잘하고 잘 대응해준다. 사람을 쉽게 믿기 때문에 다른 사람들에게 이용당할 수도 있다. <br />
+												이들과 함께 할 때는 이들의 흥미에 관심을 기울이되, 동시에 사생활도 존중해주어야 한다.
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="paging"><sup>NEO-3</sup> Big5  ㅣ<div>6</div></div>
+				</div>
+				<div class="subpage break" id="spage7">
+					<div class="name">test1 님</div>
+					<div class="cont">
+						<h2><sup>NEO-3</sup> Big5 검사 행동스타일 (계속)</h2>
+						<dl class="format">
+							<dt>사고 스타일 </dt>
+							<dd>
+								<div class="big5_beh">
+									<div class="img">
+										<img src="./resources/admin/images/img_big5_02_n.svg" />
+										<div class="axis x">A</div>
+										<div class="axis y">O</div>
+										<div class="pointBox">
+											<div class="point" style="top:43%;left:55%;">설문자위치</div>
+										</div>
+										<div class="xy_title">
+											<div><span>O : </span>인지적 개방성</div>
+											<div><span>A : </span>대인 수용성</div>
+										</div>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>O+ A- 비판형</dt>
+											<dd>
+												관습적 규정에 얽매이거나 감상에 빠지지 않고 비판적인 사고를 한다. 모든 관점을 고려하지만, 옳고 그름에 대한 판단은 스스로 내린다. 진실에 대한 자기 소신을 추구하기 위해 다른 사람의 감정을 언제든 무시할 수 있다.
+											</dd>
+										</dl>
+										<dl class="f_right ">
+											<dt>O+ A+ 진보형</dt>
+											<dd>
+												사회 및 조직 문제에 사려 깊게 접근하고, 새로운 대안을 적용해 보려고 노력한다. 인간 본성을 신뢰하며, 교육이나 혁신, 협력 등을 통해 조직이나 사회가 개선될 수 있다고 굳게 믿는다. 인간의 이성을 믿고, 스스로 합리적으로 행동하려고 노력한다
+											</dd>
+										</dl>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>O- A- 규범형</dt>
+											<dd>
+												사회 정책이나 개인의 도덕성에 대해 확고하고 일관된 믿음을 가지고 있다. 인간 본성에 대해 상당히 회의적인 시각을 가지고 있기 때문에, 사회적 문제에 대해 엄격한 규율과 엄중한 원칙 적용을 지지한다. 힘들더라도 누구나 정해진 규범을 엄격히 따라야 한다는 입장이다.
+											</dd>
+										</dl>
+										<dl class="f_right active">
+											<dt>O- A+ 보수형</dt>
+											<dd>
+												가족과 사회속에 내재되어 전승되고 있는 가치와 신념을 중요하게 여긴다. 기존에 정해진 규칙을 의심 없이 따르는 것이 모두가 평화와 번영을 누릴 수 있는 최선의 길이라 생각한다. 타인을 존중하지만 튀거나 이질적인 존재에 대해 거부감을 갖는다.
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+							<dt>학습 스타일 </dt>
+							<dd>
+								<div class="big5_beh">
+									<div class="img">
+										<img src="./resources/admin/images/img_big5_02_n.svg" />
+										<div class="axis x">C</div>
+										<div class="axis y">O</div>
+										<div class="pointBox">
+											<div class="point" style="top:43%;left:58%;">설문자위치</div>
+										</div>
+										<div class="xy_title">
+											<div><span>O : </span>인지적 개방성</div>
+											<div><span>C : </span>규범지향성</div>
+										</div>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>O+ C- 혁신적 학습형</dt>
+											<dd>
+												새로운 아이디어에 매료되고, 창의적인 발상으로 그것을 발전시킬 수 있다. 그러나 공상에 잠겨 본질을 놓칠 수 있다. 혁신적인 프로젝트를 시작하는 데는 탁월하지만, 마무리하는 데는 미흡하다. 지속적으로 집중하려면 다른 사람들의 도움이 필요하다. 불확실이나 모호함 속에서도 불편함을 느끼지 않는다.
+											</dd>
+										</dl>
+										<dl class="f_right ">
+											<dt>O+ C+ 열정적 학습형</dt>
+											<dd>
+												반드시 다른 사람들 보다 머리가 뛰어나게 좋다고 할 수는 없다. 그러나 이들은 배우는 것을 정말 좋아하고 성실하고 탁월한 준비성을 가지고 있다. 기대 수준이 매우 높고, 창의적으로 문제해결을 시도해 나간다. 자신의 능력이 허락하는 한 최대 수준까지 학문적으로 접근한다.
+											</dd>
+										</dl>
+									</div>
+									<div class="behBox">
+										<dl class="f_left ">
+											<dt>O- C-현실적 학습형</dt>
+											<dd>
+												학문적이거나 지적인 주제에 매력을 느끼지 못하고, 현실적이고 실질적 문제에 관심이 있다. 새로운 것을 배우거나 몰입하려면 특별한 인센티브가 필요하고, 정교한 체계나 정해진 일정을 잘 지키려면 외부의 도움이 필요하다. 장기적이고 지속적 몰입보다 단기적 일 처리에 적합하다.
+											</dd>
+										</dl>
+										<dl class="f_right active">
+											<dt>O- C+ 구조적 학습형</dt>
+											<dd>
+												근면하고, 체계적이며, 구조적이고 모든 규칙을 잘 따른다. 하지만 상상력은 부족한 편이며, 단계별로 구체적인 안내를 받으며 일하는 것을 좋아한다. 기계적인 암기학습에는 능하지만, 정답이 없는 문제를 만나면 어려워 한다. 구조가 분명하고 끝이 정해져 있는 과제를 선호한다.
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="paging"><sup>NEO-3</sup> Big5  ㅣ<div>7</div></div>
+				</div>
+				<div class="subpage break">
+					<div class="lastpage">
+						<div class="lastlogo"><img src="./resources/admin/images/report_neo3_last_02.png" alt="psi컨설팅" /></div>
+						<div class="company">
+							<div class="adr">133-120 서울시 성동구 성수이로 51 한라시그마밸리 9층</div>
+							<div class="info">
+								<span>T.</span> 02-783-5432, 070-7525-5434&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>F.</span> 02-783-5433<br />
+								<span>E.</span> assess@psi.co.kr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>H.</span> www.psi.co.kr
+							</div>
+							<div class="copy">Copyright © PSI Consulting, Inc. All rights reserved.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

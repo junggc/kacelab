@@ -1,0 +1,28 @@
+.fixed-message {display:block !important; position:fixed; top:10px; right:10px; z-index:999999; padding:10px 20px; border-radius:10px; border:3px solid #000; background:#fff; color:#000; font-weight:bold;}
+
+.queWrap .required-ico {position:absolute;left:0;top:0;width:0;height:0;border-left:20px solid #ce373c;border-bottom:20px solid transparent;}
+
+.answer-list-msg {text-align:left;}
+
+/* list */
+.answer-list .container .content .listWrap .listTb table {table-layout:fixed;}
+.answer-list .container .content .listWrap .listTb table thead th:nth-child(1) {width:27%;}
+.answer-list .container .content .listWrap .listTb table thead th,
+.answer-list .container .content .listWrap .listTb table tbody th,
+.answer-list .container .content .listWrap .listTb table tbody td {padding:16px 10px;}
+
+/* form */
+.answer-form .questionView .queWrap .survey > dt div:first-child {margin-right:0;}
+.answer-form .questionView .queWrap .survey > dd .ex.exExp {width:calc(100% + 35px); margin-left:-35px; padding:20px 0;}
+.answer-form .qa-editor-view {display:inline-block; width:calc(100% - 30px); box-sizing:border-box;}
+.answer-form .qa-editor-view > h1,
+.answer-form .qa-editor-view > h2,
+.answer-form .qa-editor-view > h3,
+.answer-form .qa-editor-view > h4,
+.answer-form .qa-editor-view > h5,
+.answer-form .qa-editor-view > h6,
+.answer-form .qa-editor-view > div,
+.answer-form .qa-editor-view > p {}
+.answer-form .qa-editor-view * { /*font-size:18px !important; font-family:"Noto Sans KR","DroidSansFallback","굴림",gulim,"san-serif" !important;*/ }
+.answer-form .views-text {width:50%; margin:-7px 0 -7px 15px;}
+.answer-form .exRank dd select {margin:-5px 0;}

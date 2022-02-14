@@ -1,0 +1,157 @@
+<div class="layerPopup layerStatus layerStatus2" style="display: block;">
+    <div class="dim"></div>
+    <div class="layerInner">
+        <div class="layerBox">
+            <h2>개별 발송 선택</h2>
+            <div class="layerCont">
+                <h3 class="projectSubject"></h3>
+                <form name="popupSearchForm" method="post" action="/project/ajaxStatistics">
+                    <input type="hidden" name="projectInfoID" value="{{projectInfoID}}">
+                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" name="perPage" value="10">
+                    <div class="searchArea">
+                        <input type="text" name="searchKeyword" placeholder="이름, 이메일" class="ipSearch">
+                        <button type="submit" class="dbtn dbtn_01" style="border-color:#f58220;background:#f58220;">검색</button>
+                    </div>
+                </form>
+                <div class="statusSum abClear">
+
+                </div>
+                <div class="board">
+                    <div class="tbArea statusTb">
+                        <table class="dataTable">
+
+                        </table>
+                    </div>
+                    <div class="pagination-area"></div>
+                </div>
+            </div>
+            <div class="btnArea">
+                <a class="btn btn_submit btnSelect" style="display:none;" href="javascript:;">선택</a>
+                <a class="btn btn_close" href="javascript:;">닫기</a>
+            </div>
+        </div>
+        <a class="tclose" href="javascript:;">닫기</a>
+    </div>
+    <script class="projectTemplate" type="text/x-handlebars-template">
+        \{{#with projectInfo}}
+        <div class="stCont">
+            <dl>
+                <dt>진행기간</dt>
+                <dd>\{{start_at}} ~ \{{end_at}}</dd>
+            </dl>
+            <dl>
+                <dt>제목</dt>
+                <dd>\{{project_subject}}</dd>
+            </dl>
+        </div>
+        <dl class="stPer">
+            <dt>전체 응답률</dt>
+            <dd>
+                \{{answerPercent}}% <span>(<span>\{{complete_count}}</span> / \{{respondent_count}})</span>
+            </dd>
+        </dl>
+        \{{/with}}
+    </script>
+    <script class="headerTemplate1" type="text/x-handlebars-template">
+        \{{#with respondentInfo}}
+        <caption class="hidden">개별 발송</caption>
+        <colgroup>
+            <col width="4%">
+            <col width="6%">
+            <col width="10%">
+            <col width="*">
+            <col width="10%">
+            <col width="10%">
+            <col width="*">
+            <col width="8%">
+            <col width="10%">
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col"><input type="checkbox" class="btnCheckAll" name="" /></th>
+            <th scope="col">No.</th>
+            <th scope="col">대상자 성명</th>
+            <th scope="col">대상자 이메일</th>
+            <th scope="col">대상자와 평가자의 관계</th>
+            <th scope="col">평자가 성명</th>
+            <th scope="col">평가자 이메일</th>
+            <th scope="col">응답여부</th>
+            <th scope="col">응답완료일시</th>
+        </tr>
+        </thead>
+        <tbody class="listBody"></tbody>
+        \{{/with}}
+    </script>
+    <script class="articlesTemplate1" type="text/x-handlebars-template">
+        \{{#each respondents}}
+        <tr>
+            <th scope="row"><input type="checkbox" name="checkRespondent" value="\{{id}}" /></th>
+            <td scope="row">\{{rowNum}}</td>
+            <td>\{{name}}</td>
+            <td>\{{email}}</td>
+            <td>\{{value1}}</td>
+            <td>\{{target_name}}</td>
+            <td>\{{target_email}}</td>
+            <td>\{{is_completed_label}}</td>
+            <td>\{{create_at}}</td>
+        </tr>
+        \{{else}}
+        <tr>
+            <td colspan="9" style="text-align:center;">응답자 정보가 없습니다.</td>
+        </tr>
+        \{{/each}}
+    </script>
+    <script class="headerTemplate2" type="text/x-handlebars-template">
+        \{{#with respondentInfo}}
+        <caption class="hidden">개별 발송</caption>
+        <colgroup>
+            <col width="4%">
+            <col width="6%">
+            <col width="10%">
+            <col width="*">
+            <col width="12%">
+            <col width="12%">
+            <col width="12%">
+            <col width="12%">
+            <col width="8%">
+            <col width="10%">
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col"><input type="checkbox" class="btnCheckAll" name="" /></th>
+            <th scope="col">No.</th>
+            <th scope="col">성명</th>
+            <th scope="col">이메일</th>
+            <th scope="col"><div>구분1</div>\{{label1}}</th>
+            <th scope="col"><div>구분2</div>\{{label2}}</th>
+            <th scope="col"><div>구분3</div>\{{label3}}</th>
+            <th scope="col"><div>구분4</div>\{{label4}}</th>
+            <th scope="col">응답여부</th>
+            <th scope="col">응답완료일시</th>
+        </tr>
+        </thead>
+        <tbody class="listBody"></tbody>
+        \{{/with}}
+    </script>
+    <script class="articlesTemplate2" type="text/x-handlebars-template">
+        \{{#each respondents}}
+        <tr>
+            <th scope="row"><input type="checkbox" name="checkRespondent" value="\{{id}}" /></th>
+            <td scope="row">\{{rowNum}}</td>
+            <td>\{{name}}</td>
+            <td>\{{email}}</td>
+            <td>\{{value1}}</td>
+            <td>\{{value2}}</td>
+            <td>\{{value3}}</td>
+            <td>\{{value4}}</td>
+            <td>\{{is_completed_label}}</td>
+            <td>\{{create_at}}</td>
+        </tr>
+        \{{else}}
+        <tr>
+            <td colspan="10" style="text-align:center;">응답자 정보가 없습니다.</td>
+        </tr>
+        \{{/each}}
+    </script>
+</div>

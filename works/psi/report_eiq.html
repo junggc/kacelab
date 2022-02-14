@@ -1,0 +1,4696 @@
+
+<!-- DEBUG-VIEW START 2 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!-- DEBUG-VIEW START 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>PSI Management System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=1550"/>
+    <meta name="keywords" content="PSI"/>
+    <meta name="format-detection" content="telephone=no, address=no, email=no"/>
+    <meta property="og:title" content="PSI"/>
+    <meta property="og:site_name" content="PSI"/>
+    <link href="./resources/admin/css/KoPubDotum.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/print.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/Chart.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./resources/admin/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/Chart.min.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/chartjs-plugin-datalabels.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-polar.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/themes/dark_glamour.min.js"></script>
+<link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+<link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <div id="browser" style="display:none;">
+        <div class="infobox">
+            <a href="#none" onclick="$('#browser').hide();$.cookie('browser', 'done', {expires:1});" title="브라우저 관련 팝업 닫기" class="brower_close"><span>닫기</span></a>
+            <h2>브라우저를 <span>업그레이드</span> 해주세요</h2>
+            <p>본 사이트는 익스플로러11, 크롬, 파이어폭스 브라우저에 최적화 되어 있습니다. <br/>지금 사용하고 계시는 브라우저는 곧 지원이 중단되므로<br/>최신 버전으로 업그레이드하시거나 최신
+                브라우저를 이용해 주세요.</p>
+            <ul>
+                <li class="ie">
+                    <a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank" title="새창이동"><span>인터넷익스플로러11</span></a>
+                </li>
+                <li class="ff"><a href="http://www.mozilla.or.kr/" target="_blank" title="새창이동"><span>파이어폭스</span></a>
+                </li>
+                <li class="cr">
+                    <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank" title="새창이동"><span>크롬</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <![endif]-->
+
+</head>
+<body>
+<div class="report">
+    <div class="reportType8">
+		<div class="page">
+			<div class="subpage" id="cover">
+				<div class="coverpage">
+					<div class="coverlogo">
+						<img src="./resources/admin/images/report_eiq_cover_01.png" alt="eiq report" />
+					</div>
+					<div class="perInfo">
+						<div class="inner">
+							<div>20YY. MM. DD</div>
+							<div>회사소속</div>
+							<div>부서/팀 소속</div>
+							<div>이름</div>
+						</div>
+					</div>
+					<div class="confi2">
+						본 보고서는 ㈜피에스아이컨설팅이 허가한 관계자에게만 사용이 제한되며, 모든 지적 재산권은 ㈜피에스아이컨설팅에 있습니다.  
+						<div class="copy">Copyright ⓒ PSI Consulting All Rights Reserved</div>
+					</div>
+				</div>
+			</div>
+			<div class="subpage break" id="spage1">
+				<div class="cont">
+					<div class="contentsBox">
+						<h2><img src="./resources/admin/images/report_eiq_contitle.png" alt="CONTENTS" /></h2>
+						<div class="h2_cont">EIQ Feedback Report는 다음의 정보를 담고 있습니다. </div>
+						<ul>
+							<li>
+								<div><span>I</span>EIQ 개요</div>
+								<span>EIQ의 역량모델과 본 리포트 해석 시 참고해야 할 사항을 제공합니다.</span>
+								<div>03</div>
+							</li>
+							<li>
+								<div><span>II</span>EIQ 결과 요약</div>
+								<span>EIQ결과에 대한 본인과 타인 인식의 전반적 모습을 확인할 수 있습니다.</span>
+								<div>06</div>
+							</li>
+							<li>
+								<div><span>III</span>이해관계자 그룹 별 분석</div>
+								<span>감성지능 역량에 대해 본인과 각 이해관계자 그룹 별 인식 차이에 대한 세부 결과를 제공합니다.</span>
+								<div>09</div>
+							</li>
+							<li>
+								<div><span>IV</span>역량 별 사내·외 기준 집단과의 비교</div>
+								<span>귀하의 감성지능 역량 수준을 회사 평균 및 국내 평균과 비교해볼 수 있습니다.</span>
+								<div>12</div>
+							</li>
+							<li>
+								<div><span>V</span>EIQ 결과 종합분석</div>
+								<span>감성지능 중요도와 역량 별 수준을 종합적으로 고려하여 우수·취약한 감성지능에 대한 종합 정보를 제공합니다.</span>
+								<div>16</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>1</div></div>
+			</div>
+			<div class="subpage break" id="spage2">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>I</span></div>EIQ 개요 : 감성지능 진단요소(1/2)</div></h2>
+					<div class="format2">
+						그동안 감정은 직장에서 불필요한 것으로 여겨졌습니다. 감정은 일반적으로 비논리적이고 생산성에 부정적인 것으로 간주<br />
+						되었습니다. 그러나 감정은 우연히 우리에게 오는 외부 경험이 아닙니다. 감성지능이라고 하는 감성 역량은 자신과 <br />
+						다른 사람의 감정을 정확하게 인식하고 그러한 감정을 성공적으로 이해하고 관리하는 능력을 나타냅니다. <br />
+						이 역량은 협력적 관계를 구축하고 지적성장을 촉진하는데 핵심적인 역량 중 하나입니다.
+					</div>
+					<div class="format2">
+						이런 이유로 맥킨지컨설팅에서는 ‘사회성 및 정서적 기술’을 디지털 트랜스포메이션을 위한 필수적인 요구사항이 될 것으로 <br />
+						예측했으며 세계경제포럼(WEF)에서도 4차 산업혁명 시대에 살아남기 위한 필요한 역량으로 감성지능을 선정하였습니다. <br />
+						연구에 따르면 감성지능은 직장에서의 직무성과와 성공을 예측하는 중요한 요인입니다. (Lopes, Grewal, Kadis, Gall & Salovey). <br />
+						감성지능이 우수한 사람은 리더십에 대한 더 큰 잠재력을 가지고 있는 것으로 간주되며 감성지능이 낮은 사람들보다 더 높은 <br />
+						급여와 더 많은 승진기회 등을 통해 조직이나 구성원들로부터 인정을 받는 경향이 있습니다.
+					</div>
+					<div class="format2">
+						본 진단은 감정을 인지하는 대상을 ‘자신’과 ‘타인’으로 구분하였으며 감정에 대한 상호작용을 ‘감정인식’과 ‘감정조절’로 <br />
+						구분하였습니다. 이 두 축을 기준으로 4가지 차원(자기인식, 자기조절, 공감, 관계구축)에 대한 자신과 타인들의 인식을 비교할 수 <br />
+						있는 자료를 제공합니다. ‘감성지능’을 다면적으로 파악하는 본 진단을 통해 귀하의 감성역량에 대한 강점과 개발을 위한 시사점을 <br />
+						찾으시기 바랍니다.
+					</div>
+					<div class="eiq_puzzle type2">
+						<table>
+							<colgroup>
+								<col width="*" />
+								<col width="*" />
+								<col width="8%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">자신 (Self)</th>
+									<th scope="col">상대방 (Social)</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pz1">
+										<div>[ 자기인식 ]</div>
+										<ul>
+											<li>자기 감정 이해</li>
+											<li>자기 평가</li>
+											<li>자신감</li>
+										</ul>
+									</td>
+									<td class="pz2">
+										<div>[ 공감 ]</div>
+										<ul>
+											<li>감수성</li>
+											<li>서비스 지향</li>
+											<li>상황파악</li>
+											<li>유연성</li>
+										</ul>
+									</td>
+									<th scope="row">감정인식</th>
+								</tr>
+								<tr>
+									<td class="pz3">
+										<div>[ 자기조절 ]</div>
+										<ul>
+											<li>감정조절</li>
+											<li>낙관성</li>
+											<li>신뢰감</li>
+											<li>책임감</li>
+										</ul>
+									</td>
+									<td class="pz4">
+										<div>[ 관계 구축 ]</div>
+										<ul>
+											<li>친밀감 형성</li>
+											<li>영향력 발휘</li>
+											<li>갈등 대처</li>
+											<li>협력</li>
+										</ul>
+									</td>
+									<th scope="row">감정조절</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>3</div></div>
+			</div>
+			<div class="subpage break" id="spage3">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>I</span></div>EIQ 개요 : 감성지능 진단요소(2/2)</div></h2>
+					<div class="format2">
+						감성지능 진단(Emotion Intelligence Quotients)에서는 감성지능을 자기인식, 자기조절, 공감, 관계구축의 4가지 차원으로 <br />
+						진단하며 각 차원은 3-4개의 하위 요인으로 구성되어 있습니다.
+					</div>
+					<div class="lciTb eiqTb type1">
+						<table>
+							<caption class="hidden">EIQ 개요 : 감성지능 진단요소(2/2)</caption>
+							<colgroup>
+								<col width="30%" />
+								<col width="18%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" rowspan="3">
+										<div class="title">자기인식</div>
+										자신의 감정을 인지하고<br />이해하는 것을 통해<br />사회적 적응과 자기관리의<br />기반을 마련함 
+									</th>
+									<td>
+										<div class="spec">자기 감정 이해</div>
+									</td>
+									<td>자신의 감정에 대해 이해하고 있으며, 본인의 감정의<br />인과관계 및 업무에 미치는 영향을 인정 및 인지함</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">자기평가</div>
+									</td>
+									<td>자신의 강/약점을 파악하고 있으며, <br />본인 감정이 타인 감정에 미치는 영향을 인지함</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">자신감</div>
+									</td>
+									<td>스스로에 대한 확신이 있으며, <br />다양한 상황에서 본인의 판단과 능력을 믿음</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="lciTb eiqTb type2">
+						<table>
+							<caption class="hidden">EIQ 개요 : 감성지능 진단요소(2/2)</caption>
+							<colgroup>
+								<col width="30%" />
+								<col width="18%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr class="group">
+									<th scope="row" rowspan="4">
+										<div class="title">자기조절</div>
+										자신의 감정을<br />인지한 것을 바탕으로,<br />감정을 조절하여<br />긍정적인 결과를 도출함
+									</th>
+									<td>
+										<div class="spec">감정 조절</div>
+									</td>
+									<td>다양한 상황에서 냉정/평정심을 유지하거나 심한 감정기복 <br />없이 타인 및 문제상황을 상황을 마주할 수 있음</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">낙관성</div>
+									</td>
+									<td>긍정적인 태도 및 타인에 대한 수용적인 태도를 가지고 있으며, <br />문제상황을 마주했을 때 비판보다는 해결하려 노력함</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">신뢰감</div>
+									</td>
+									<td>본인의 실수를 인정하며, 옳다고 믿는 것에 대해서 <br />소신있게 일하는 등 행동에 일관성이 있음</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">책임감</div>
+									</td>
+									<td>맡은 일을 끝까지 완수하며, <br />본인의 언행에 대한 책임을 짐</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="lciTb eiqTb type3">
+						<table>
+							<caption class="hidden">EIQ 개요 : 감성지능 진단요소(2/2)</caption>
+							<colgroup>
+								<col width="30%" />
+								<col width="18%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" rowspan="4">
+										<div class="title">공감</div>
+										타인의 감정에 대한 인지와 <br />이해를 통해 상대의 입장을 <br />고려해 상황을 파악하고 <br />유연하게 대처함
+									</th>
+									<td>
+										<div class="spec">감수성</div>
+									</td>
+									<td>상대의 언어적/비언어적 신호를 잘 읽어 <br />상대가 원하는 바를 잘 파악하며 이해함 </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">서비스 지향</div>
+									</td>
+									<td>상대의 입장에서 생각하려고 하며, <br />상대의 만족을 높이기 위해 노력함</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">상황 파악</div>
+									</td>
+									<td>전체 상황을 잘 파악하며, 그 상황의 맥락 및 여러 요소들을 <br />고려해 상대와 상호작용 할 수 있음</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">유연성</div>
+									</td>
+									<td>상대에 따라 의사소통 방식, 성향, 수준 등의 차이를 고려하여 <br />친밀도를 쌓으며, 예기치 못한 상황에도 잘 대처함  </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="lciTb eiqTb type4">
+						<table>
+							<caption class="hidden">EIQ 개요 : 감성지능 진단요소(2/2)</caption>
+							<colgroup>
+								<col width="30%" />
+								<col width="18%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" rowspan="4">
+										<div class="title">관계구축</div>
+										타인 감정에 대한 인지를 <br />바탕으로, 친밀감을 형성하고 <br />영향력을 발휘하는 등 <br />인간관계를 형성함 
+									</th>
+									<td>
+										<div class="spec">친밀감 형성</div>
+									</td>
+									<td>타인에게 먼저 다가가거나 대화를 주도하며, 경청해 주는 등 <br />상대가 친밀감을 느낄 수 있도록 함 </td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">영향력 발휘 </div>
+									</td>
+									<td>상대의 지지를 얻어내기 위해 영향력을 발휘하며, <br />합의하기 어려운 이슈를 잘 조율함</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">갈등대처</div>
+									</td>
+									<td>갈등 상황에서 상대의 감정을 배려하며, <br />합리적인 해결안을 제시하거나 받아들임</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="spec">협력</div>
+									</td>
+									<td>공동의 목표를 달성하기 위해 팀워크 및 네트워크 <br />형성을 통해 함께 고민하고 완수함 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>4</div></div>
+			</div>
+			<div class="subpage break" id="spage4">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>1</span></div>EIQ 진단 개요 : 결과해석 참고사항</div></h2>
+					<div class="format2">
+						본 리포트는 다양한 사람들의 관점에서 귀하의 감성지능을 분석한 결과이며, 결과 해석에 대한 올바른 이해를 돕기 위한 <br />
+						기본 정보는 아래와 같습니다. 본 진단결과를 바탕으로 귀하의 전반적 모습 및 강점과 개발 필요점을 이해할 수 있습니다. <br />
+						역량개발 계획을 수립하고 실행하기 위해 효과적으로 활용하시기 바랍니다.  
+					</div>
+					<dl class="format">
+						<dt>EIQ 진단결과 관련 정보 수집 </dt>
+						<dd>
+							<p>본 리포트는 진단대상자 본인을 포함하여 귀하와 업무상 밀접하게 상호작용하는 다양한 이해관계자로부터 수집된 정보를 <br />분석한 결과입니다. 리포트에 표현된 다양한 정보제공자는 다음을 의미합니다.  </p>
+							<div class="list01">이해관계자 : 상사, 동료, 구성원 모두를 포괄하는 의미합니다.</div>
+							<dl>
+								<dt class="list01">점수 결과에 사용된 정보제공자는 다음과 같이 표현되었습니다.  </dt>
+								<dd>
+									<ul class="list02">
+										<li>본인 : 귀하가 스스로에 대하여 응답한 결과입니다</li>
+										<li>상사 : 귀하가 업무상 직접 보고의무를 지닌 상위직급자로 직상위자 또는 차상위자가 포함됩니다.</li>
+										<li>동료 : 귀하와 업무상 유관하게 업무를 진행하고 있는 타 부서/팀의 동일 직급 또는 유사 직급이 포함됩니다.</li>
+										<li>구성원 : 귀하에게 직접 보고의 의무를 가지는 동일 부서/팀의 후배직원들을 의미합니다.</li>
+										<li>타인 : 상사, 동료, 구성원의 세 이해관계자 집단 모두의 응답을 평균한 값입니다.</li>
+									</ul>
+								</dd>
+							</dl>
+						</dd>
+						<dt>점수의 의미</dt>
+						<dd>
+							<p>본 리포트에 제시된 각 진단결과 점수는 다양한 이해관계자들이 5점 척도로 응답한 값이며, 상황에 따라 퍼센트로 변환한 <br />점수가 제시됩니다. 각 점수 척도는 다음을 의미합니다.</p>
+							<div class="lciTb2">
+								<table>
+									<caption class="hidden">점수의 의미</caption>
+									<colgroup>
+										<col style="*" />
+										<col style="*" />
+										<col style="*" />
+										<col style="*" />
+										<col style="*" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">1점</th>
+											<th scope="col">2점</th>
+											<th scope="col">3점</th>
+											<th scope="col">4점</th>
+											<th scope="col">5점</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>0%</td>
+											<td>25%</td>
+											<td>50%</td>
+											<td>75%</td>
+											<td>100%</td>
+										</tr>
+										<tr>
+											<td>역량발휘 행동이<br />매우 미흡하다.</td>
+											<td>역량발휘 행동이<br />다소 미흡한 편이다.</td>
+											<td>역량발휘 행동이<br />보통 수준이다.</td>
+											<td>역량발휘 행동이<br />우수한 편이다.</td>
+											<td>역량발휘 행동이<br />매우 우수하다.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</dd>
+						<dt>사내·외 기준집단</dt>
+						<dd>
+							<p>본 리포트에는 귀하의 점수를 사내·외 기준 집단과 비교한 점수(12~15p)를 제시하고 있습니다. <br />비교 대상이 되는 사내·외 기준집단의 의미는 다음과 같습니다.</p>
+							<div class="list03">
+								<span>사내 기준 : </span>
+								<div>리포트에는 ‘사내 평균’로 표현되며, 귀하와 함께 금번 감성지능 진단에 참여한 동일 조직 구성원들의 평균을 <br />의미합니다. 소속 조직에서 진단에 참여한 대상자가 1인인 경우에는 사내 평균은 제시되지 않습니다.</div>
+							</div>
+							<div class="list03">
+								<span>사외 기준 : </span>
+								<div>리포트에는 ‘국내 평균’으로 표현되며, 타사를 포함하여 그동안 EIQ에 참여한 전체 진단참여자들 중 상위 30%<br />
+								에 해당되는 사람들의 평균 값을 그래프에 제시하고 있습니다. 또한 백분위 값은 귀하의 점수가 전체 진단참여자<br />
+								들의 결과와 비교하여 어느 수준에 있는지를 제시한 것입니다. 백분위 값이 클수록 상위수준에 해당됩니다. <br />
+								예를 들어 백분위 값 80은 귀하의 점수가 국내 전체 진단참여자 중 상위 80%에 해당된다는 뜻입니다.</div>
+							</div>
+						</dd>
+					</dl>
+					<div class="parti">
+						<div>귀하의 감성지능 진단을 위해 본인 외 <strong>총 <span>00</span> 명</strong> 의 이해관계자들이 참여하였습니다.</div>
+						<span>상사 <strong><span>00</span> 명</strong></span>
+						<span>동료 <strong><span>00</span> 명</strong></span>
+						<span>구성원 <strong><span>00</span> 명</strong></span>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>5</div></div>
+			</div>
+			<div class="subpage break" id="spage5">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>II</span></div>EIQ 진단결과 요약 : 종합 (1/3)</div></h2>
+					<div class="format2">
+						4개 차원에 대한 귀하 본인과 타인(상사, 동료, 구성원)의 인식을 종합적으로 확인할 수 있습니다 
+					</div>
+					<div class="eiq_puzzle type3">
+						<table>
+							<colgroup>
+								<col width="*" />
+								<col width="*" />
+								<col width="7%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">자신 (Self)</th>
+									<th scope="col">상대방 (Social)</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="pz1">
+										<div><div>[ 자기인식 ]</div>귀하의 ‘자기인식’은 <strong>(보통)</strong> 입니다</div>
+										<div class="eiq_graph_wrap">
+											<div class="eiq_graph_inner">
+												<div class="axis_box">
+													<div class="axis axis_0"><div>0%</div></div>
+													<div class="axis axis_25"><div>25%</div></div>
+													<div class="axis axis_50"><div>50%</div></div>
+													<div class="axis axis_75"><div>75%</div></div>
+													<div class="axis axis_100"><div>100%</div></div>
+												</div>
+												<div class="range_box">
+													<div class="row">낮음</div>
+													<div class="normal">보통</div>
+													<div class="high">높음</div>
+												</div>
+												<div class="bar_box">
+													<div class="bar bar_01" style="width:calc(68% + 1px);"><div>본인</div><span>68%</span></div>
+													<div class="bar bar_02" style="width:calc(45% + 1px);"><div>타인</div><span>45%</span></div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td class="pz2">
+										<div><div>[ 자기조절 ]</div>귀하의 ‘자기조절’은 <strong>(보통)</strong> 입니다</div>
+										<div class="eiq_graph_wrap">
+											<div class="eiq_graph_inner">
+												<div class="axis_box">
+													<div class="axis axis_0"><div>0%</div></div>
+													<div class="axis axis_25"><div>25%</div></div>
+													<div class="axis axis_50"><div>50%</div></div>
+													<div class="axis axis_75"><div>75%</div></div>
+													<div class="axis axis_100"><div>100%</div></div>
+												</div>
+												<div class="range_box">
+													<div class="row">낮음</div>
+													<div class="normal">보통</div>
+													<div class="high">높음</div>
+												</div>
+												<div class="bar_box">
+													<div class="bar bar_01" style="width:calc(75% + 1px);"><div>본인</div><span>75%</span></div>
+													<div class="bar bar_02" style="width:calc(50% + 1px);"><div>타인</div><span>50%</span></div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<th scope="row">감정인식</th>
+								</tr>
+								<tr>
+									<td class="pz3">
+										<div><div>[ 공감 ]</div>귀하의 ‘공감’은 <strong>(보통)</strong> 입니다</div>
+										<div class="eiq_graph_wrap">
+											<div class="eiq_graph_inner">
+												<div class="axis_box">
+													<div class="axis axis_0"><div>0%</div></div>
+													<div class="axis axis_25"><div>25%</div></div>
+													<div class="axis axis_50"><div>50%</div></div>
+													<div class="axis axis_75"><div>75%</div></div>
+													<div class="axis axis_100"><div>100%</div></div>
+												</div>
+												<div class="range_box">
+													<div class="row">낮음</div>
+													<div class="normal">보통</div>
+													<div class="high">높음</div>
+												</div>
+												<div class="bar_box">
+													<div class="bar bar_01" style="width:calc(25% + 1px);"><div>본인</div><span>25%</span></div>
+													<div class="bar bar_02" style="width:calc(100% + 1px);"><div>타인</div><span>100%</span></div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td class="pz4">
+										<div><div>[ 관계 구축 ]</div>귀하의 ‘관계구축’은 <strong>(보통)</strong> 입니다</div>
+										<div class="eiq_graph_wrap">
+											<div class="eiq_graph_inner">
+												<div class="axis_box">
+													<div class="axis axis_0"><div>0%</div></div>
+													<div class="axis axis_25"><div>25%</div></div>
+													<div class="axis axis_50"><div>50%</div></div>
+													<div class="axis axis_75"><div>75%</div></div>
+													<div class="axis axis_100"><div>100%</div></div>
+												</div>
+												<div class="range_box">
+													<div class="row">낮음</div>
+													<div class="normal">보통</div>
+													<div class="high">높음</div>
+												</div>
+												<div class="bar_box">
+													<div class="bar bar_01" style="width:calc(68% + 1px);"><div>본인</div><span>68%</span></div>
+													<div class="bar bar_02" style="width:calc(45% + 1px);"><div>타인</div><span>45%</span></div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<th scope="row">감정조절</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="parti type2">
+						<dl>
+							<dt>종합 결과요약</dt>
+							<dd>
+								<div>귀하의 종합적인 감성지능 정도는 위의 그래프와 같습니다. (감성지능 정도는 타인평균 기준으로 산출됩니다)</div>
+								<div class="list03">
+									<div>감성지능 중 <strong>‘0000’차원</strong>이 가장 높게 나타났으며, <strong>‘0000’차원</strong>이 가장 낮게 나타났습니다. </div>
+								</div>
+								<div class="list03">
+									<div>본인과 타인의 점수차이<span class="list_noti sup">*</span>는 <strong>평균 00%</strong>입니다. <span class="list_noti">*점수차이가 클수록 본인을 과대평가하는 경향이 있음</span></div>
+								</div>
+								<div>보다 자세한 내용은 본 진단리포트 7-18page를 참고하시면 됩니다.</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>6</div></div>
+			</div>
+			<div class="subpage break" id="spage6">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>II</span></div>EIQ 진단결과 요약 : 종합 (2/3) </div></h2>
+					<div class="format2 type2">EIQ 결과에 대한 전체적인 결과를 확인할 수 있습니다</div>
+					<dl class="comp">
+						<dt>본인-타인 그룹 간 평균 비교</dt>
+						<dd>
+							<div class="dptb">
+								<p>감성지능을 구성하는 15개 요인에 대해 <br />본인이 스스로 판단한 점수와 귀하를 관찰한 <br />모든 타인들의 평균 점수를 <br />하나의 그래프로 제시하고 있습니다.</p>
+								<p>타인 그룹 별 진단결과와 <br />본인이 판단한 결과를 비교하여 <br />각 역량에 대해 어느 정도 인식 차이가 <br />있는지를 한 눈에 파악할 수 있습니다.</p>
+								<div class="gageBox">
+									<div>
+										<div class="gageEx ex2">
+											<div class="ex"></div>
+											<div>본인</div>
+										</div>
+										<div class="gageEx ex1">
+											<div class="ex"></div>
+											<div>타인</div>
+										</div>
+									</div>								
+								</div>
+							</div>
+							<div class="chartBox eiqChartBox">
+								<canvas id="chartEiq1" class="chart" height="250"></canvas>
+								<script>
+									var ctx = document.getElementById('chartEiq1').getContext('2d');
+									var myChart = new Chart(ctx, {
+										type: 'radar',
+										data: {
+											labels: ['자기감정 이해', '자기 평가', '자신감', '감정조절', '낙관성', '신뢰감', '책임감','감수성','서비스 지향','상황파악','유연성','친밀감 형성', '영향력', '갈등대처', '협력'],
+											datasets: [
+												{
+													label: '타인',
+													data: [4.00, 4.03, 4.00, 4.05, 4.07, 4.07, 4.02, 4.00, 4.06, 4.04, 4.03, 4.07, 4.00, 3.00, 3.30],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+													],
+													borderWidth: 2,
+													//pointStyle:'rect',
+													//rotation: 45,
+													pointBackgroundColor:[
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+														'rgba(69, 114, 184, 1)',
+													],
+												},
+												{
+													label: '본인',
+													data: [4.50, 4.43, 4.00, 4.15, 4.17, 4.07, 4.52, 4.00, 4.46, 4.54, 4.53, 4.27, 3.00, 3.50, 4.00],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+													],
+													borderWidth: 2,
+													pointBackgroundColor:[
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+													],
+												}
+											]
+										},
+										options: {
+											legend: {
+												display: false
+											},
+											scale: {
+												angleLines: {
+													display: true,//대각선없애기,
+													color: 'rgba(129, 129, 129, 0.5)'
+												},
+												gridLines: {
+													color: [
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+													]
+												  },
+												ticks: {
+													min: 1,
+													max: 5,
+													labelOffset: 100,
+													stepSize : 1,
+													fontSize : 14//data기준숫자 사이즈
+												},
+												pointLabels: {
+													fontSize: 12,//labels 사이즈,
+													fontColor:[
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+													]
+												},
+												yAxes: [{
+													position:'left',
+													ticks: {
+														beginAtZero: false
+													}
+												}]
+											}
+										}
+									});
+								</script>
+							</div>
+						</dd>
+					</dl>
+					<dl class="comp">
+						<dt>타인 응답자 간 귀하의 감성지능에 대한 인식 </dt>
+						<dd>
+							<div class="dptb">
+								<p>감성지능을 구성하는 15개 요인에 대한 <br />각 개인들의 점수분포를 제시하고 있습니다.</p>
+								<p>이를 통해 귀하의 각 역량발휘 모습에 대해 <br />이해관계자 개개인들이 가지고 있는 <br />다양한 인식 차이를 확인할 수 있습니다.</p>
+								<div class="gageBox type2">
+									<div class="gageEx ex3">
+										<div class="ex"></div>
+										<div>본인</div>
+									</div>
+									<div class="gageEx ex4">
+										<div class="ex"><div></div></div>
+										<div>타인 개인별</div>
+									</div>										
+								</div>
+							</div>
+							<div class="chartBox eiqChartBox">
+								<canvas id="chartEiq2" class="chart" height="250"></canvas>
+								<script>
+									var ctx = document.getElementById('chartEiq2').getContext('2d');
+									var myChart = new Chart(ctx, {
+										type: 'radar',
+										data: {
+											labels: ['자기감정 이해', '자기 평가', '자신감', '감정조절', '낙관성', '신뢰감', '책임감','감수성','서비스 지향','상황파악','유연성','친밀감 형성', '영향력', '갈등대처', '협력'],
+											datasets: [
+												{
+													label: '본인',
+													data: [4.00, 4.03, 4.00, 4.05, 4.07, 4.07, 4.02, 4.00, 4.06, 4.04, 4.03, 4.07, 4.00, 3.00, 3.30],
+													pointRadius: 0,
+													backgroundColor: [
+														'rgba(201, 21, 29, 0.2)'
+													],
+													borderColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderWidth: 0
+												},
+												{
+													label: '타인 개인별',
+													data: [
+														4.50, 4.43, 4.00, 4.15, 4.17, 4.07, 4.52, 4.00, 4.46, 4.54, 4.53, 4.27, 3.00, 3.50, 4.00,
+														5.00, 4.01, 4.02, 4.03, 3.05, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00,
+														4.00, 4.50
+													],
+													backgroundColor: [
+														'rgba(201, 21, 29, 0)',
+													],
+													borderColor: [
+														'rgba(201, 21, 29, 0)',
+													],
+													borderWidth: 0,
+													pointBackgroundColor:[
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														//15개 1세트
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+														//데이터없이 건너뛸때 (10개 건너뜀)
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														'rgba(4, 111, 185, 0)',
+														//15개 1세트
+														'rgba(4, 111, 185, 1)',
+														'rgba(4, 111, 185, 1)',
+													],
+													pointBorderColor: [
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														//15개 1세트
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														//데이터없이 건너뛸때 (10개 건너뜀)
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+														//15개 1세트
+														'rgba(201, 21, 29, 0)',
+														'rgba(201, 21, 29, 0)',
+													],
+												}
+											]
+										},
+										options: {
+											legend: {
+												display: false
+											},
+											scale: {
+												angleLines: {
+													display: true,//대각선없애기,
+													color: 'rgba(129, 129, 129, 0.5)'
+												},
+												gridLines: {
+													color: [
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+													]
+												  },
+												ticks: {
+													min: 1,
+													max: 5,
+													labelOffset: 100,
+													stepSize : 1,
+													fontSize : 14//data기준숫자 사이즈
+												},
+												pointLabels: {
+													fontSize: 12,//labels 사이즈,
+													fontColor:[
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+													]
+												},
+												yAxes: [{
+													position:'left',
+													ticks: {
+														beginAtZero: false
+													}
+												}]
+											}
+										}
+									});
+								</script>
+							</div>
+							
+						</dd>
+					</dl>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>7</div></div>
+			</div>
+			<div class="subpage break" id="spage7">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>II</span></div>EIQ 진단결과 요약 : 종합 (3/3)</div></h2>
+					<div class="format2">4개 차원, 15개 요인에 대한 귀하 본인과 타인(상사, 동료, 구성원)의 인식을 종합적으로 확인할 수 있습니다 </div>
+					<div class="format3">
+						<dl>
+							<dt>타인 대비 본인 진단 경향</dt>
+							<dd>
+								<ul>
+									<li>과대평가 요인 수<div class="box">1</div></li>
+									<li>유사평가 요인 수<div class="box">6</div></li>
+									<li>과소평가 요인 수<div class="box">5</div></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>본인 감성지능에 대한 타인들의 일치성</dt>
+							<dd>
+								<div class="box">높음</div>
+								<div class="box on">보통</div>
+								<div class="box">낮음</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="lciTb2 lciTb3 type2">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="15%" />
+								<col width="15%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="10%" />
+								<col width="10%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">차원</th>
+									<th scope="col" rowspan="2">요인</th>
+									<th scope="col" rowspan="2">본인<br />점수</th>
+									<th scope="col" rowspan="2">타인<br />평균</th>
+									<th scope="col" colspan="5">점수</th>
+									<th scope="col" rowspan="2">본인-타인<br />인식차이</th>
+									<th scope="col" rowspan="2">타인 간<br />인식차이*</th>
+								</tr>
+								<tr>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="title">
+									<th rowspan="3" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_01.png" alt="icon"></div><div class="img_title">자기인식</div></th>
+									<td><strong>자기 감정 이해</strong></td>
+									<td>3.96</td>
+									<td>4.01</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div><!-- left=(2.0*2-1))*10 , right=(4.5*2-1)*10 -->
+											<div class="mine" style="left:69.2%;">3.96</div><!-- left= (3.96*2 - 1)*10 -->
+											<div class="other2" style="left:60.2%;">3.51</div><!-- left= (3.51*2 - 1)*10 -->
+										</div>
+									</td>
+									<td>
+										<div class="tup">△△</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자기평가</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자신감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_02.png" alt="icon"></div><div class="img_title">자기조절</div></th>
+									<td><strong>감정조절</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>낙관성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>신뢰감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>책임감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_03.png" alt="icon"></div><div class="img_title">공감</div></th>
+									<td><strong>감수성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>서비스 지향</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>상황파악</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>유연성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_04.png" alt="icon"></div><div class="img_title">관계구축</div></th>
+									<td><strong>친밀감 형성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>영향력 발휘</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>코칭</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>성과주도</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other2" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+									</td>
+									<td>
+										<div class="rec">■</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2">
+						<div class="mn">본인 점수</div>
+						<div class="oth1">타인 평균</div>
+						<div class="oth2"><div></div>타인 점수 범위</div>
+					</div>
+					<div class="indi3">
+						<div class="inner">
+							<div><div class="rec">■</diV> 가 많을수록 타인 간 인식차이가 심함</div>
+							<div><div class="tup">△</diV> 가 많을수록 타인보다 자신을 높게 평가함</div>
+							<div><div class="tup">▼</div> 가 많을수록 타인보다 자신을 낮게 평가함</div>
+						</div>
+					</div>
+					<div class="parti2 typeTb">
+						<div>타인 간 인식차이<br />해석 주의사항 </div>
+						<div>
+							타인간 인식차이는 타인 응답점수 중 최고, 최저점수의 차이가 아니라, 타인 개개인들의 점수가 분산되어 있는 정도<br />
+							(표준편차)를 의미합니다. <br />
+							따라서 타인 점수 범위의 그래프 길이가 길더라도, 개인들이 평정한 점수의 분산 정도가 낮으면(예 : 타인진단자 5명 중 <br />
+							1명만 1점에 평정, 다른 4명은 모두 5점에 평정) 타인 간 인식차이는 크지 않은 것으로 볼 수 있습니다.
+						</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>8</div></div>
+			</div>
+			<div class="subpage break" id="spage8">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>III</span></div>이해관계자 그룹별 분석 : 본인 – 상사 인식 비교</div></h2>
+					<div class="format2">15개 감성지능 요인에 대한 귀하 본인과 상사 간의 인식을 세부적으로 비교할 수 있습니다. </div>
+					<div class="format3">
+						<div class="chartWrap">
+							<div class="chartBox">
+								<canvas id="chartEiq3" class="chart" height="200"></canvas>
+								<script>
+									var ctx = document.getElementById('chartEiq3').getContext('2d');
+									var myChart = new Chart(ctx, {
+										type: 'radar',
+										data: {
+											labels: ['자기감정 이해', '자기 평가', '자신감', '감정조절', '낙관성', '신뢰감', '책임감','감수성','서비스 지향','상황파악','유연성','친밀감 형성', '영향력', '갈등대처', '협력'],
+											datasets: [
+												{
+													label: '상사',
+													data: [4.00, 4.03, 4.00, 4.05, 4.07, 4.07, 4.02, 4.00, 4.06, 4.04, 4.03, 4.07, 4.00, 3.00, 3.30],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+														'rgba(56, 88, 44, 1)',
+													],
+													borderWidth: 2,
+													//pointStyle:'rect',
+													//rotation: 45,
+													pointBackgroundColor:[
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+														'rgba(85, 131, 54, 1)',
+													],
+												},
+												{
+													label: '본인',
+													data: [4.50, 4.43, 4.00, 4.15, 4.17, 4.07, 4.52, 4.00, 4.46, 4.54, 4.53, 4.27, 3.00, 3.50, 4.00],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+													],
+													borderWidth: 2,
+													pointBackgroundColor:[
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+													],
+												}
+											]
+										},
+										options: {
+											legend: {
+												display: false
+											},
+											scale: {
+												angleLines: {
+													display: true,//대각선없애기,
+													color: 'rgba(129, 129, 129, 0.5)'
+												},
+												gridLines: {
+													color: [
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+													]
+												  },
+												ticks: {
+													min: 1,
+													max: 5,
+													labelOffset: 100,
+													stepSize : 1,
+													fontSize : 14//data기준숫자 사이즈
+												},
+												pointLabels: {
+													fontSize: 12,//labels 사이즈,
+													fontColor:[
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+													]
+												},
+												yAxes: [{
+													position:'left',
+													ticks: {
+														beginAtZero: false
+													}
+												}]
+											}
+										}
+									});
+								</script>
+							</div>
+							<div class="gageBox">
+								<div>
+									<div class="gageEx ex1">
+										<div class="ex"></div>
+										<div>본인</div>
+									</div>
+									<div class="gageEx ex3">
+										<div class="ex"><div></div></div>
+										<div>상사</div>
+									</div>
+								</div>										
+							</div>
+						</div>
+						<dl style="padding-top:80px;">
+							<dt>상사 대비 본인 응답 경향</dt>
+							<dd>
+								<ul>
+									<li>과대평가 요인 수<div class="box">1</div></li>
+									<li>유사평가 요인 수<div class="box">6</div></li>
+									<li>과소평가 요인 수<div class="box">5</div></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="lciTb2 lciTb3 type2">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="15%" />
+								<col width="15%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">차원</th>
+									<th scope="col" rowspan="2">요인</th>
+									<th scope="col" rowspan="2">본인<br />점수</th>
+									<th scope="col" rowspan="2">상사<br />평균</th>
+									<th scope="col" colspan="5">점수</th>
+									<th scope="col" rowspan="2">본인-상사 인식차이</th>
+								</tr>
+								<tr>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="title">
+									<th rowspan="3" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_01.png" alt="icon"></div><div class="img_title">자기인식</div></th>
+									<td><strong>자기 감정 이해</strong></td>
+									<td>3.96</td>
+									<td>4.01</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div><!-- left=(2.0*2-1))*10 , right=(4.5*2-1)*10 -->
+											<div class="mine" style="left:69.2%;">3.96</div><!-- left= (3.96*2 - 1)*10 -->
+											<div class="other3" style="left:60.2%;">3.51</div><!-- left= (3.51*2 - 1)*10 -->
+										</div>
+									</td>
+									<td>
+										<div class="tup">△△</div>
+										<div class="tup">△</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자기평가</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자신감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_02.png" alt="icon"></div><div class="img_title">자기조절</div></th>
+									<td><strong>감정조절</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>낙관성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>신뢰감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>책임감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_03.png" alt="icon"></div><div class="img_title">공감</div></th>
+									<td><strong>감수성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>서비스 지향</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>상황파악</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>유연성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_04.png" alt="icon"></div><div class="img_title">관계구축</div></th>
+									<td><strong>친밀감 형성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>영향력 발휘</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>코칭</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>성과주도</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other3" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2">
+						<div class="mn">본인 점수</div>
+						<div class="oth3">상사 평균</div>
+						<div class="oth2"><div></div>상사 점수 범위</div>
+					</div>
+					<div class="indi3">
+						<div class="inner">
+							<div><div class="tup">△</diV> 가 많을수록 상사보다 자신을 높게 평가함</div>
+							<div><div class="tup">▼</div> 가 많을수록 상사보다 자신을 낮게 평가함</div>
+						</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>9</div></div>
+			</div>
+			<div class="subpage break" id="spage9">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>III</span></div>이해관계자 그룹별 분석 : 본인 – 동료 인식 비교</div></h2>
+					<div class="format2">15개 감성지능 요인에 대한 귀하 본인과 동료 간의 인식을 세부적으로 비교할 수 있습니다. </div>
+					<div class="format3">
+						<div class="chartWrap">
+							<div class="chartBox">
+								<canvas id="chartEiq4" class="chart" height="200"></canvas>
+								<script>
+									var ctx = document.getElementById('chartEiq4').getContext('2d');
+									var myChart = new Chart(ctx, {
+										type: 'radar',
+										data: {
+											labels: ['자기감정 이해', '자기 평가', '자신감', '감정조절', '낙관성', '신뢰감', '책임감','감수성','서비스 지향','상황파악','유연성','친밀감 형성', '영향력', '갈등대처', '협력'],
+											datasets: [
+												{
+													label: '동료',
+													data: [4.00, 4.03, 4.00, 4.05, 4.07, 4.07, 4.02, 4.00, 4.06, 4.04, 4.03, 4.07, 4.00, 3.00, 3.30],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+													],
+													borderWidth: 2,
+													//pointStyle:'rect',
+													//rotation: 45,
+													pointBackgroundColor:[
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+														'rgba(131, 91, 164, 1)',
+													],
+												},
+												{
+													label: '본인',
+													data: [4.50, 4.43, 4.00, 4.15, 4.17, 4.07, 4.52, 4.00, 4.46, 4.54, 4.53, 4.27, 3.00, 3.50, 4.00],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+													],
+													borderWidth: 2,
+													pointBackgroundColor:[
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+													],
+												}
+											]
+										},
+										options: {
+											legend: {
+												display: false
+											},
+											scale: {
+												angleLines: {
+													display: true,//대각선없애기,
+													color: 'rgba(129, 129, 129, 0.5)'
+												},
+												gridLines: {
+													color: [
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+													]
+												  },
+												ticks: {
+													min: 1,
+													max: 5,
+													labelOffset: 100,
+													stepSize : 1,
+													fontSize : 14//data기준숫자 사이즈
+												},
+												pointLabels: {
+													fontSize: 12,//labels 사이즈,
+													fontColor:[
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+													]
+												},
+												yAxes: [{
+													position:'left',
+													ticks: {
+														beginAtZero: false
+													}
+												}]
+											}
+										}
+									});
+								</script>
+							</div>
+							<div class="gageBox">
+								<div>
+									<div class="gageEx ex1">
+										<div class="ex"></div>
+										<div>본인</div>
+									</div>
+									<div class="gageEx ex6">
+										<div class="ex"><div></div></div>
+										<div>동료</div>
+									</div>
+								</div>										
+							</div>
+						</div>
+						<dl style="padding-top:80px;">
+							<dt>동료 대비 본인 응답 경향</dt>
+							<dd>
+								<ul>
+									<li>과대평가 요인 수<div class="box">1</div></li>
+									<li>유사평가 요인 수<div class="box">6</div></li>
+									<li>과소평가 요인 수<div class="box">5</div></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="lciTb2 lciTb3 type2">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="15%" />
+								<col width="15%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">차원</th>
+									<th scope="col" rowspan="2">요인</th>
+									<th scope="col" rowspan="2">본인<br />점수</th>
+									<th scope="col" rowspan="2">동료<br />평균</th>
+									<th scope="col" colspan="5">점수</th>
+									<th scope="col" rowspan="2">본인-동료 인식차이</th>
+								</tr>
+								<tr>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="title">
+									<th rowspan="3" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_01.png" alt="icon"></div><div class="img_title">자기인식</div></th>
+									<td><strong>자기 감정 이해</strong></td>
+									<td>3.96</td>
+									<td>4.01</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div><!-- left=(2.0*2-1))*10 , right=(4.5*2-1)*10 -->
+											<div class="mine" style="left:69.2%;">3.96</div><!-- left= (3.96*2 - 1)*10 -->
+											<div class="other4" style="left:60.2%;">3.51</div><!-- left= (3.51*2 - 1)*10 -->
+										</div>
+									</td>
+									<td>
+										<div class="tup">△</div>
+										<div class="tup">△</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자기평가</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자신감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_02.png" alt="icon"></div><div class="img_title">자기조절</div></th>
+									<td><strong>감정조절</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>낙관성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>신뢰감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>책임감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_03.png" alt="icon"></div><div class="img_title">공감</div></th>
+									<td><strong>감수성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>서비스 지향</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>상황파악</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>유연성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_04.png" alt="icon"></div><div class="img_title">관계구축</div></th>
+									<td><strong>친밀감 형성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>영향력 발휘</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>코칭</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>성과주도</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other4" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2">
+						<div class="mn">본인 점수</div>
+						<div class="oth4">동료 평균</div>
+						<div class="oth2"><div></div>동료 점수 범위</div>
+					</div>
+					<div class="indi3">
+						<div class="inner">
+							<div><div class="tup">△</diV> 가 많을수록 동료보다 자신을 높게 평가함</div>
+							<div><div class="tup">▼</div> 가 많을수록 동료보다 자신을 낮게 평가함</div>
+						</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>10</div></div>
+			</div>
+			<div class="subpage break" id="spage10">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>III</span></div>이해관계자 그룹별 분석 : 본인 – 구성원 인식 비교</div></h2>
+					<div class="format2">15개 감성지능 요인에 대한 귀하 본인과 구성원 간의 인식을 세부적으로 비교할 수 있습니다. </div>
+					<div class="format3">
+						<div class="chartWrap">
+							<div class="chartBox">
+								<canvas id="chartEiq5" class="chart" height="200"></canvas>
+								<script>
+									var ctx = document.getElementById('chartEiq5').getContext('2d');
+									var myChart = new Chart(ctx, {
+										type: 'radar',
+										data: {
+											labels: ['자기감정 이해', '자기 평가', '자신감', '감정조절', '낙관성', '신뢰감', '책임감','감수성','서비스 지향','상황파악','유연성','친밀감 형성', '영향력', '갈등대처', '협력'],
+											datasets: [
+												{
+													label: '구성원',
+													data: [4.00, 4.03, 4.00, 4.05, 4.07, 4.07, 4.02, 4.00, 4.06, 4.04, 4.03, 4.07, 4.00, 3.00, 3.30],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+													],
+													borderWidth: 2,
+													//pointStyle:'rect',
+													//rotation: 45,
+													pointBackgroundColor:[
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+														'rgba(190, 144, 20, 1)',
+													],
+												},
+												{
+													label: '본인',
+													data: [4.50, 4.43, 4.00, 4.15, 4.17, 4.07, 4.52, 4.00, 4.46, 4.54, 4.53, 4.27, 3.00, 3.50, 4.00],
+													backgroundColor: [
+														'rgba(0, 0, 0, 0)'
+													],
+													borderColor: [
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+														'rgba(186, 28, 34, 1)',
+													],
+													borderWidth: 2,
+													pointBackgroundColor:[
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+														'rgba(197, 90, 26, 1)',
+													],
+												}
+											]
+										},
+										options: {
+											legend: {
+												display: false
+											},
+											scale: {
+												angleLines: {
+													display: true,//대각선없애기,
+													color: 'rgba(129, 129, 129, 0.5)'
+												},
+												gridLines: {
+													color: [
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+														'rgba(129, 129, 129, 1)',
+													]
+												  },
+												ticks: {
+													min: 1,
+													max: 5,
+													labelOffset: 100,
+													stepSize : 1,
+													fontSize : 14//data기준숫자 사이즈
+												},
+												pointLabels: {
+													fontSize: 12,//labels 사이즈,
+													fontColor:[
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(107, 168, 219, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(239, 177, 49, 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(113, 192, 129 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+														'rgba(169, 132, 186 , 1)',
+													]
+												},
+												yAxes: [{
+													position:'left',
+													ticks: {
+														beginAtZero: false
+													}
+												}]
+											}
+										}
+									});
+								</script>
+							</div>
+							<div class="gageBox">
+								<div>
+									<div class="gageEx ex1">
+										<div class="ex"></div>
+										<div>본인</div>
+									</div>
+									<div class="gageEx ex5">
+										<div class="ex"><div></div></div>
+										<div>구성원</div>
+									</div>
+								</div>										
+							</div>
+						</div>
+						<dl style="padding-top:80px;">
+							<dt>구성원 대비 본인 응답 경향</dt>
+							<dd>
+								<ul>
+									<li>과대평가 요인 수<div class="box">1</div></li>
+									<li>유사평가 요인 수<div class="box">6</div></li>
+									<li>과소평가 요인 수<div class="box">5</div></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="lciTb2 lciTb3 type2">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="15%" />
+								<col width="15%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" rowspan="2">차원</th>
+									<th scope="col" rowspan="2">요인</th>
+									<th scope="col" rowspan="2">본인<br />점수</th>
+									<th scope="col" rowspan="2">구성원<br />평균</th>
+									<th scope="col" colspan="5">점수</th>
+									<th scope="col" rowspan="2">본인-구성원 인식차이</th>
+								</tr>
+								<tr>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="title">
+									<th rowspan="3" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_01.png" alt="icon"></div><div class="img_title">자기인식</div></th>
+									<td><strong>자기 감정 이해</strong></td>
+									<td>3.96</td>
+									<td>4.01</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div><!-- left=(2.0*2-1))*10 , right=(4.5*2-1)*10 -->
+											<div class="mine" style="left:69.2%;">3.96</div><!-- left= (3.96*2 - 1)*10 -->
+											<div class="other5" style="left:60.2%;">3.51</div><!-- left= (3.51*2 - 1)*10 -->
+										</div>
+									</td>
+									<td>
+										<div class="tup">△</div>
+										<div class="tup">△</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자기평가</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>자신감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_02.png" alt="icon"></div><div class="img_title">자기조절</div></th>
+									<td><strong>감정조절</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>낙관성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>신뢰감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>책임감</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_03.png" alt="icon"></div><div class="img_title">공감</div></th>
+									<td><strong>감수성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>서비스 지향</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>상황파악</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>유연성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_04.png" alt="icon"></div><div class="img_title">관계구축</div></th>
+									<td><strong>친밀감 형성</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>영향력 발휘</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>코칭</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>성과주도</strong></td>
+									<td>4.01</td>
+									<td>3.31</td>
+									<td class="graph" colspan="5">
+										<div class="other">
+											<div class="range" style="left:30%;right:80%;width:50%;">2.0~4.5</div>
+											<div class="mine" style="left:60%;">3.96</div>
+											<div class="other5" style="left:70%;">4.01</div>
+										</div>
+									</td>
+									<td>
+										<div class="tdown">▼</div>
+										<div class="tdown">▼</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2">
+						<div class="mn">본인 점수</div>
+						<div class="oth5">구성원 평균</div>
+						<div class="oth2"><div></div>구성원 점수 범위</div>
+					</div>
+					<div class="indi3">
+						<div class="inner">
+							<div><div class="tup">△</diV> 가 많을수록 구성원보다 자신을 높게 평가함</div>
+							<div><div class="tup">▼</div> 가 많을수록 구성원보다 자신을 낮게 평가함</div>
+						</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>11</div></div>
+			</div>
+			<div class="subpage break" id="spage11">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>IV</span></div>차원 별 사내·외 기준집단 비교</div></h2>
+					<div class="format2">자기인식 차원과 차원을 구성하는 3개 요인에 대해 본인이 속한 조직의 구성원들과 국내 기준집단의 비교를 통해 보다 객관적인 역량개발 방향 설정이 가능합니다.</div>
+					<div class="lciTb2 lciTb3 type3">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">차원</th>
+									<th scope="col">진단자</th>
+									<th scope="col">원점수</th>
+									<th scope="col">백분위</th>
+									<th scope="col">1</th>
+									<th scope="col" class="brdn">2</th>
+									<th scope="col" class="brdn">3</th>
+									<th scope="col" class="brdn">4</th>
+									<th scope="col" class="brdn">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_01.png" alt="icon"></div><div class="img_title">자기인식</div></th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div><!-- default -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div><!-- left=(1.0 - 1)*20 , width=(4.0 - 1.0)*20 -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="lciTb2 lciTb3 type3 brdn">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>자기 감정 이해</dt>
+											<dd>자신의 감정에 대해<br />이해하고 있으며,<br />본인의 감정의 인과관계 및<br />업무에 미치는 영향을 <br />인정 및 인지함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>자기 평가</dt>
+											<dd>자신의 강/약점을<br />파악하고 있으며,<br />본인 감정이 타인 감정에<br />미치는 영향을 인지함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>자신감</dt>
+											<dd>스스로에 대한<br />확신이 있으며,<br />다양한 상황에서 본인의<br />판단과 능력을 믿음</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2 type2">
+						<div class="mn type2">본인점수</div>
+						<div class="oth1 oth6">사내 평균</div>
+						<div class="oth8">국내 리더 집단 중 상위 30%의 평균</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>12</div></div>
+			</div>
+			<div class="subpage break" id="spage12">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>IV</span></div>차원 별 사내·외 기준집단 비교</div></h2>
+					<div class="format2">자기조절 차원과 차원을 구성하는 4개 요인에 대해 본인이 속한 조직의 구성원들과 국내 기준집단의 비교를 통해 보다 객관적인 역량개발 방향 설정이 가능합니다.</div>
+					<div class="lciTb2 lciTb3 type3 small">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">차원</th>
+									<th scope="col">진단자</th>
+									<th scope="col">원점수</th>
+									<th scope="col">백분위</th>
+									<th scope="col">1</th>
+									<th scope="col" class="brdn">2</th>
+									<th scope="col" class="brdn">3</th>
+									<th scope="col" class="brdn">4</th>
+									<th scope="col" class="brdn">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_02.png" alt="icon"></div><div class="img_title">자기조절</div></th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div><!-- default -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div><!-- left=(1.0 - 1)*20 , width=(4.0 - 1.0)*20 -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="lciTb2 lciTb3 type3 brdn small">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>감정 조절</dt>
+											<dd>다양한 상황에서<br />냉정/평정심을 유지하거나<br />심한 감정기복 없이 타인 및<br />문제상황을 마주할 수 있음</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>낙관성</dt>
+											<dd>긍정적인 태도 및<br />타인에 대한 수용적인 태도를<br />가지고 있으며,<br />문제상황을 마주했을 때<br />비판보다는 해결하려 노력함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>신뢰감</dt>
+											<dd>본인의 실수를 인정하며,<br />옳다고 믿는 것에 대해서<br />소신있게 일하는 등<br />행동에 일관성이 있음 </dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>책임감</dt>
+											<dd>맡은 일을 끝까지 완수하며,<br />본인의 언행에 대한<br />책임을 짐</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2 type2">
+						<div class="mn type2">본인점수</div>
+						<div class="oth1 oth6">사내 평균</div>
+						<div class="oth8">국내 리더 집단 중 상위 30%의 평균</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>13</div></div>
+			</div>
+			<div class="subpage break" id="spage13">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>IV</span></div>차원 별 사내·외 기준집단 비교</div></h2>
+					<div class="format2">공감 차원과 차원을 구성하는 4개 요인에 대해 본인이 속한 조직의 구성원들과 국내 기준집단의 비교를 통해 보다 객관적인 역량개발 방향 설정이 가능합니다.</div>
+					<div class="lciTb2 lciTb3 type3 small">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">차원</th>
+									<th scope="col">진단자</th>
+									<th scope="col">원점수</th>
+									<th scope="col">백분위</th>
+									<th scope="col">1</th>
+									<th scope="col" class="brdn">2</th>
+									<th scope="col" class="brdn">3</th>
+									<th scope="col" class="brdn">4</th>
+									<th scope="col" class="brdn">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_03.png" alt="icon"></div><div class="img_title">공감</div></th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div><!-- default -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div><!-- left=(1.0 - 1)*20 , width=(4.0 - 1.0)*20 -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="lciTb2 lciTb3 type3 brdn small">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>감수성</dt>
+											<dd>상대의 언어적/비언어적<br />신호를 잘 읽어<br />상대가 원하는 것을<br />잘 파악하며 이해함 </dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>서비스 지향</dt>
+											<dd>상대의 입장에서<br />생각하려고 하며,<br />상대의 만족을<br />높이기 위해 노력함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>상황 파악</dt>
+											<dd>전체 상황을 잘 파악하며,<br />그 상황의 맥락 및<br />여러 요소들을 고려해<br />상대와 상호작용 할 수 있음</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>유연성</dt>
+											<dd>상대에 따라 의사소통 방식,<br />성향, 수준 등의 차이를<br />고려하여 친밀도를 쌓으며,<br />예기치 못한 상황에도<br />잘 대처함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2 type2">
+						<div class="mn type2">본인점수</div>
+						<div class="oth1 oth6">사내 평균</div>
+						<div class="oth8">국내 리더 집단 중 상위 30%의 평균</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>14</div></div>
+			</div>
+			<div class="subpage break" id="spage14">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>IV</span></div>차원 별 사내·외 기준집단 비교</div></h2>
+					<div class="format2">관계 구축 차원과 차원을 구성하는 4개 요인에 대해 본인이 속한 조직의 구성원들과 국내 기준집단의 비교를 통해 보다 객관적인 역량개발 방향 설정이 가능합니다.</div>
+					<div class="lciTb2 lciTb3 type3 small">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">차원</th>
+									<th scope="col">진단자</th>
+									<th scope="col">원점수</th>
+									<th scope="col">백분위</th>
+									<th scope="col">1</th>
+									<th scope="col" class="brdn">2</th>
+									<th scope="col" class="brdn">3</th>
+									<th scope="col" class="brdn">4</th>
+									<th scope="col" class="brdn">5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_04.png" alt="icon"></div><div class="img_title">관계구축</div></th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div><!-- default -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div><!-- left=(1.0 - 1)*20 , width=(4.0 - 1.0)*20 -->
+											<div class="mine" style="left:40%;">3.0</div><!-- left=(3.0 - 1)*20 -->
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="lciTb2 lciTb3 type3 brdn small">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />									
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>친밀감 형성</dt>
+											<dd>타인에게 먼저 다가가거나<br />대화를 주도하며,<br />경청해 주는 등 상대가<br />친밀감을 느낄 수 있도록 함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>영향력 발휘</dt>
+											<dd>상대의 지지를<br />얻어내기 위해<br />영향력을 발휘하며,<br />합의하기 어려운 이슈를<br />잘 조율함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>갈등 대처</dt>
+											<dd>갈등 상황에서 <br />상대의 감정을 배려하며,<br />합리적인 해결안을<br />제시하거나 받아들임</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="title">
+									<th rowspan="5" scope="row">
+										<dl>
+											<dt>협력</dt>
+											<dd>공동의 목표를 달성하기 위해<br />팀워크 및 네트워크 형성을<br />통해 함께 고민하고 완수함</dd>
+										</dl>
+									</th>
+									<td>본인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div><span>0.0~0.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:100%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>타인</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>상사</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>동료</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>구성원</td>
+									<td>0</td>
+									<td>0</td>
+									<td class="graph" colspan="5">
+										<div class="gageWrap">
+											<div class="gage1"><div style="left:10%;width:60%;"><span>1.0~4.0</span></div></div>
+											<div class="mine" style="left:40%;">3.0</div>
+											<div class="other6" style="left:80%;">5.0</div>
+											<div class="other8" style="left:50%;">3.0</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi indi2 type2">
+						<div class="mn type2">본인점수</div>
+						<div class="oth1 oth6">사내 평균</div>
+						<div class="oth8">국내 리더 집단 중 상위 30%의 평균</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>15</div></div>
+			</div>
+			<div class="subpage break" id="spage15">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>V</span></div>종합분석 : 감성지능 역량 강점 · 개발 필요점</div></h2>
+					<div class="format2">본인과 타인 간 진단 결과를 종합적으로 분석하여 귀하의 상대적 강점 및 개발이 필요한 요인에 대한 정보를 제시하고 있습니다. </div>
+					<div class="boxfive">
+						<div class="box">
+							<div class="box1">
+								<h4>C</h4>
+								<div class="inc">본인은 강점으로 인식하지만<br />타인은 개발 필요점으로<br />인식하는 역량</div>
+							</div>
+							<div class="box2">
+								<h4>A</h4>
+								<div class="inc">본인과 타인 모두 <br />강점으로<br />인식하고 있는 역량</div>
+							</div>
+							<div class="box3">
+								<h4>D</h4>
+								<div class="inc">본인-타인 모두 <br />개발 필요점으로<br />인식하고 있는 역량</div>
+							</div>
+							<div class="box4">
+								<h4>B</h4>
+								<div class="inc">본인은 개발 필요점으로 <br />인식하지만 타인은 <br />강점으로인식하는 역량</div>
+							</div>
+							<div class="box5">
+								<h4>E</h4>
+							</div>
+							<span class="axis xaxis">타인</span>
+							<span class="axis yaxis">본인</span>
+							<span class="num num1" style="top:60%;left:20%;">1</span>
+							<span class="num num2" style="top:20%;left:40%;">2</span>
+							<span class="num num3" style="top:78%;left:38%;">3</span>
+							<span class="num num4" style="top:40%;left:75%;">4</span>
+							<span class="num num5" style="top:50%;left:38%;">5</span>
+							<span class="num num6" style="top:10%;left:38%;">6</span>
+							<span class="num num7" style="top:25%;left:78%;">7</span>
+							<span class="num num8" style="top:18%;left:25%;">8</span>
+							<span class="num num9" style="top:66%;left:16%;">9</span>
+							<span class="num num10" style="top:58%;left:85%;">10</span>
+							<span class="num num11" style="top:17%;left:70%;">11</span>
+							<span class="num num12" style="top:58%;left:60%;">12</span>
+						</div>
+						<div class="etype"><div class="inner"><span>E</span> 본인이나 타인의 점수가 중간 수준이어서 강점이나 개발 필요점에 속하지 않는 요인</div></div>
+					</div>
+					<div class="lciTb2 lciTb3 type4">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="16%" />
+								<col width="16%" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+								<col width="*" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">차원</th>
+									<th scope="col">요인</th>
+									<th scope="col"><div class="gr">A</div></th>
+									<th scope="col"><div class="gr">B</div></th>
+									<th scope="col"><div class="gr">C</div></th>
+									<th scope="col"><div class="gr">D</div></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="title">
+									<th rowspan="3" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_01.png" alt="icon"></div><div class="img_title">자기인식</div></th>
+									<td><strong>자기감정 이해</strong></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+								</tr>
+								<tr>
+									<td><strong>자기 평가</strong></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>자신감</strong></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_02.png" alt="icon"></div><div class="img_title">자기조절</div></th>
+									<td><strong>감정조절</strong></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>낙관성</strong></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>신뢰감</strong></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>책임감</strong></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_03.png" alt="icon"></div><div class="img_title">공감</div></th>
+									<td><strong>감수성</strong></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+								</tr>
+								<tr>
+									<td><strong>서비스 지향</strong></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+								</tr>
+								<tr>
+									<td><strong>상황파악</strong></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+								</tr>
+								<tr>
+									<td><strong>유연성</strong></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+								</tr>
+								<tr class="title">
+									<th rowspan="4" scope="row"><div class="img"><img src="./resources/admin/images/report_eiq_ico_04.png" alt="icon"></div><div class="img_title">관계구축</div></th>
+									<td><strong>친밀감 형성</strong></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>영향력 발휘</strong></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>갈등대처</strong></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>협력</strong></td>
+									<td></td>
+									<td></td>
+									<td><div class="cir">●</div></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indi">
+						<div class="indi3">
+							<div class="inner">
+								<div><div class="cir">●</div> 강점과 개발 필요점에 해당되는 역량</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>16</div></div>
+			</div>
+			<div class="subpage break" id="spage16">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>IV</span></div>종합분석 : 타인이 본 우수한 역량행동 Top 10</div></h2>
+					<div class="format2">우수한 역량행동은 감성지능 진단의 75개 행동 중 타인평균 점수가 가장 높은 10개 행동을 제시하였습니다. 역량단위가 아닌 역량을 구성하는 행동(문항) 수준에서 제시되므로 동일한 요인 내에서도 구체적 행동에 따라 우수 행동과 개발 필요 행동으로 나뉘어 제시될 수 있습니다. </div>
+					<div class="lciTb2 lciTb3 type5">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="10%" />
+								<col width="16%" />
+								<col width="*" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">순위</th>
+									<th scope="col">해당 요인</th>
+									<th scope="col">역량행동</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>공감적 소통</td>
+									<td>자신의 한계나 부족을 인정하고, 목표 달성을 위해 필요한 도움을 관련인에게 적극 요청한다.</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">5</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">6</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">7</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">8</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">9</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">10</th>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>17</div></div>
+			</div>
+			<div class="subpage break" id="spage17">
+				<div class="name">홍길동 님</div>
+				<div class="cont">
+					<h2><div class="inner"><div><span>IV</span></div>종합분석 : 타인이 본 개발 필요 역량행동 Bottom 10</div></h2>
+					<div class="format2">개발 필요 역량행동은 감성지능 진단의 75개 행동 중 타인평균 점수가 가장 낮은 10개 행동을 제시하였습니다. 역량단위가 아닌 역량을 구성하는 행동(문항) 수준에서 제시되므로 동일한 요인 내에서도 구체적 행동에 따라 우수 행동과 개발 필요 행동으로 나뉘어 제시될 수 있습니다. </div>
+					<div class="lciTb2 lciTb3 type5 type2">
+						<table>
+							<caption class="hidden"></caption>
+							<colgroup>
+								<col width="10%" />
+								<col width="16%" />
+								<col width="*" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">순위</th>
+									<th scope="col">해당 요인</th>
+									<th scope="col">역량행동</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>공감적 소통</td>
+									<td>자신의 한계나 부족을 인정하고, 목표 달성을 위해 필요한 도움을 관련인에게 적극 요청한다.</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">5</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">6</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">7</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">8</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">9</th>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">10</th>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="paging">Emotional Intelligence Quotients   ㅣ<div>18</div></div>
+			</div>
+			<div class="subpage break">
+				<div class="lastpage">
+					<div class="lastlogo"><img src="./resources/admin/images/report_eiq_last_02.png" alt="psi컨설팅" /></div>
+					<div class="company">
+						<div class="adr">133-120 서울시 성동구 성수이로 51 한라시그마밸리 9층</div>
+						<div class="info">
+							<span>T.</span> 02-783-5432, 070-7525-5434&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>F.</span> 02-783-5433<br />
+							<span>E.</span> assess@psi.co.kr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>H.</span> www.psi.co.kr
+						</div>
+						<div class="copy">Copyright © PSI Consulting, Inc. All rights reserved.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

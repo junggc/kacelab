@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.kacelab.com/sitemap.xml

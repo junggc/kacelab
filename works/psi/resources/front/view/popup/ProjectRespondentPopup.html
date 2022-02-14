@@ -1,0 +1,69 @@
+<div class="layerPopup layerList layerStatus2" style="display: block;">
+    <div class="dim"></div>
+    <div class="layerInner">
+        <div class="layerBox">
+            <h2>대상자 목록</h2>
+            <form name="popupSearchForm" method="post" action="/respondent/ajaxList">
+                <input type="hidden" name="perPage" id="perPage" value="5">
+                <input type="hidden" name="page" id="page" value="1">
+                <input type="hidden" name="searchCategory1" value="{{category1Code}}">
+                <input type="hidden" name="searchCategory2" value="{{category2Code}}">
+                <div class="layerCont">
+                    <dl class="abClear">
+                        <dt><div>검색</div></dt>
+                        <dd>
+                            <div class="search">
+                                <input type="text" name="searchKeyword" placeholder="제목">
+                                <a class="dbtn dbtn_01 btnSearch" href="javascript:;">검색</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="board">
+                        <div class="tbArea statusTb">
+                            <table>
+                                <caption class="hidden">개별 발송 선택</caption>
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="*">
+                                    <col width="10%">
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">제목</th>
+                                        <th scope="col">인원</th>
+                                        <th scope="col">선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="listBody">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination-area"></div>
+                    </div>
+                </div>
+<!--
+                <div class="btnArea">
+                    <a class="btn btn_submit" href="javascript:;">닫기</a>
+                </div>
+-->
+            </form>
+        </div>
+        <a class="tclose" href="javascript:;">닫기</a>
+    </div>
+    <script class="respondentTemplate" type="text/x-handlebars-template">
+        \{{#each respondents}}
+        <tr data-id="\{{id}}" data-index="\{{@index}}" data-object="\{{getObjectJSON this}}">
+            <td>\{{rowNum}}</td>
+            <td>\{{subject}}</td>
+            <td>\{{count}}</td>
+            <td><a class="sbtn sbtn_edit" href="#">선택</a></td>
+        </tr>
+        \{{else}}
+        <tr>
+            <td colspan="4" style="text-align:center;">명단 정보가 없습니다.</td>
+        </tr>
+        \{{/each}}
+    </script>
+</div>

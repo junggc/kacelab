@@ -1,0 +1,719 @@
+
+<!-- DEBUG-VIEW START 2 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!-- DEBUG-VIEW START 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>PSI Management System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=1550"/>
+    <meta name="keywords" content="PSI"/>
+    <meta name="format-detection" content="telephone=no, address=no, email=no"/>
+    <meta property="og:title" content="PSI"/>
+    <meta property="og:site_name" content="PSI"/>
+    <link href="./resources/admin/css/KoPubDotum.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/print.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/Chart.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./resources/admin/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/Chart.min.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/chartjs-plugin-datalabels.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <div id="browser" style="display:none;">
+        <div class="infobox">
+            <a href="#none" onclick="$('#browser').hide();$.cookie('browser', 'done', {expires:1});" title="브라우저 관련 팝업 닫기" class="brower_close"><span>닫기</span></a>
+            <h2>브라우저를 <span>업그레이드</span> 해주세요</h2>
+            <p>본 사이트는 익스플로러11, 크롬, 파이어폭스 브라우저에 최적화 되어 있습니다. <br/>지금 사용하고 계시는 브라우저는 곧 지원이 중단되므로<br/>최신 버전으로 업그레이드하시거나 최신
+                브라우저를 이용해 주세요.</p>
+            <ul>
+                <li class="ie">
+                    <a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank" title="새창이동"><span>인터넷익스플로러11</span></a>
+                </li>
+                <li class="ff"><a href="http://www.mozilla.or.kr/" target="_blank" title="새창이동"><span>파이어폭스</span></a>
+                </li>
+                <li class="cr">
+                    <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank" title="새창이동"><span>크롬</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="report">
+		<div class="reportType9 type2">
+			<div class="page">
+				<div class="subpage" id="cover">
+					<div class="coverpage">
+						<div class="coverlogo">
+							<img src="./resources/admin/images/report_csi2_cover_01.png" alt="csi report" />
+						</div>
+						<div class="perInfo">
+							<div class="inner">
+								<div>20YY. MM. DD</div>
+								<div>회사</div>
+								<div>부서/팀</div>
+								<div>이름</div>
+							</div>
+						</div>
+						<div class="confi2">
+							본 보고서는 ㈜피에스아이컨설팅이 허가한 전문가에게만 사용이 제한되며, 모든 지적 재산권은 ㈜피에스아이컨설팅에 있습니다.  
+							<div class="copy">Copyright ⓒ PSI Consulting All Rights Reserved</div>
+						</div>
+					</div>
+				</div>
+				<div class="subpage break" id="spage1">
+					<div class="cont">
+						<div class="contentsBox">
+							<h2><img src="./resources/admin/images/report_csi_contitle.png" alt="CONTENTS" /></h2>
+							<ul>
+								<li>
+									<div><span>1</span>커뮤니케이션 스타일 진단 개요</div>
+								</li>
+								<li>
+									<div><span>2</span>4가지 커뮤니케이션 스타일</div>
+								</li>
+								<li>
+									<div><span>3</span>커뮤니케이션 스타일 진단 참고사항</div>
+								</li>
+								<li>
+									<div><span>4</span>나의 커뮤니케이션 스타일</div>
+								</li>
+								<li>
+									<div><span>5</span>커뮤니케이션 스타일의 적용</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="paging">Communication Styles Inventory   ㅣ<div>1</div></div>
+				</div>
+				<div class="subpage break" id="spage2">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>1</span></div>커뮤니케이션 스타일 진단 개요</div></h2>
+						<dl class="format">
+							<dt>4개의 창(Window)이란?</dt>
+							<dd>
+								<div class="format2">
+									커뮤니케이션 스타일 진단은 심리학자 Joseph Luft와 정신과 의사인 Harry Ingham이 창안한 <br />
+									‘조하리의 창(Johari’s Window)’ 이론에 바탕을 두고 있습니다. 이들에 의하면 사람들은 누구나 4개의 창을 가지고 있으며, <br />
+									각 창의 크기나 모양은 가로와 세로 두개의 창살에 의해 결정됩니다. 
+								</div>
+								<div class="format2">
+									여기서 가로, 세로 창살이란 Telling과 Asking의 두가지 의사소통 행동을 상징합니다. 가로 창살(Telling)의 위치는 타인에게 <br />
+									자신의 생각을 얼마나 분명하고 솔직하게 말하느냐에 따라 결정되며, 세로 창살(Asking)의 위치는 상대의 의견을 묻고 피드백을 <br />
+									요청하고 경청하는 정도에 따라 결정됩니다. 이 두가지 행동 수준에 따라 두개의 창살이 교차하면서 다양한 창문 형태가 <br />
+									나타나게 됩니다. 
+								</div>
+								<div class="format2">
+									보다 효과적인 커뮤니케이션을 하기 위해서는 <strong class="brb">가로 창살을 아래로 더 내리고, 세로 창살을 오른쪽으로 더 열어서</strong> <br />
+									<strong class="brb">‘공감과 이해 창문’을 넓히는 것이 필요합니다.</strong> <br />
+									자기를 조금 더 솔직히 표현하고, 상대의 의견을 묻고 피드백을 주고 받음으로써 신뢰를 바탕으로 ‘공감과 이해의 창문’을 <br />
+									더 넓혀 보시기 바랍니다.
+								</div>
+							</dd>
+						</dl>
+						<div class="csi_window">
+							<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+							<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+							<div class="win_box type_wb1">
+								<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+								<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+								<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+								<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+								<span class="arr arr_x"></span>
+								<span class="arr arr_y"></span>
+								<span class="exp_box">
+									<span class="exp_box_inner">
+										<span class="expand exp1">피드백</span>
+										<span class="expand exp2">자기표현</span>
+										<span class="expand exp3">타인과 함께 탐색</span>
+									</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="paging">Communication Styles Inventory   ㅣ<div>3</div></div>
+				</div>
+				<div class="subpage break" id="spage3">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>2</span></div>4가지 커뮤니케이션 스타일(1/2) </div></h2>
+						<div class="format2">
+							커뮤니케이션 스타일은 <strong class="brb">가장 넓은 창문 형태에 따라 다음의 4가지로 구분</strong>할 수 있습니다.
+						</div>
+						<div class="win_wrap">
+							<dl class="winw1">
+								<dt>열린소통형</dt>
+								<dd>
+									<div class="winw_cont">
+										자신의 생각이나 의견을 명확하게 공유하고 상대의 의견, <br />피드백을 적극적으로 요청하는 가장 이상적인 의사소통 유형
+									</div>
+									<div class="csi_window small">
+										<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+										<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+										<div class="win_box type_wb1">
+											<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+											<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+											<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+											<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+											<span class="arr arr_x"></span>
+											<span class="arr arr_y"></span>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class="winw3">
+								<dt>자기보호형</dt>
+								<dd>
+									<div class="winw_cont">
+										남의 의견을 묻고 피드백을 구하지만<br />자기 의견이나 생각을 솔직하게 드러내지 않는 유형
+									</div>
+									<div class="csi_window small">
+										<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+										<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+										<div class="win_box type_wb3">
+											<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+											<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+											<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+											<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+											<span class="arr arr_x"></span>
+											<span class="arr arr_y"></span>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class="winw2">
+								<dt>자기주장형</dt>
+								<dd>
+									<div class="winw_cont">
+										자기생각이나 주장을 명확하게 표현하지만<br />상대의 의견이나 피드백을 듣지 않는 유형
+									</div>
+									<div class="csi_window small">
+										<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+										<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+										<div class="win_box type_wb2">
+											<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+											<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+											<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+											<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+											<span class="arr arr_x"></span>
+											<span class="arr arr_y"></span>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl class="winw4">
+								<dt>무관심형</dt>
+								<dd>
+									<div class="winw_cont">
+										자기 주장이나 정보공유에 소극적이고,<br />타인에 대한 관심이나 존중을 드러내지 않는 유형
+									</div>
+									<div class="csi_window small">
+										<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+										<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+										<div class="win_box type_wb4">
+											<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+											<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+											<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+											<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+											<span class="arr arr_x"></span>
+											<span class="arr arr_y"></span>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="paging">Communication Styles Inventory   ㅣ<div>4</div></div>
+				</div>
+				<div class="subpage break" id="spage4">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>2</span></div>4가지 커뮤니케이션 스타일(2/2)</div></h2>
+						<div class="format2">4가지 커뮤니케이션 스타일별 주요 특징 및 인간관계에 대한 영향은 다음과 같습니다.</div>
+						<div class="lciTb csiTb">
+							<table>
+								<caption class="hidden">4가지 커뮤니케이션 스타일별 주요 특징 및 인간관계에 대한 영향</caption>
+								<colgroup>
+									<col width="17%">
+									<col width="*">
+									<col width="*">
+									<col width="23%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="cpl">스타일</th>
+										<th scope="cpl">정의</th>
+										<th scope="cpl">자세</th>
+										<th scope="cpl">지배적인 창문</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<div class="img"><img src="./resources/admin/images/report_csi2_logo_05.png" alt="열린소통형" /></div>
+											<div class="img_title">열린소통형</div>
+										</th>
+										<td>“공감과 이해 창문<br />(Open Window)”이 넓으며,<br />다른 사람에 대한<br />신뢰와 존중을 보여줌</td>
+										<td>
+											<ul>
+												<li>상대의 이해와 공감을 얻기 쉬움</li>
+												<li>편안하고 개방적인 소통이 가능함</li>
+												<li>의견대립을 거쳐 합의를 도출할 수 있음</li>
+												<li>창의적인 문제해결이 가능함</li>
+												<li>서로 만족스러운 인간관계를 구축함</li>
+											</ul>
+										</td>
+										<td>
+											<div class="csi_window">
+												<div class="win_box type_wb1">
+													<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="img"><img src="./resources/admin/images/report_csi2_logo_06.png" alt="자기주장형" /></div>
+											<div class="img_title">자기주장형</div>
+										</th>
+										<td>“나만 모르는 창문<br />(Blind Window)”이 넓으며,<br />타인의 의견이나 피드백을<br />경시하는 경향이 있음</td>
+										<td>
+											<ul>
+												<li>상대방의 의견을 듣기보다 본인의 의견을 주장함</li>
+												<li>상대방의 이해와 협조를 끌어내기 힘들 수 있음</li>
+												<li>독선적, 일방적인 사람으로 비춰질 수 있음</li>
+												<li>타인의 참여 부족으로 업무추진이나 문제해결이 어려울 수 있음</li>
+											</ul>
+										</td>
+										<td>
+											<div class="csi_window">
+												<div class="win_box type_wb2">
+													<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="img"><img src="./resources/admin/images/report_csi2_logo_07.png" alt="자기보호형" /></div>
+											<div class="img_title">자기보호형</div>
+										</th>
+										<td>“감추는 창문<br />(Hidden Window)”이 넓으며,<br />자기자신을 잘 드러내지 않는<br />경향이 있음</td>
+										<td>
+											<ul>
+												<li>상대방에 대한 신뢰가 부족하거나 인간관계를 지나치게 중시하여 자기를 충분히 표현하지 않음</li>
+												<li>갈등을 회피하는 성향이 강함</li>
+												<li>타인이 거리감을 느끼거나 이해하기 힘든 사람으로 인식할 수 있음</li>
+											</ul>
+										</td>
+										<td>
+											<div class="csi_window">
+												<div class="win_box type_wb3">
+													<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="img"><img src="./resources/admin/images/report_csi2_logo_08.png" alt="무관심형" /></div>
+											<div class="img_title">무관심형</div>
+										</th>
+										<td>“미지의 창문<br />(Unknown Window)”이 넓으며,<br />거리감을 두거나<br />회피하는 경향이 있음</td>
+										<td>
+											<ul>
+												<li>위험부담이 있는 일을 기피함</li>
+												<li>이해 부족으로 인해 타인의 불만/오해가 발생할 수 있음</li>
+												<li>업무추진이나 문제해결이 잘 안 될 가능성이 높음</li>
+												<li>차갑고 불평불만이 많은 사람으로 인식될 수 있음</li>
+											</ul>
+										</td>
+										<td>
+											<div class="csi_window">
+												<div class="win_box type_wb4">
+													<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="paging">Communication Styles Inventory   ㅣ<div>5</div></div>
+				</div>
+				<div class="subpage break" id="spage5">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>3</span></div>커뮤니케이션 스타일 진단 참고사항</div></h2>
+						<div class="format2">
+							본 리포트는 다양한 사람들의 관점에서 귀하의 커뮤니케이션 스타일을 분석한 결과이며, 결과 해석에 대한 올바른 이해를 돕기 <br />
+							위한 기본 정보는 아래와 같습니다. 제시된 자료를 바탕으로 본인의 커뮤니케이션 스타일의 유형과 강점 및 개발 요구점을 이해할 <br />
+							수 있습니다. 진단 결과를 바탕으로 본인과 타인이 바라보는 자신의 커뮤니케이션 스타일을 파악하고, 성공적인 커뮤니케이션을 <br />
+							위해 필요한 행동 및 스킬을 개발하는 용도로 활용하시기 바랍니다.
+						</div>
+						<dl class="format">
+							<dt>커뮤니케이션 스타일 진단결과 관련 정보 수집</dt>
+							<dd>
+								<p>본 리포트는 진단대상자 본인을 포함하여 귀하와 업무상 밀접하게 상호작용하는 다양한 이해관계자로부터 수집된 정보를 분석한 결과입니다. 리포트에 표현된 다양한 정보제공자는 다음을 의미합니다.  </p>
+								<div class="list01">이해관계자 : 상사, 동료, 구성원 모두를 포괄하는 의미합니다.</div>
+								<dl>
+									<dt class="list01">점수 결과에 사용된 정보제공자는 다음과 같이 표현되었습니다.  </dt>
+									<dd>
+										<ul class="list02">
+											<li>본인 : 귀하가 스스로에 대하여 응답한 결과입니다</li>
+											<li>타인 : 상사, 동료, 구성원 등 이해관계자 집단 모두의 응답 평균값입니다</li>
+										</ul>
+									</dd>
+								</dl>
+							</dd>
+							<dt>점수의 의미</dt>
+							<dd>
+								<p>본 리포트를 통해, 귀하가 일반적인 상황에서 뿐만 아니라 일대일 상황, 집단과 팀 속에서 가장 자주 사용하는 커뮤니케이션 <br />
+								행동과 가장 드물게 사용하는 커뮤니케이션 행동이 무엇인지 확인할 수 있습니다. <br />Asking 요인과 Telling 요인은 각각 10개의 문항으로 구성되어 있으며, 다음의 5점 척도로 측정됩니다. <br />
+								각 요인의 점수는 10개 문항의 합계를 의미합니다.</p>
+								<div class="lciTb2">
+									<table>
+										<caption class="hidden">점수의 의미</caption>
+										<colgroup>
+											<col width="*">
+											<col width="*">
+											<col width="*">
+											<col width="*">
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">1점</th>
+												<th scope="col">2점</th>
+												<th scope="col">3점</th>
+												<th scope="col">4점</th>
+												<th scope="col">5점</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>전혀 그렇지 않다.</td>
+												<td>대체로 그렇지 않다.</td>
+												<td>가끔 그렇다</td>
+												<td>대체로 그렇다.</td>
+												<td>항상 그렇다.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p>Telling 요인의 점수가 높을 수록 자기 주장이나 의견을 표현하는 행동수준이 높다는 것을 의미하며, <br />Asking 요인의 점수가 높을 수록 타인의 의견을 경청하고 피드백을 요청하는 행동수준이 높은 것을 의미합니다.</p>
+							</dd>
+							<dt>진단 결과 요약</dt>
+							<dd>
+								<p>커뮤니케이션의 두가지 행동요인에 대한 본인과 타인의 인식을 종합적으로 확인할 수 있습니다.</p>
+								<div class="lciTb2 csiTb">
+									<table>
+										<caption class="hidden">진단 결과 요약</caption>
+										<colgroup>
+											<col width="12%">
+											<col width="25%">
+											<col width="25%">
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">요인</th>
+												<th scope="col">본인 점수<div>(점수범위: 12~60점)</div></th>
+												<th scope="col">타인 평균 점수<div>(점수범위: 12~60점)</div></th>
+												<th scope="col">타인 간 인식 차이<div>(타인 개개인들의 점수가 분산되어 있는 정도를 의미)</div></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">Telling</th>
+												<td>30</td>
+												<td>44</td>
+												<td><div class="rec">■</div></td>
+											</tr>
+											<tr>
+												<th scope="row">Asking</th>
+												<td>30</td>
+												<td>41</td>
+												<td><div class="rec">■</div><div class="rec">■</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="indi3">
+									<div class="inner">
+										<div><div class="rec">■</div> 가 많을수록 타인 간 인식차이가 심함</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<div class="parti">
+							<div>귀하의 커뮤니케이션 스타일 진단을 위해 본인 외 <strong>총 <span>00</span> 명</strong> 의 이해관계자들이 참여하였습니다.</div>
+							<span>상사 <strong><span>00</span> 명</strong></span>
+							<span>동료 <strong><span>00</span> 명</strong></span>
+							<span>구성원 <strong><span>00</span> 명</strong></span>
+						</div>
+					</div>
+					<div class="paging">Communication Styles Inventory   ㅣ<div>6</div></div>
+				</div>
+				<div class="subpage break" id="spage6">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>4</span></div>나의 커뮤니케이션 스타일</div></h2>
+						<dl class="format">
+							<dt>커뮤니케이션 스타일 진단 결과</dt>
+							<dd>
+								<p>본인과 타인이 평가한 커뮤니케이션 스타일은 다음과 같습니다.</p>
+								<div class="small_win_result">
+									<div class="win_wrap">
+										<h3>&lt; 본인 &gt;</h3>
+										<dl class="winw4">
+											<dd>
+												<div class="csi_window small">
+													<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+													<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+													<div class="win_box type_wb4">
+														<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+														<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+														<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+														<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+														<span class="arr arr_x"></span>
+														<span class="arr arr_y"></span>
+													</div>
+												</div>
+											</dd>
+											<dt>무관심형</dt>
+										</dl>
+										<!--
+										<dl class="winw3">
+											<dd>
+												<div class="csi_window small">
+													<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+													<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+													<div class="win_box type_wb3">
+														<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+														<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+														<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+														<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+														<span class="arr arr_x"></span>
+														<span class="arr arr_y"></span>
+													</div>
+												</div>
+											</dd>
+											<dt>자기보호형</dt>
+										</dl>
+										<dl class="winw2">										
+											<dd>
+												<div class="csi_window small">
+													<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+													<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+													<div class="win_box type_wb2">
+														<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+														<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+														<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+														<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+														<span class="arr arr_x"></span>
+														<span class="arr arr_y"></span>
+													</div>
+												</div>
+											</dd>
+											<dt>자기주장형</dt>
+										</dl>
+										-->
+									</div>
+									<div class="win_wrap">
+										<h3>&lt; 타인 전체 &gt;</h3>
+										<dl class="winw1">
+											<dd>
+												<div class="csi_window small">
+													<div class="square_axis x_axis">Asking(피드백 요청/질문)</div>
+													<div class="square_axis y_axis">Telling (주장/솔직한 표현)</div>
+													<div class="win_box type_wb1">
+														<div class="wbox1"><div><img src="./resources/admin/images/report_csi2_logo_01.png" alt="공감과 이해의 창문" />공감과 이해의 창문<div>Open Window</div></div></div>
+														<div class="wbox2"><div><img src="./resources/admin/images/report_csi2_logo_02.png" alt="나만 모르는 창문" />나만 모르는 창문<div>Blind Window</div></div></div>
+														<div class="wbox3"><div><img src="./resources/admin/images/report_csi2_logo_03.png" alt="감추는 창문" />감추는 창문<div>Hidden Window</div></div></div>
+														<div class="wbox4"><div><img src="./resources/admin/images/report_csi2_logo_04.png" alt="미지의 창문" />미지의 창문<div>Unknown Window</div></div></div>
+														<span class="arr arr_x"></span>
+														<span class="arr arr_y"></span>
+													</div>
+												</div>
+											</dd>
+											<dt>열린소통형</dt>
+										</dl>
+									</div>
+								</div>
+							</dd>
+							<dt>커뮤니케이션 강점 및 개발 필요점</dt>
+							<dd>
+								<p class="format2" style="padding:0;">타인 진단 결과를 바탕으로, 가장 <strong class="brb">강점으로 작용하는 커뮤니케이션 행동</strong>은 다음과 같습니다.<p>
+								<div class="csiTb csiTb2">
+									<table>
+										<caption class="hidden">커뮤니케이션 강점 및 개발 필요점</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="15%" />
+											<col width="15%" />
+											<col width="*" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">순위</th>
+												<th scope="col">요인</th>
+												<th scope="col">평균점수</th>
+												<th scope="col">커뮤니케이션 행동</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>Asking</td>
+												<td>4.3</td>
+												<td>자기 의견에 대해 남들이 어떻게 생각하는지 물어본다.</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>Asking</td>
+												<td>3.9</td>
+												<td>자기 변명을 하지 않고 비판에 귀를 기울인다.</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td>Telling</td>
+												<td>3.8</td>
+												<td>잘 몰랐을 경우 혼동했거나 지식이 부족했음을 바로 인정한다.</td>
+											</tr>
+											<tr>
+												<th scope="row">4</th>
+												<td>Telling</td>
+												<td>3.6</td>
+												<td>다른 사람이 이해할 수 있도록 알기 쉬운 말로 표현한다. </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p class="format2">타인 진단 결과를 바탕으로, 가장 점수가 낮아 <strong class="brb">개선이 필요한 커뮤니케이션 행동</strong>은 다음과 같습니다.<p>
+								<div class="csiTb csiTb2">
+									<table>
+										<caption class="hidden">커뮤니케이션 강점 및 개발 필요점</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="15%" />
+											<col width="15%" />
+											<col width="*" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">순위</th>
+												<th scope="col">요인</th>
+												<th scope="col">평균점수</th>
+												<th scope="col">커뮤니케이션 행동</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>Telling</td>
+												<td>2.2</td>
+												<td>스스로 확신하는 것을 굽히지 않고 말한다.</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>Asking</td>
+												<td>2.9</td>
+												<td>다른 사람의 충고를 받아들인다.</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td>Telling</td>
+												<td>2.4</td>
+												<td>자기 자신을 솔직하게 표현한다.</td>
+											</tr>
+											<tr>
+												<th scope="row">4</th>
+												<td>Telling</td>
+												<td>2.6</td>
+												<td>별로 달가운 일이 아닐지라도 남들이 알아야 할 일이라면 알려준다.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="paging">Communication Styles Inventory   ㅣ<div>7</div></div>
+				</div>
+				<div class="subpage break" id="spage7">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>5</span></div>커뮤니케이션 스타일의 적용</div></h2>
+						<div class="format2">
+							커뮤니케이션 스타일별 주요 특성과 개선방안은 다음과 같습니다. 각 스타일별 내용을 참고하시어 본인과 타인을 이해하고, <br />
+							타인과의 관계 향상을 위해 활용하시기 바랍니다. 
+						</div>
+						<div class="windi"><span class="active">active</span> : 타인이 평가한 나의 커뮤니케이션 스타일</div>
+						<div class="win_wrap type_text">
+							<dl class="winw1 active">
+								<dt>열린소통형</dt>
+								<dd>
+									<div class="winw_cont2">
+										<p>인간관계에 있어서 가장 바람직한 스타일입니다. <br />열린 소통형은 다른 사람의 생각과 감정에 귀를 기울임으로써 <br />상호존중이 그대로 나타나며, 생각과 감정을 솔직하게 공유함<br />으로써 상호신뢰가 형성됩니다.</p>
+										<p>열린 소통형의 중요한 장점 중 하나는 자연스럽고 솔직한 <br />토론이 이뤄질 수 있다는 것입니다. 간혹 반대되는 견해와 <br />대립되는 가치관이 부딪힐 수도 있겠지만, 모든 사람들은 <br />자신과 같지 않으므로 의견 대립이 자연적으로 생길 수 있다는 <br />것을 인지하고 있고, 다양성으로부터 풍부한 창의력이 나올 수 <br />있다고 믿기 때문에 의견 대립을 통해 오히려 만족도 높은 <br />결론을 이끌어낼 수 있습니다. </p>
+									</div>
+								</dd>
+							</dl>
+							<dl class="winw3">
+								<dt>자기보호형</dt>
+								<dd>
+									<div class="winw_cont2">
+										<p>다른 사람에게 시간적인 여유를 주고 주의를 기울여 그들의 <br />생각과 감정에 대해 관심을 표시한다는 장점을 가지고 있으나, <br />남의 얘기를 듣기만 하고 자신의 생각이나 감정을 표현하지 <br />않기 때문에 솔직하지 못하거나 무성의하다는 인상을 줄 수 <br />있습니다. 또한 갈등을 회피하거나 억제하는 성향으로 인해 <br />창의력과 문제해결력이 감퇴될 수 있습니다.</p>
+										<p>자기표현을 회피하고 타인 의견에 의존하는 면이 존재하기 <br />때문에 파트너는 일방적인 관계에 힘들어할 수 있습니다. <br />이를 해결하기 위해서는 보다 적극적으로 자기표현을 하고 <br />갈등에 대응함으로써 공감과 이해 창문을 늘리고 상대를 <br />신뢰하고 있음을 드러내야 합니다. <br />반대로 자기보호형의 파트너는 대화할 때, 자기보호형의 <br />아이디어, 기대, 목표, 감정 등에 대해 적극적으로 질문하고 <br />경청함으로써 존중심을 보여야 합니다.</p>
+									</div>
+								</dd>
+							</dl>
+							<dl class="winw2">
+								<dt>자기주장형</dt>
+								<dd>
+									<div class="winw_cont2">
+										<p>자기주장형은 자신의 감정과 생각을 과감하게 표현하고 <br />솔직하다는 장점을 가지고 있으나, 남의 의견을 묻지 않거나 <br />타인의 생각에 대해 경청하지 않는 단점이 있습니다. <br />다른 사람의 감정과 생각은 별로 중요하지 않는 것처럼 행동<br />하기 때문에 의도치 않게 관계를 해칠 수 있습니다.</p>
+										<p>나에 대한 실망, 불만, 오해 등 상대방에게 부정적 인식을 줄 <br />가능성이 높은 ‘나만 모르는 창문’이 넓으며, 이것이 지나칠 <br />경우, 상대가 의견제시를 기피할 수 있습니다. <br />또 상대에게 참다 못해 인신공격이나 자포자기의 행동을 유발<br />할 수 있습니다. </p>
+										<p>이를 개선하기 위해 다른 사람의 얘기에 더욱 귀를 기울여야 <br />합니다. 다른 사람 역시 자신의 의견이나 주장이 있다는 것을 <br />인식하고 상대방에게 귀를 기울임으로써 존중하는 태도를 <br />보인다면 보다 바람직한 인간관계를 형성할 수 있을 것입니다.</p>
+									</div>
+								</dd>
+							</dl>
+							<dl class="winw4">
+								<dt>무관심형</dt>
+								<dd>
+									<div class="winw_cont2">
+										<p>본인의 생각이나 감정을 남에게 표현하는 것을 꺼릴 뿐 아니라 <br />남의 말에도 귀를 기울이지 않는 경향이 있습니다. 미지의 <br />창문이 넓기 때문에, 발현되지 않은 창의력과 미해결된 문제<br />들이 존재할 수 있습니다.</p>
+										<p>다른 사람의 의도에 대해 신뢰를 보이지 않으며 다른 사람의 <br />의견에 대해서 존중을 적극적으로 나타내지 않다보니 종종 <br />차갑고 비인간적이며 불평불만이 많은 사람으로 비쳐질 수 <br />있습니다.</p>
+										<p>무관심형의 인간관계를 많이 경험한다는 것은, 소속된 집단 <br />전체가 개인주의 혹은 자기보호적인 특성을 띄고 있을 <br />가능성이 있습니다. 무관심형 인간관계가 팀 구성원 간에, <br />조직 간에 존재하게 되면 낮은 동기부여, 낮은 생산성으로 <br />이어질 수 있습니다. 상대방의 생각과 감정에 귀를 기울이고 <br />자신의 생각과 감정을 개방적으로 표현한다면 개선될 수 <br />있습니다.</p>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="paging">Communication Styles Inventory   ㅣ<div>8</div></div>
+				</div>
+				<div class="subpage break">
+					<div class="lastpage">
+						<div class="lastlogo"><img src="./resources/admin/images/report_csi_last_02.png" alt="psi컨설팅" /></div>
+						<div class="company">
+							<div class="adr">133-120 서울시 성동구 성수이로 51 한라시그마밸리 9층</div>
+							<div class="info">
+								<span>T.</span> 02-783-5432, 070-7525-5434&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>F.</span> 02-783-5433<br />
+								<span>E.</span> assess@psi.co.kr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>H.</span> www.psi.co.kr
+							</div>
+							<div class="copy">Copyright © PSI Consulting, Inc. All rights reserved.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

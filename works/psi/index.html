@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <title>PSI Management System</title>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+ <meta name="viewport" content="width=1550" />
+ <meta name="keywords" content="PSI" />
+ <meta name="format-detection" content="telephone=no, address=no, email=no" />
+ <meta property="og:title" content="PSI" />
+ <meta property="og:site_name" content="PSI" />
+ <style type="text/css">
+	html { font-size:14px; }
+	dl { padding:20px; }
+	dd { padding:5px 0;}
+	dt { font-weight:bold; }
+	* + dt { margin-top:15px; }
+	dd.ready a { background-color: #FDFF7A; }
+	dd.check a { background-color: #29b1d6;color:#fff; }
+	dd.del a {color:#999;}
+	.tab h2 {display:inline-block;}
+	.tab h2:first-child {margin-right:575px;}
+	.cont:after {content:"";display:block;clear:both;}
+	.cont .tabcont {float:left;width:600px;border:1px solid #ddd;}
+	.cont .tabcont#fo {margin-left:50px;}
+ </style> 
+</head>
+
+<body>
+	<h1>PSI Management System</h1>
+	
+	<div class="cont">
+		<div class="tabcont" id="bo">
+			<dl>
+				<dt>진단 리포트 퍼블리싱 리스트</dt>
+				<dd><a href="admin_lci_2.html" target="_blank">LCI 재진단</a></dd>
+				<dd><a href="report_csi.html" target="_blank">CMSI</a></dd>
+				<dd><a href="report_csi2.html" target="_blank">CSI</a></dd>
+				<dd><a href="report_eiq.html" target="_blank">EIQ</a></dd>
+				<dd><a href="report_mvp.html" target="_blank">MVP</a></dd>
+				<dd><a href="report_wellbeing.html" target="_blank">웰빙</a></dd>
+				<dd class="del"><a href="report_neo3big5.html" target="_blank">NEO-3Big5</a></dd>
+				<dd class="del"><a href="report_big5_detail.html" target="_blank">직장인 Big5 상세</a></dd>
+				<dd><a href="report_big5_total.html" target="_blank">NEO3-Big5 일반/상세 합본</a></dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+@charset "utf-8";
+/****************************************/
+/*  Name: PSI
+/*  PART: Front Theme STYLE
+/*  Version: 1.0
+/*  Author: 임수경
+/****************************************/
+
+/* 레드 */
+/* 진단테스트 */
+body {height:100%;background:#fff;}
+#skiptoContent {position: absolute;top:-70px;left:0;z-index: 1000; width: 100%; margin: 0 auto;}
+#skiptoContent a:focus, #accessibility a:active {position:absolute; top: 70px; z-index: 1000; width: 100%; height: 70px; background:#2b323d; font-size: 16px; line-height: 70px; color:#ffffff; text-align:center;}
+.wrap {width:100%;min-width:1200px;height:100%;}
+.wrap .container {width:1140px;height:100%;height:100%;padding:0 30px 90px 30px;margin:0 auto;}
+.wrap .container h2 {padding:60px 0 40px 0;font-size:24px;color:#222;font-weight:bold;text-align:center;}
+.wrap .container .content {}
+.wrap .container .content .t_login {padding:120px 0 160px 0;text-align:center;background:#fff;}
+.wrap .container .content .t_login h3.logTitle {font-size:22px;font-weight:500;color:#333;}
+.wrap .container .content .t_login h3.logTitle:before {content:"";display:block;width:48px;height:64px;margin:0 auto 20px auto;background:url(../images/ico_test_log01.png) 0 0 no-repeat;background-size:cover;}
+.wrap .container .content .t_login.tSave02 h3.logTitle:before {width:66px;height:66px;background:url(../images/ico_test_save01.png) 0 0 no-repeat;background-size:cover;}
+.wrap .container .content .t_login h3.logTitle .titleCont {margin:15px 0 0 0;font-size:15px;line-height:24px;color:#555;}
+.wrap .container .content .t_login .logArea {width:460px;padding:35px 0 0 0;margin:0 auto;}
+.wrap .container .content .t_login .logArea input {display:block;width:calc(100% - 42px);padding:20px;margin-top:8px;font-size:16px;border-radius:2px;}
+.wrap .tBtnArea {width:1200px;height:65px;margin:0 auto;position:fixed;bottom:0;left:50%;margin-left:-600px;z-index:2;}
+.wrap .tBtnArea:after {content:"";display:block;clear:both;}
+.wrap .tBtnArea a {display:block;height:64px;border-top:1px solid #1c2c49;line-height:63px;background:#1c2c49;color:#fff;font-size:18px;font-weight:500;text-align:center;}
+.wrap .tBtnArea a:first-child {float:left;width:33%;background:#efefef;color:#1c2c49;}
+.wrap .tBtnArea a:last-child {float:left;width:67%;}
+.wrap .tBtnArea a.btnLogt,
+.wrap .tBtnArea a.btnClose {float:none;width:100%;background:#1c2c49;color:#fff;}
+.wrap .tBtnArea.type2 a {float:left;width:25%;}
+.wrap .tBtnArea.type2 a.btnPrev,
+.wrap .tBtnArea.type2 a.btnSave,
+.wrap .tBtnArea.type2 a.btnLoad {position:relative;background:#efefef;color:#1c2c49;}
+.wrap .tBtnArea.type2 a.btnSave:before {content:"";display:block;width:1px;height:100%;position:absolute;top:0;left:-1px;background:#1c2c49;}
+.wrap .tBtnArea.type2 a.btnSave:after {content:"";display:block;width:1px;height:100%;position:absolute;top:0;right:0;background:#1c2c49;}
+.wrap .tBtnArea.type2 a.btnLoad span {display:inline-block;padding-left:5px;}
+.wrap .tBtnArea a.btnPrev:before {content:"";display:inline-block;width:8px;height:13px;background:url(../images/arr_test.png) 0 0 no-repeat;background-size:16px 13px;margin-right:8px;}
+.wrap .tBtnArea a.btnNext:after {content:"";display:inline-block;width:8px;height:13px;background:url(../images/arr_test.png) -8px 0 no-repeat;background-size:16px 13px;margin-left:8px;}
+.wrap .container .content .listWrap {padding:40px 55px;background:#fff;}
+.wrap .container .content .listWrap .intWrap {text-align:center;padding:25px;border-radius:5px;}
+.wrap .container .content .listWrap .intWrap ul {display:inline-block;text-align:left;}
+.wrap .container .content .listWrap .intWrap ul li {position:relative;padding:0 0 0 30px;margin-top:10px;font-size:17px;line-height:22px;}
+.wrap .container .content .listWrap .intWrap ul li:first-child{margin-top:0;}
+.wrap .container .content .listWrap .intWrap ul li:before {content:"";display:block;width:24px;height:24px;position:absolute;top:0;left:0;}
+.wrap .container .content .listWrap .listTb {border-top:1px solid #444;border-bottom:1px solid #444;margin:40px 0 10px 0;}
+.wrap .container .content .listWrap .listTb table thead th {padding:15px 0;font-size:15px;color:#555;border-bottom:1px solid #444;border-left:1px solid #d4d4d4;text-align:center;font-weight:500;}
+.wrap .container .content .listWrap .listTb table thead th:first-child {border-left:0;}
+.wrap .container .content .listWrap .listTb table tbody th {padding:16px 0;border-top:1px solid #d4d4d4;text-align:center;font-size:17px;font-weight:500;color:#333;line-height:31px;}
+.wrap .container .content .listWrap .listTb table tbody th a {display:inline-block;width:120px;height:32px;color:#fff;font-size:15px;line-height:31px;text-align:center;border-radius:5px;margin-left:20px;}
+.wrap .container .content .listWrap .listTb table tbody th a.btnComp {background:#76ab2d;}
+.wrap .container .content .listWrap .listTb table tbody th a.btnConti {background:#ff5000;}
+.wrap .container .content .listWrap .listTb table tbody th a.btnGo {background:#2197f3;}
+.wrap .container .content .listWrap .listTb table tbody td {padding:16px 0;border-top:1px solid #d4d4d4;border-left:1px solid #d4d4d4;text-align:center;font-size:17px;color:#333;line-height:31px;}
+.wrap .container .content .listWrap .listTb table tbody tr:first-child th,
+.wrap .container .content .listWrap .listTb table tbody tr:first-child td {border-top:0;}
+.wrap .container .content .inner .stepGage {width:500px;margin:0 auto;}
+.wrap .container .content .inner .stepGage .gageWrap {position:relative;width:500px;height:16px;border-radius:16px;background:#d2d2d2;}
+.wrap .container .content .inner .stepGage .gageWrap .gage {position:absolute;top:0;left:0;height:16px;border-radius:16px;background:#ff5000;}
+.wrap .container .content .inner .stepGage .gageWrap .gage div {position:absolute;top:0;left:-40px;line-height:15px;height:16px;font-size:14px;font-weight:500;color:#999;}
+.wrap .container .content .inner .mem {padding:40px 0 0 0;text-align:right;font-size:14px;color:#777;}
+.wrap .container .content .editorArea {min-height:470px;background:#fff;}
+.wrap .container .content .intBox:after {content:"";display:block;clear:both;}
+.wrap .container .content .intBox dl {position:relative;float:left;width:50%;padding:30px 0;margin-top:25px;background:#fff;text-align:center;color:#555;line-height:24px;}
+.wrap .container .content .intBox dl:first-child:after {content:"";display:block;width:1px;height:100%;position:absolute;top:0;right:0;}
+.wrap .container .content .intBox dl dt {font-size:17px;font-weight:500;}
+.wrap .container .content .intBox dl dd {font-size:15px;}
+.wrap .tBtnArea a.btnLoad2 span {display:inline-block;padding-left:5px;}
+.questionView {padding:10px 0 0 0;}
+.questionView .queWrap {margin-top:10px;border:0;}
+.questionView .queWrap .survey {padding:0 20px;}
+.questionView .queWrap .survey>dt {padding:20px 0 20px 35px;font-size:16px;}
+.questionView .queWrap .survey>dt div:first-child {font-size:19px;margin-left:-30px;}
+.questionView .queWrap .survey>dd {padding:0 0 0 35px;}
+.questionView .queWrap .survey>dd .ex {font-size:14px;}
+.questionView .queWrap .survey>dd .ex {padding:0 0 30px 0;}
+/* 테마 */
+html {background:url(../images/bg_test_c2.jpg) center 0 repeat-y;}
+input[type=text]:focus,
+input[type=password]:focus {outline:none;border:1px solid #fa514b;}
+.wrap .container,
+.wrap .container .content .inner {background:#faf1f1;}
+.wrap .container .content .intBox dl:first-child:after {background:#faf1f1;}
+.wrap .container .content .listWrap .intWrap {background:#efefef;}
+.wrap .container .content .listWrap .intWrap ul li {color:#777;}
+.wrap .container .content .listWrap .intWrap ul li:before {background:url(../images/ico_test_list01_c2.png) 0 0 no-repeat;}
+.questionView input:checked+label {border-color:#fa514b !important;background:#fff;color:#fa514b !important;}
+.questionView .queWrap .survey>dd .ex.exCho>ul>li:first-child dd .exo li label {color:inherit !important;}
+.questionView input[type=radio]:checked+label:before {background:url(../images/ico_radio_c2.png) 0 0 no-repeat;}
+.questionView input[type=checkbox]:checked {background:url(../images/ico_checkbox_c2.png) 0 0 no-repeat;}
+.questionView .queWrap .survey>dt div:first-child {color:#fa514b;}
+.questionView .queWrap .survey>dd .ex.exPrefer .prefer li a.on {background:#fa514b;}
+.questionView .queWrap .survey>dd .ex.exInt div.int input:focus {border-color:#fa514b;}
+.questionView .queWrap .survey>dd .ex.exCho ul li dd .exo li textarea:focus {border-color:#fa514b;}
+
+@media all and (max-width:1119px) {
+    .wrap {min-width:100%;}
+    .wrap .container {position:relative;z-index:1;width:92%;padding:0 4% 50px 4%;}
+	.wrap .container h2 {font-size:20px;line-height:28px;padding:45px 0 30px 0;}
+	.wrap .container .content .t_login {padding:80px 0 100px 0;}
+	.wrap .container .content .t_login.tSave  {padding:60px 0 80px 0;}
+	.wrap .container .content .t_login h3.logTitle {font-size:16px;}
+	.wrap .container .content .t_login h3.logTitle:before {width:43px;height:57px;}
+	.wrap .container .content .t_login.tSave02 h3.logTitle:before {width:61px;height:61px;}
+	.wrap .container .content .t_login h3.logTitle .titleCont {font-size:13px;line-height:19px;}
+	.wrap .container .content .t_login h3.logTitle .titleCont span {display:block;}
+	.wrap .container .content .t_login .logArea {width:90%;padding:30px 5% 0 5%;}
+	.wrap .container .content .t_login .logArea input {font-size:12px;padding:12px 10px;width:calc(100% - 22px);}
+	.wrap .tBtnArea {width:100%;left:0;height:50px;margin:0;}
+	.wrap .tBtnArea a {height:49px;line-height:48px;font-size:14px;}
+	.wrap .container .content .listWrap {padding:25px 5%;}
+	.wrap .container .content .listWrap .intWrap {padding:15px;text-align:left;}
+	.wrap .container .content .listWrap .intWrap ul {display:block;}
+	.wrap .container .content .listWrap .intWrap ul li {padding:0 0 0 20px;font-size:13px;line-height:19px;}
+	.wrap .container .content .listWrap .intWrap ul li:before {width:16px;height:16px;top:2px;}
+	.wrap .container .content .listWrap .listTb table thead th {padding:10px 0;font-size:12px;}
+	.wrap .container .content .listWrap .listTb table tbody th {font-size:13px;line-height:22px;}
+	.wrap .container .content .listWrap .listTb table tbody th a {display:block;width:80%;font-size:10px;margin:7px auto 0 auto;height:20px;line-height:19px;border-radius:3px;}
+	.wrap .container .content .listWrap .listTb table tbody td {font-size:13px;line-height:22px;}
+	.wrap .container .content .inner {}
+	.wrap .container .content .inner .stepGage {width:80%;}
+	.wrap .container .content .inner .stepGage .gageWrap {width:100%;height:12px;border-radius:12px;}
+	.wrap .container .content .inner .stepGage .gageWrap .gage {height:12px;border-radius:12px;}
+	.wrap .container .content .inner .stepGage .gageWrap .gage div {left:-30px;line-height:11px;height:12px;}
+	.wrap .container .content .inner .mem {padding:30px 0 0 0;}
+	.wrap .tBtnArea.type2 a.btnLoad,
+	.wrap .tBtnArea a.btnLoad2 {line-height:16px;height:40px;padding:9px 0 0 0;}
+	.wrap .tBtnArea.type2 a.btnLoad span,
+	.wrap .tBtnArea a.btnLoad2 span {padding:0;display:block;}
+	.wrap .container .content .editorArea  {min-height:350px;padding:10px;}
+	.wrap .container .content .intBox dl {padding:20px 0;text-align:left;}
+	.wrap .container .content .intBox dl dt {padding:0 15px;font-size:13px;font-weight:bold;letter-spacing:-0.5px;}
+	.wrap .container .content .intBox dl dd {padding:0 15px;font-size:12px;}
+	.wrap .container .content .intBox dl dd div {display:inline;}
+	.questionView {padding:0 0 15px 0;}
+	.questionView .queWrap {margin-top:15px;}
+	.questionView .queWrap+.queWrap {margin-top:15px;}
+	.questionView .queWrap .survey {padding:0 5%;}
+	.questionView .queWrap .survey>dd {padding:0;}
+	.questionView .queWrap .survey>dd .ex>li label {padding:12px 20px 12px 40px;}
+	.questionView .queWrap .survey>dd .ex>li label:before {left:11px;}
+	.questionView .queWrap .survey>dd .ex.exRank .rankBox li {font-size:14px;}
+	.questionView .queWrap .survey>dd .ex.exRank>dl dt {float:none;width:100%;font-size:12px;}
+	.questionView .queWrap .survey>dd .ex.exRank>dl dd {float:none;width:100%;}
+	.questionView .queWrap .survey>dd .ex.exRank>dl dd select {width:100%;}
+	.questionView .queWrap .survey>dd .ex.exCho ul li dt {display:block;width:100%;font-weight:500;padding-bottom:5px;font-size:15px;}
+	.questionView .queWrap .survey>dd .ex.exCho ul li dd {display:block;width:100%;}
+	.questionView .queWrap .survey>dd .ex.exCho ul li dd .exo li {float:none;margin-top:10px;width:100% !important;text-align:left;}
+	.questionView .queWrap .survey>dd .ex.exCho ul li dd .exo li label {display:inline-block !important;width:auto;text-align:left;}
+	.questionView .queWrap .survey>dd .ex.exCho ul li dd .exo li label:before {display:inline-block;margin:0 5px 0 0;}
+	.questionView .queWrap .survey>dd .ex.exCho ul li dd .exo li label span {display:inline-block !important;position:static !important;width:auto !important}
+	.questionView .queWrap .survey>dd .ex.exInt {display:block;width:100%;}
+	.questionView .queWrap .survey>dd .ex.exInt div.prev {display:block;width:100%;padding:0 0 15px 0;text-align:center;}
+	.questionView .queWrap .survey>dd .ex.exInt div.int {display:block;width:100%;}
+	.questionView .queWrap .survey>dd .ex.exInt div.next {display:block;width:100%;padding:15px 0 0 0;text-align:center;}
+	.questionView .queWrap .survey>dd .ex.exCho {padding-top:0;}
+	.questionView .queWrap .survey>dd .ex.exPrefer .prefer {padding:0;}
+	.questionView .queWrap .survey>dd .ex.exPrefer .prefer li {padding:0 5px;}
+	.questionView .queWrap .survey>dd .ex.exPrefer .prefer li a {width:35px;height:35px;line-height:34px;}
+	.questionView .queWrap .survey>dd .ex.exPrefer>div {font-size:12px;line-height:34px;}
+	.questionView .queWrap .survey>dd .ex.exCho ul li dd .exo li input[type=checkbox] {position:static;transform:translate(0);}
+
+	.wrap .container .content .listWrap .intWrap ul li:before {width:16px;height:16px;background:url(../images/ico_test_list01m_c2m.png) 0 0 no-repeat;background-size:cover;top:2px;}
+	.questionView .queWrap .survey>dd .ex.exCho>ul>li:first-child dd .exo li input:checked+label {color:#fa514b !important;}
+	.questionView input[type=radio]:checked+label:before {background:url(../images/ico_radio_c2m.png) 0 0 no-repeat;background-size:cover;}
+	.questionView input[type=checkbox]:checked {background:url(../images/ico_checkbox_c2m.png) 0 0 no-repeat;background-size:cover;}
+
+
+}
+
+@media all and (max-width:320px) {
+	.questionView .queWrap .survey>dd .ex.exPrefer .prefer li {padding:0 2px;}
+}

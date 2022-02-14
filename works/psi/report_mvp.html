@@ -1,0 +1,4516 @@
+
+<!-- DEBUG-VIEW START 2 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!-- DEBUG-VIEW START 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>PSI Management System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=1550"/>
+    <meta name="keywords" content="PSI"/>
+    <meta name="format-detection" content="telephone=no, address=no, email=no"/>
+    <meta property="og:title" content="PSI"/>
+    <meta property="og:site_name" content="PSI"/>
+    <link href="./resources/admin/css/KoPubDotum.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/print.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/Chart.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./resources/admin/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/Chart.min.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/chartjs-plugin-datalabels.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-polar.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/themes/dark_glamour.min.js"></script>
+<link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+<link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <div id="browser" style="display:none;">
+        <div class="infobox">
+            <a href="#none" onclick="$('#browser').hide();$.cookie('browser', 'done', {expires:1});" title="브라우저 관련 팝업 닫기" class="brower_close"><span>닫기</span></a>
+            <h2>브라우저를 <span>업그레이드</span> 해주세요</h2>
+            <p>본 사이트는 익스플로러11, 크롬, 파이어폭스 브라우저에 최적화 되어 있습니다. <br/>지금 사용하고 계시는 브라우저는 곧 지원이 중단되므로<br/>최신 버전으로 업그레이드하시거나 최신
+                브라우저를 이용해 주세요.</p>
+            <ul>
+                <li class="ie">
+                    <a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank" title="새창이동"><span>인터넷익스플로러11</span></a>
+                </li>
+                <li class="ff"><a href="http://www.mozilla.or.kr/" target="_blank" title="새창이동"><span>파이어폭스</span></a>
+                </li>
+                <li class="cr">
+                    <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank" title="새창이동"><span>크롬</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <![endif]-->
+
+</head>
+<body>
+<div class="report">
+    <div class="reportType7">
+		<style>
+			@page {
+				size: A4 landscape;
+				margin: 0;
+			}
+		</style>
+        <div class="page">
+            <div class="subpage" id="cover">
+                <div class="coverpage">
+                    <div class="coverlogo">
+                        <img src="./resources/admin/images/report_mvp_cover_01.png" alt="mvp report" />
+                    </div>
+                    <div class="perInfo">
+                        <div class="inner">
+                            <div>20YY. MM. DD.</div>
+                            <div>회사명</div>
+                            <div>부서명</div>
+                            <div>이름</div>
+                        </div>
+                    </div>
+                    <div class="confi2">
+						본 보고서는 ㈜피에스아이컨설팅이 허가한 전문가에게만 사용이 제한되며, 모든 지적 재산권은 ㈜피에스아이컨설팅에 있습니다.  
+						<div class="copy">Copyright ⓒ PSI Consulting All Rights Reserved</div>
+					</div>
+                </div>
+            </div>
+            <div class="subpage break" id="spage1">
+                <div class="cont">
+                    <div class="contentsBox">
+                        <h2>
+							<img src="./resources/admin/images/report_mvp_contitle.png" alt="CONTENTS" />
+							<div>MVP 진단 Feedback Report는<br />다음의 정보를 담고 있습니다.</div>
+						</h2>
+                        <ul>
+                            <li>
+                                <div><span>1</span>MVP 진단 개요 </div>
+                                <div class="cont_info">MVP 진단의 동기가치유형과 본 리포트 해석 시 참고해야 할 사항을 제공합니다.</div>
+								<p>1) 동기가치유형 모델</p>
+								<p>2) 결과해석 참고사항</p>
+                            </li>
+                            <li>
+                                <div><span>2</span>진단 결과 : 종합</div>
+                                <div class="cont_info">본인과 타인이 생각하는 동기가치유형을 확인할 수 있습니다. </div>
+                            </li>
+                            <li>
+                                <div><span>3</span>진단 결과 : 본인</div>
+                                <div class="cont_info">본인이 생각하는 동기가치유형을 확인할 수 있습니다. </div>
+                            </li>
+                            <li>
+                                <div><span>4</span>진단 결과 : 타인 전체(상사/구성원/동료) </div>
+                                <div class="cont_info">타인이 생각하는 동기가치유형을 확인할 수 있습니다. </div>
+                            </li>
+                            <li>
+                                <div><span>5</span>진단 결과 해석 및 특징 요약</div>
+                                <div class="cont_info">자신의 동기가치유형에 대한 해석 및 특징 요약을 제공합니다.  </div>
+                            </li>
+                            <li>
+                                <div><span>6</span>동기가치유형 비교</div>
+                                <div class="cont_info">진단 결과에 대해 참고할 수 있는 유형 간 비교 자료를 제공합니다.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>1</div></div>
+            </div>
+            <div class="subpage break" id="spage2">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>1</span></div>MVP 진단 개요<span>1) 동기가치유형 모델</span></div></h2>
+                    <dl class="format">
+                        <dt>MVP(Motivational Value Profile) 진단이란?</dt>
+                        <dd>
+                            <!--p>심리검사도구 MMPI의 최초 개발자이며, 스탠포드대학 교수였던  J. Wiggins 박사가 개발한 대인관계문제 진단도구인 Interpersonal Circumplex 모델과 <br />
+							시카고 대학교 교수인 Elias Porter 박사의 Relationship Awareness이론에 바탕을 두고 개발한 <span class="highlight">“케미”를 통해 원하는 결과를 효과적으로 성취할 수 있도록 도와주는 진단 도구</span>입니다.</p-->
+							<p>우리가 하는 행동 이면의 동기를 네 가지 유형으로 구분하여 설명하는 도구로, 자신에 대한 깨달음(Self Awareness)과 상대방에 대한 이해(Social Awareness)를 통해 스스로 행동을 관리하여 관계의 질을 개선할 수 있도록 도와줍니다.</p>
+                        </dd>
+                    </dl>
+                    <div class="boxs1">
+						<div class="page2">
+							<div>
+								<h3 class="h3type1">동기가치체계(Motivational Value System)란? </h3>
+								<div class="format1"><strong>동기가치체계는 우리가 사람들과 맺는 관계 속에서 행동하는 행동의 동기를 설명해줍니다.</strong></div>
+								<div class="format1">
+									사람들은 누구나 <span class="tcolor1">Red</span>,  <span class="tcolor2">Green</span>,  <span class="tcolor3">Blue</span>,  <span class="tcolor4">Orange</span> 네 가지 대인관계 동기가치를 가지고 있습니다. <br />
+									그 동기가 얼마나 자주 나타나는지, 어떤 행동으로 나타나는지는 사람마다 다릅니다. <br />
+									동기가치는 다른 사람들과 함께 일할 때 동기들이 어떠한 조화를 이루는지를 보여줍니다.
+								</div>
+								<div class="mvp_intro1">
+									<h3>[ 동기가치의 두가지 축 ]</h3>
+									<div class="axis_wrap">
+										<div class="axis_box">
+											<div>동기<br />가치</div>
+										</div>
+									</div>
+									<dl class="axis_title1">
+										<dt>통제 (Hard/Control/Fast)</dt>
+										<dd>
+											<ul>
+												<li>빠른 의사결정 / 의견주장</li>
+												<li>자신감 / 경쟁적</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="axis_title2">
+										<dt>관계 (Warm/Open/Relationship)</dt>
+										<dd>
+											<ul>
+												<li>감정의 표현, 친근한</li>
+												<li>사람 중심, 열정적</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="axis_title3">
+										<dt>업무 (Cold/Closed/Task)</dt>
+										<dd>
+											<ul>
+												<li>감정배제, 격식중시</li>
+												<li>사실과 절차, 객관적</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl class="axis_title4">
+										<dt>수용 (Soft/Obey/Slow)</dt>
+										<dd>
+											<ul>
+												<li>신중한 행동 / 의사표현 보류</li>
+												<li>규칙과 정책 수용 / 협력적</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div>
+								<div class="chartWrap">
+									<div class="chartBox">
+										<div id="mvpchart1" class="chart"></div>
+										<script>
+											anychart.onDocumentReady(function () {
+											  // create polar chart
+											  var chart = anychart.polar();
+											  var columnSeries = chart.column([
+												//{ x: '자신을 내세우는', value: 1, fill:"#000" },
+												{ x: '자신을 내세우는', value: 1 },
+												{ x: '외향적', value: 2 },
+												{ x: '친밀감을주는', value: 3 },
+												{ x: '보살피는', value: 4 },
+												{ x: '협조적', value: 5 },
+												{ x: '온순한', value: 0 },
+												{ x: '소심한', value: 5 },
+												{ x: '내성적', value: 5 },
+												{ x: '무관심한', value: 5 },
+												{ x: '냉정한', value: 5 },
+												{ x: '자기중심적', value: 5 },
+												{ x: '지배적', value: 5 }
+											  ]);
+
+											  //chart.padding(25);
+											  // set title settings
+											  chart
+												.title()
+												.enabled(false);
+											  // disable y-axis
+											  
+											  chart.yScale().minimum(1);
+											  chart.yScale().maximum(6);
+											  
+											  chart.sortPointsByX(true);
+											  
+											  chart.yAxis(false);
+											  chart.xAxis().stroke('#000');
+											  //chart.xAxis().labels().padding(10,0,10,0).fontSize('10px').fontColor('#f00').hAlign('center');
+											  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+											   chart.xAxis().ticks().length('100%').stroke('#fefefe');
+											  chart.xAxis().labels().padding(10,0,10,0).fontSize(12).fontColor("#000").hAlign('center');
+											  //culumn 배경색
+											  chart.xGrid().palette(["#e03c11", "#e03c11", "#dd8a10", "#dd8a10", "#dd8a10", "#7ebf38", "#7ebf38", "#7ebf38", "#07a7e1", "#07a7e1", "#07a7e1", "#e03c11"]);
+											  //chart.yGrid().fill('#000000');
+											  //chart.yGrid().palette(['lightgray 0.3', 'white 0.9']);
+
+											  chart.xScale('ordinal');
+											  chart.yScale().ticks().count(6);
+											  chart.startAngle(-15);
+
+
+											  // set chart container id
+											  chart.container('mvpchart1');
+
+											  // initiate chart drawing
+											  chart.draw();
+											});
+										</script>
+									</div>
+									<div class="chartTitle1">
+										<dl class="ct1">
+											<dt>주도형</dt>
+											<dd>Hard/Control/Fast</dd>
+										</dl>
+										<dl class="ct2">
+											<dt>우호형</dt>
+											<dd>Warm/Open/Relationship</dd>
+										</dl>
+										<dl class="ct3">
+											<dt>수용형</dt>
+											<dd>Soft/Obey/Slow</dd>
+										</dl>
+										<dl class="ct4">
+											<dt>방어형</dt>
+											<dd>Cold/Close/Task</dd>
+										</dl>
+									</div>
+									<div class="chartTitle2">
+										<div class="ctt1">Performance</div>
+										<div class="ctt2">People</div>
+										<div class="ctt3">Peace</div>
+										<div class="ctt4">Process</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>2</div></div>
+            </div>
+            <div class="subpage break" id="spage3">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>1</span></div>MVP 진단 개요<span>1) 동기가치유형 모델</span></div></h2>
+                    <div class="format2">
+                        4가지 동기가치의 구성 내용은 다음과 같습니다.
+                    </div>
+                    <div class="boxs1">
+						<div class="mvpTb1 red">
+							<table>
+								<caption class="hidden">MVP 진단 개요</caption>
+								<colgroup>
+									<col width="13%" />
+									<col width="27%" />
+									<col width="15%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+								<tr>
+									<th scope="row" rowspan="3">
+										<div class="img"><img src="./resources/admin/images/report_mvp_logo_01.png" alt="icon" /></div>
+									</th>
+									<td rowspan="3">
+										<dl>
+											<dt>성과를 내기 위한 동기<div>Performance</div></dt>
+											<dd>과제 완수나 성과를 위해<br />행동하고 목표를 정하면 추진력 있게 행동함</dd>
+										</dl>
+									</td>
+									<td><div class="spec">지배적</div></td>
+									<td>통제하기를 좋아함 / 목표를 세우고 단호한 행동 / 자기확신이 높음</td>
+								</tr>
+								<tr>
+									<td><div class="spec">자신을 내세우는</div></td>
+									<td>지위, 명예에 높은 관심 / 앞장서는 / 자기 의견을 제시함</td>
+								</tr>
+								<tr>
+									<td><div class="spec">외향적</div></td>
+									<td>도전적이며 위험감수 / 즉각적으로 반응하고 행동 / 감정을 공유 / 행동지향적</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="mvpTb1 green">
+							<table>
+								<caption class="hidden">MVP 진단 개요</caption>
+								<colgroup>
+									<col width="13%" />
+									<col width="27%" />
+									<col width="15%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+								<tr>
+									<th scope="row" rowspan="3">
+										<div class="img"><img src="./resources/admin/images/report_mvp_logo_02.png" alt="icon" /></div>
+									</th>
+									<td rowspan="3">
+										<dl>
+											<dt>편안함을 추구하기 위한 동기<div>Peace</div></dt>
+											<dd>유연성과 적응력을 발휘하며<br />개방적이고 다른 사람과의 조화를 중요시 함</dd>
+										</dl>
+									</td>
+									<td><div class="spec">온순한</div></td>
+									<td>사려 깊은 / 주장을 강하게 하지 않음 / 개인적 갈등을 싫어함 </td>
+								</tr>
+								<tr>
+									<td><div class="spec">소심한</div></td>
+									<td>정해진 원칙 수용 / 두려움이 많은 / 의사결정에 시간이 걸림 / 안전과 안정 선호</td>
+								</tr>
+								<tr>
+									<td><div class="spec">내성적</div></td>
+									<td>행동하기 전 깊이 생각함 / 자신을 잘 보여주지 않음 / 말보다 글, 문자로 소통</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="mvpTb1 blue">
+							<table>
+								<caption class="hidden">MVP 진단 개요</caption>
+								<colgroup>
+									<col width="13%" />
+									<col width="27%" />
+									<col width="15%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+								<tr>
+									<th scope="row" rowspan="3">
+										<div class="img"><img src="./resources/admin/images/report_mvp_logo_03.png" alt="icon" /></div>
+									</th>
+									<td rowspan="3">
+										<dl>
+											<dt>절차를 수립하기 위한 동기<div>Process</div></dt>
+											<dd>질서와 체계를 만들고 실용적이고 올바른 것,<br />개인적인 흥미와 관심사를 추구함</dd>
+										</dl>
+									</td>
+									<td><div class="spec">무관심한</div></td>
+									<td>절차지향적 / 독립적으로 일함 / 이성적</td>
+								</tr>
+								<tr>
+									<td><div class="spec">냉정한</div></td>
+									<td>원칙을 중시 / 자제력이 있는 / 기준에 엄격함 / 다른 사람에 관심이 없음</td>
+								</tr>
+								<tr>
+									<td><div class="spec">자기중심적</div></td>
+									<td>분석적 / 원하는 것을 이루기 위해 최선을 다함 / 계산적 / 이해타산적</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="mvpTb1 orange">
+							<table>
+								<caption class="hidden">MVP 진단 개요</caption>
+								<colgroup>
+									<col width="13%" />
+									<col width="27%" />
+									<col width="15%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+								<tr>
+									<th scope="row" rowspan="3">
+										<div class="img"><img src="./resources/admin/images/report_mvp_logo_04.png" alt="icon" /></div>
+									</th>
+									<td rowspan="3">
+										<dl>
+											<dt>다른 사람을 돕기 위한 동기<div>People</div></dt>
+											<dd>다른 사람들의 안정과 성장 및 복지에 관심을 가지며<br />다른 사람을 도와주려고 함</dd>
+										</dl>
+									</td>
+									<td><div class="spec">친밀감을 주는</div></td>
+									<td>먼저 다가감 / 상대의 기분을 헤아림 / 타인에 대해 개방적</td>
+								</tr>
+								<tr>
+									<td><div class="spec">보살피는</div></td>
+									<td>타인의 요구에 빠르게 반응함 / 피해를 주지 않으려고 노력 / 상대의 감정을 인정</td>
+								</tr>
+								<tr>
+									<td><div class="spec">협조적</div></td>
+									<td>팀 플레이를 지향 / 조직 몰입이 높음 / 동료를 도와주는 / 공동의 이익을 위하는</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>3</div></div>
+            </div>
+            <div class="subpage break" id="spage4">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>1</span></div>MVP 진단 개요<span>2) 결과해석 참고사항</span></div></h2>
+                    <div class="format2">
+                        본 리포트는 진단대상자 본인을 포함한 다양한 사람들의 관점에서 귀하의 동기가치유형을 분석한 결과입니다. 
+						다른 사람들과 함께 일할 때 사람마다 행동 방식에 차이가 있을 뿐 동기가치유형이 옳고 그름, 좋고 나쁨의 가치 판단의 기준이 될 수 없습니다. 
+						동기가치유형에 대한 객관적인 평가가 아니라 타인들이 인식하고 있는 행동 유형으로서 결과를 참고하시기 바랍니다.
+                    </div>
+					<div class="boxs1" style="height:515px;margin-top:25px;">
+						<dl class="mvp_type1">
+							<dt>진단 결과 관련 정보 수집</dt>
+							<dd>
+								<div class="mgb10">
+									본 리포트는 진단대상자 본인을 포함하여 귀하와 업무상 밀접하게 상호작용하는 다양한 이해관계자로부터 수집된 정보를 분석한 결과입니다. <br />
+									리포트에 표현된 다양한 정보제공자는 다음을 의미합니다.
+								</div>
+								<div class="list01">이해관계자 : 상사, 동료, 구성원 모두를 포괄하는 의미입니다.</div>
+								<div class="list01">점수 제시 결과에 사용된 정보제공자는 다음과 같이 표현되었습니다.  </div>
+								<div class="parti2">
+									<ul class="type_round">
+										<li>상&nbsp;&nbsp;&nbsp;사 : 귀하가 업무상 직접 보고의무를 지닌 상위 직급자로 직상위자 또는 차상위자가 포함됩니다.
+										<li>동&nbsp;&nbsp;&nbsp;료 : 귀하와 업무상 유관하게 업무를 진행하고 있는 타 부서/팀의 동일 직급 또는 유사 직급이 포함됩니다.</li>
+										<li>구성원 : 귀하에게 직접 보고의 의무를 가지는 동일 부서/팀의 부하직원들을 의미합니다.</li>
+										<li>타&nbsp;&nbsp;&nbsp;인 : 상사, 동료, 구성원의 세 이해관계자 집단 모두의 응답을 평균으로 계산한 값입니다.</li></li>
+									</ul>
+								</div>
+							</dd>
+							<dt>점수의 의미</dt>
+							<dd>
+								<div class="mgb10">
+									본 리포트에 제시된 각 진단 결과 점수는 진단대상자 본인을 포함한 다양한 이해관계자들이 5점 척도로 응답한 값을 유형별 또는 이해관계자 별로 평균으로 계산한 값입니다. <br />
+									각 척도 점수는 다음을 의미합니다.
+								</div>
+								<div class="basicTb">
+									<table>
+										<caption class="hidden">점수의 의미</caption>
+										<colgroup>
+											<col width="*" />
+											<col width="*" />
+											<col width="*" />
+											<col width="*" />
+											<col width="*" />
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">1점</th>
+											<th scope="col">2점</th>
+											<th scope="col">3점</th>
+											<th scope="col">4점</th>
+											<th scope="col">5점</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>평소 행동이<br />전혀 그렇지 않다.</td>
+											<td>평소 행동이<br />그렇지 않다.</td>
+											<td>평소 행동이<br />보통 수준으로 나타난다.</td>
+											<td>평소 행동이<br />그렇다.</td>
+											<td>평소 행동이<br />매우 그렇다.</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>4</div></div>
+            </div>
+            <div class="subpage break" id="spage5">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>2</span></div>MVP 진단 결과 종합</div></h2>
+                    <div class="format2">홍길동님 본인 및 타인이 생각하는 동기가치유형을 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dt>홍길동 님의 동기가치유형 진단 결과 종합</dt>
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">본인</div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart2" class="chart" style="height:290px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													//{ x: '자신을 내세우는', value: 1, fill:"#000" },
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+
+												  //chart.padding(25);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  
+												  chart.sortPointsByX(true);
+												  
+												  //chart.yAxis(true);
+												  //chart.yGrid().fontColor("#000");
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  //chart.xAxis().labels().padding(10,0,10,0).fontSize('10px').fontColor('#f00').hAlign('center');
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  //culumn 배경색
+												  //chart.xGrid().palette(["#e03c11", "#e03c11", "#dd8a10", "#dd8a10", "#dd8a10", "#7ebf38", "#7ebf38", "#7ebf38", "#07a7e1", "#07a7e1", "#07a7e1", "#e03c11"]);
+												  //chart.yGrid().fill('#000000');
+												  //chart.yGrid().palette(['lightgray 0.3', 'white 0.9']);
+												  //chart.yGrid().stroke('#000 0.9').palette(['lightgray 0.3', 'white 0.9']);
+
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart2');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">본인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</div></th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row"><div>본인</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2 high">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr>
+													<th scope="row"><div>타인</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4 low">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-ever">
+													<th scope="row"><div>국내평균</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>상사</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>동료</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>구성원</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div>
+									<div class="title_tag">타인 전체</div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart3" class="chart" style="height:290px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													//{ x: '자신을 내세우는', value: 1, fill:"#000" },
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+
+												  //chart.padding(25);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  
+												  chart.sortPointsByX(true);
+												  
+												  //chart.yAxis(true);
+												  //chart.yGrid().fontColor("#000");
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  //chart.xAxis().labels().padding(10,0,10,0).fontSize('10px').fontColor('#f00').hAlign('center');
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  //culumn 배경색
+												  //chart.xGrid().palette(["#e03c11", "#e03c11", "#dd8a10", "#dd8a10", "#dd8a10", "#7ebf38", "#7ebf38", "#7ebf38", "#07a7e1", "#07a7e1", "#07a7e1", "#e03c11"]);
+												  //chart.yGrid().fill('#000000');
+												  //chart.yGrid().palette(['lightgray 0.3', 'white 0.9']);
+												  //chart.yGrid().stroke('#000 0.9').palette(['lightgray 0.3', 'white 0.9']);
+
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart3');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb2 type_d">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="17%" />
+												<col width="*" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">내가 생각하는<br/>나의 동기가치 유형</th>
+													<td>
+														<div class="p_type type1">주도형</div>
+														<div class="p_type type2">수용형</div>
+														<!--
+														<div class="p_type type3">방어형</div>
+														<div class="p_type type4">우호형</div>
+														-->
+													</td>
+													<td>
+														<img src="./resources/admin/images/mvp_circle1.png" alt="circle chart" />
+														<img src="./resources/admin/images/mvp_circle2.png" alt="circle chart" />
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="mvp_tb2 type_d">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="17%" />
+												<col width="*" />												
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">타인이 생각하는<br/>나의 동기가치 유형</th>
+													<td>
+														<!--
+														<div class="p_type type1">주도형</div>
+														<div class="p_type type2">수용형</div>
+														-->
+														<div class="p_type type3">방어형</div>
+														<div class="p_type type4">우호형</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle2.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>5</div></div>
+            </div>
+            <div class="subpage break" id="spage6">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>3</span></div>MVP 진단 결과 요약 : 본인</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대한 전반적인 모습을 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">본인</div>
+									<div class="chartWrap small small2">
+										<div class="chartBox">
+											<div id="mvpchart4" class="chart" style="height:350px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(10).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart4');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">본인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">본인</th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2 high">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>												
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type1">
+									<h3><span>RED</span> 주도형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>리더로서의 책임과 지위, 명예에 대하여 경쟁에서 이기는 것</li>
+												<li>다른 사람들을 설득하는 것</li>
+												<li>기회를 민감하게 포착하는 것</li>
+												<li>정당한 대가를 요구하고 획득하는 것</li>
+												<li>즉각적으로 반응하고 행동하는 것</li>
+												<li>도전적이며 위험을 감수하며 받아들이는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>진보적이고 혁신적이며 긴장감이 넘치고 도전적이며 <br />생동감 있고 자극적 · 경쟁적이며, 창의적인 환경</li>
+												<li>새로운 기회와 개인의 발전 및 성장 잠재력을 북돋아주는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type1">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">내가 생각하는<br/>나의 동기가치 유형</th>
+													<td>주도형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3">과정</div>
+																<div class="type1 on">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2">평화</div>
+																<div class="type4">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle1.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>6</div></div>
+            </div>
+            <div class="subpage break" id="spage7">
+                <div class="name">홍길동 님</div>
+				<div class="cont">
+                    <h2><div class="inner"><div><span>3</span></div>MVP 진단 결과 요약 : 본인</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대한 전반적인 모습을 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dt></dt>
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">본인</div>
+									<div class="chartWrap small small2">
+										<div class="chartBox">
+											<div id="mvpchart5" class="chart" style="height:350px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart5');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">본인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">본인</th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3 high">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>												
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type2">
+									<h3><span>GREEN</span> 수용형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>다른 사람들의 생각과 감정에 대해 이해하고 받아들이는 것</li>
+												<li>평화로운 상태를 유지하는 것</li>
+												<li>어떤 조직의 구성원이 되는 것, 조화나 팀워크</li>
+												<li>자기주장을 자제하는 것</li>
+												<li>다른 사람들에게 융통성 있는 사람으로 인식되는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>친근하며, 갈등이 표출되지 않고, 민주적이고,<br />프라이버시가 보장되는 환경</li>
+												<li>조용하며, 서로 존중하며, 서로의 감정을 자제하며,<br />조화와 화합을 이루는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type2">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">내가 생각하는<br/>나의 동기가치 유형</th>
+													<td>수용형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3">과정</div>
+																<div class="type1">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2 on">평화</div>
+																<div class="type4">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle2.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>7</div></div>
+            </div>
+            <div class="subpage break" id="spage8">
+                <div class="name">홍길동 님</div>
+				<div class="cont">
+                    <h2><div class="inner"><div><span>3</span></div>MVP 진단 결과 요약 : 본인</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대한 전반적인 모습을 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dt></dt>
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">본인</div>
+									<div class="chartWrap small small2">
+										<div class="chartBox">
+											<div id="mvpchart6" class="chart" style="height:350px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart6');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">본인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">본인</th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4 high">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>												
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type3">
+									<h3><span>BLUE</span> 방어형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>객관적이고 올바르며, 원칙을 따르는 것</li>
+												<li>감정을 조절하며, 실용적이고 신중하게 결정하는 것</li>
+												<li>철저하며, 공정하며, 결심을 지키는 것</li>
+												<li>진지하며, 확고한 자기 기준을 가지고 결정을 내리며, 주체성이 있는 것</li>
+												<li>행동하기 전에 깊이 생각하는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>정확 · 명료하며 논리적 · 실용적이고, 효율적이며,<br />신뢰할 수 있고 조직화된 환경</li>
+												<li>효율적으로 자원을 활용하며; 독립적으로 의사결정하며,<br />
+												정확하고 납득 가능하며, 신뢰할 만한 기준을 가지고 의사결정, 검증된 의견을 제시,<br />
+												신중히 대안을 검토, 경제성을 고려하는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type3">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">내가 생각하는<br/>나의 동기가치 유형</th>
+													<td>방어형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3 on">과정</div>
+																<div class="type1">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2">평화</div>
+																<div class="type4">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle3.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>8</div></div>
+            </div>
+            <div class="subpage break" id="spage9">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>3</span></div>MVP 진단 결과 요약 : 본인</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대한 전반적인 모습을 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">본인</div>
+									<div class="chartWrap small small2">
+										<div class="chartBox">
+											<div id="mvpchart7" class="chart" style="height:350px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart7');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">본인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">본인</th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5 high">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+												</tr>												
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type4">
+									<h3><span>ORANGE</span> 우호형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>다른 사람들의 안정과 성장에 관심이 있음</li>
+												<li>타인에 대한 배려에 관심을 쏟음</li>
+												<li>다른 사람들을 도와주며 피해를 주지 않으려 노력함</li>
+												<li>다른 사람들의 권리를 존중하고 배려함</li>
+												<li>다른 사람들이 스스로를 존중하도록 도와줌</li>
+												<li>다른 사람들의 요구에 빠르게 반응하는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>개방적이고, 친근하며, 다른 사람들을 돕고 배려하며,<br />신뢰하며, 진실하게 대하며, 존중하는 환경</li>
+												<li>자신을 필요로 하고 인정해 주는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type4">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">내가 생각하는<br/>나의 동기가치 유형</th>
+													<td>우호형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3">과정</div>
+																<div class="type1">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2">평화</div>
+																<div class="type4 on">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle4.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>9</div></div>
+            </div>
+            <div class="subpage break" id="spage10">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>4</span></div>MVP 진단 결과 : 타인 전체</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대한 전반적인 모습을 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">타인 전체<div class="type_tag type1">주도형</div></div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart8" class="chart"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(5,0,5,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart8');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="title_tag">구성원<div class="type_tag type2">수용형</div></div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart9" class="chart"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(5,0,5,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart9');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>									
+								</div>
+								<div>
+									<div class="title_tag">상사<div class="type_tag type3">방어형</div></div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart10" class="chart"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(5,0,5,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart10');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="title_tag">동료<div class="type_tag type4">우호형</div></div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart11" class="chart"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(5,0,5,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart11');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>									
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>10</div></div>
+            </div>
+            <div class="subpage break" id="spage11">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>4</span></div>MVP 진단 결과 : 타인 전체</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대해 타인(상사/구성원/동료)이 생각하는 동기가치유형 진단 결과를 세부적으로 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">타인 전체</div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart12" class="chart" style="height:290px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart12');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">타인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</div></th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row"><div>타인</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4 low">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-ever">
+													<th scope="row"><div>국내평균</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>상사</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>동료</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>구성원</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type1">
+									<h3><span>RED</span> 주도형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>리더로서의 책임과 지위, 명예에 대하여 경쟁에서 이기는 것</li>
+												<li>다른 사람들을 설득하는 것</li>
+												<li>기회를 민감하게 포착하는 것</li>
+												<li>정당한 대가를 요구하고 획득하는 것</li>
+												<li>즉각적으로 반응하고 행동하는 것</li>
+												<li>도전적이며 위험을 감수하며 받아들이는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>진보적이고 혁신적이며 긴장감이 넘치고 도전적이며 <br />생동감 있고 자극적 · 경쟁적이며, 창의적인 환경</li>
+												<li>새로운 기회와 개인의 발전 및 성장 잠재력을 북돋아주는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type1">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">타인이 생각하는<br/>나의 동기가치 유형</th>
+													<td>주도형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3">과정</div>
+																<div class="type1 on">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2">평화</div>
+																<div class="type4">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle1.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>11</div></div>
+            </div>
+            <div class="subpage break" id="spage12">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>4</span></div>MVP 진단 결과 : 타인 전체</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대해 타인(상사/구성원/동료)이 생각하는 동기가치유형 진단 결과를 세부적으로 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dt></dt>
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">타인 전체</div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart13" class="chart" style="height:290px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart13');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">타인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</div></th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row"><div>타인</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4 low">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-ever">
+													<th scope="row"><div>국내평균</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>상사</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>동료</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>구성원</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type2">
+									<h3><span>GREEN</span> 수용형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>다른 사람들의 생각과 감정에 대해 이해하고 받아들이는 것</li>
+												<li>평화로운 상태를 유지하는 것</li>
+												<li>어떤 조직의 구성원이 되는 것, 조화나 팀워크</li>
+												<li>자기주장을 자제하는 것</li>
+												<li>다른 사람들에게 융통성 있는 사람으로 인식되는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>친근하며, 갈등이 표출되지 않고, 민주적이고,<br />프라이버시가 보장되는 환경</li>
+												<li>조용하며, 서로 존중하며, 서로의 감정을 자제하며,<br />조화와 화합을 이루는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type2">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">타인이 생각하는<br/>나의 동기가치 유형</th>
+													<td>수용형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3">과정</div>
+																<div class="type1">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2 on">평화</div>
+																<div class="type4">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle2.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>12</div></div>
+            </div>
+            <div class="subpage break" id="spage13">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>4</span></div>MVP 진단 결과 : 타인 전체</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대해 타인(상사/구성원/동료)이 생각하는 동기가치유형 진단 결과를 세부적으로 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dt></dt>
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">본인</div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart14" class="chart" style="height:290px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart14');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">타인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</div></th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row"><div>타인</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4 low">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-ever">
+													<th scope="row"><div>국내평균</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>상사</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>동료</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>구성원</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type3">
+									<h3><span>BLUE</span> 방어형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>객관적이고 올바르며, 원칙을 따르는 것</li>
+												<li>감정을 조절하며, 실용적이고 신중하게 결정하는 것</li>
+												<li>철저하며, 공정하며, 결심을 지키는 것</li>
+												<li>진지하며, 확고한 자기 기준을 가지고 결정을 내리며, 주체성이 있는 것</li>
+												<li>행동하기 전에 깊이 생각하는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>정확 · 명료하며 논리적 · 실용적이고, 효율적이며,<br />신뢰할 수 있고 조직화된 환경</li>
+												<li>효율적으로 자원을 활용하며; 독립적으로 의사결정하며,<br />
+												정확하고 납득 가능하며, 신뢰할 만한 기준을 가지고 의사결정, 검증된 의견을 제시,<br />
+												신중히 대안을 검토, 경제성을 고려하는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type3">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">타인이 생각하는<br/>나의 동기가치 유형</th>
+													<td>방어형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3 on">과정</div>
+																<div class="type1">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2">평화</div>
+																<div class="type4">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle3.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>13</div></div>
+            </div>
+            <div class="subpage break" id="spage14">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>4</span></div>MVP 진단 결과 : 타인 전체</div></h2>
+                    <div class="format2">홍길동님의 MVP 진단 결과에 대해 타인(상사/구성원/동료)이 생각하는 동기가치유형 진단 결과를 세부적으로 확인할 수 있습니다.</div>
+                    <dl class="comp comp2">
+                        <dd>
+                            <div class="page2">
+								<div>
+									<div class="title_tag">본인</div>
+									<div class="chartWrap small">
+										<div class="chartBox">
+											<div id="mvpchart15" class="chart" style="height:290px;"></div>
+											<script>
+												anychart.onDocumentReady(function () {
+												  // create polar chart
+												  var chart = anychart.polar();
+												  var columnSeries = chart.column([
+													{ x: '자신을 내세우는', value: 3.5, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '외향적', value: 2, fill:"#e03c11 0.8", stroke:"#000" },
+													{ x: '친밀감을주는', value: 3, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '보살피는', value: 4, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '협조적', value: 5, fill:"#e37a34 0.8", stroke:"#000" },
+													{ x: '온순한', value: 2, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '소심한', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '내성적', value: 5, fill:"#7ebf38 0.8", stroke:"#000" },
+													{ x: '무관심한', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '냉정한', value: 3.5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '자기중심적', value: 5, fill:"#07a7e1 0.8", stroke:"#000" },
+													{ x: '지배적', value: 2.5, fill:"#e03c11 0.8", stroke:"#000" }
+												  ]);
+												  // set title settings
+												  chart
+													.title()
+													.enabled(false);
+												  // disable y-axis
+												  
+												  chart.yScale().minimum(1);
+												  chart.yScale().maximum(5);
+												  chart.sortPointsByX(true);
+												  chart.xAxis().stroke('#000');
+												  chart.yAxis().stroke('#000');
+												  chart.yAxis(false);
+												  chart.xAxis().fill('#efefef').stroke('#000').overlapMode('auto-width');
+												  chart.xAxis().ticks().length('100%').stroke('#fefefe');
+												  chart.xAxis().labels().padding(6,0,6,0).fontSize(7).fontColor("#000").hAlign('center');
+												  chart.yAxis().labels().fontColor("#000");
+												  chart.xScale('ordinal');
+												  chart.yScale().ticks().count(5);
+												  chart.startAngle(-15);
+
+
+												  // set chart container id
+												  chart.container('mvpchart15');
+
+												  // initiate chart drawing
+												  chart.draw();
+												});
+											</script>
+										</div>
+										<div class="chartTitle1">
+											<dl class="ct1">
+												<dt>주도형</dt>
+												<dd>Hard/Control/Fast</dd>
+											</dl>
+											<dl class="ct2">
+												<dt>우호형</dt>
+												<dd>Warm/Open/Relationship</dd>
+											</dl>
+											<dl class="ct3">
+												<dt>수용형</dt>
+												<dd>Soft/Obey/Slow</dd>
+											</dl>
+											<dl class="ct4">
+												<dt>방어형</dt>
+												<dd>Cold/Close/Task</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="mvp_tb">
+										<table>
+											<caption class="hidden">타인</caption>
+											<colgroup>
+												<col width="9%" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr class="th-group1">
+													<th scope="col" class="th-color1">유형</th>
+													<th scope="col" class="th-color2" colspan="4">주도형<div>평균점수</div></th>
+													<th scope="col" class="th-color3" colspan="4">수용형<div>평균점수</div></th>
+													<th scope="col" class="th-color4" colspan="4">방어형<div>평균점수</div></th>
+													<th scope="col" class="th-color5" colspan="4">우호형<div>평균점수</div></th>
+												</tr>
+												<tr class="th-group2">
+													<th scope="col" class="th-color6"><div>하위유형</div></th>
+													<th scope="col" class="th-color7"><div>지배적</div></th>
+													<th scope="col" class="th-color7"><div>자신을<div>내세우는</div></div></th>
+													<th scope="col" class="th-color7"><div>외향적</div></th>
+													<th scope="col" class="th-color7_2"><div>평균</div></th>
+													<th scope="col" class="th-color8"><div>내성적</div></th>
+													<th scope="col" class="th-color8"><div>소심한</div></th>
+													<th scope="col" class="th-color8"><div>온순한</div></th>
+													<th scope="col" class="th-color8_2"><div>평균</div></th>
+													<th scope="col" class="th-color9"><div>무관심한</div></th>
+													<th scope="col" class="th-color9"><div>냉정한</div></th>
+													<th scope="col" class="th-color9"><div>자기<div>중심적</div></div></th>
+													<th scope="col" class="th-color9_2"><div>평균</div></th>
+													<th scope="col" class="th-color10"><div>협조적</div></th>
+													<th scope="col" class="th-color10"><div>보살피는</div></th>
+													<th scope="col" class="th-color10"><div>친밀감을<div>주는</div></div></th>
+													<th scope="col" class="th-color10_2"><div>평균</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row"><div>타인</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4 low">5.0</td><!-- 본인과 타인점수에서 가장 높은/낮은 -->
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-ever">
+													<th scope="row"><div>국내평균</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>상사</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>동료</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+												<tr class="tr-other">
+													<th scope="row"><div>구성원</div></th>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color2">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color3">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color4">5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td>5.0</td>
+													<td class="th-color5">5.0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="mvp_type_intro type4">
+									<h3><span>ORANGE</span> 우호형</h3>
+									<dl>
+										<dt>가치 있게 여기는 행동</dt>
+										<dd>
+											<ul>
+												<li>다른 사람들의 안정과 성장에 관심이 있음</li>
+												<li>타인에 대한 배려에 관심을 쏟음</li>
+												<li>다른 사람들을 도와주며 피해를 주지 않으려 노력함</li>
+												<li>다른 사람들의 권리를 존중하고 배려함</li>
+												<li>다른 사람들이 스스로를 존중하도록 도와줌</li>
+												<li>다른 사람들의 요구에 빠르게 반응하는 것</li>
+											</ul>											
+										</dd>
+										<dt>최적 환경</dt>
+										<dd>
+											<ul>
+												<li>개방적이고, 친근하며, 다른 사람들을 돕고 배려하며,<br />신뢰하며, 진실하게 대하며, 존중하는 환경</li>
+												<li>자신을 필요로 하고 인정해 주는 환경</li>
+											</ul>											
+										</dd>
+									</dl>
+									<div class="mvp_tb2 type4">
+										<table>
+											<caption class="hidden">동기가치유형</caption>
+											<colgroup>
+												<col width="30%" />
+												<col width="*" />
+												<col width="22%" />
+												<col width="17%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">타인이 생각하는<br/>나의 동기가치 유형</th>
+													<td>우호형</td>
+													<td>
+														<div class="mvp_intro_tb">
+															<div class="mtb_row">
+																<div class="type3">과정</div>
+																<div class="type1">성과</div>
+															</div>
+															<div class="mtb_row">
+																<div class="type2">평화</div>
+																<div class="type4 on">사람</div>
+															</div>
+														</div>
+													</td>
+													<td><img src="./resources/admin/images/mvp_circle4.png" alt="circle chart" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>14</div></div>
+            </div>
+            <div class="subpage break" id="spage15">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <dl class="mvp_result type1">
+						<dt>4가지 행동 유형 중 <span>주도형(Red)</span> 이 귀하의 동기가치유형에 가장 가깝게 나타났습니다.</dt>
+						<dd>
+							<p><span>주도형</span> 은 독립적이고 직접적입니다. 이들은 타인과의 관계에서 자신의 확고함을 보여주며, 성과 및 목표 지향적이고, 최종 결과에 관심이 있습니다.</p>
+							<p>
+								주도형은 도전을 받아들이고, 권한을 거머쥐며, 문제 해결에 먼저 뛰어듭니다. 이들은 훌륭한 관리 및 운영 기술을 발휘하고, 스스로 빠르고 인상깊게 일하는 편입니다.<br />
+								타인에게 지배적, 독자적이며 경쟁적인 경향이 있는데, 이는 비즈니스 환경에서 더욱 두드러집니다. 주도형은 장애물을 극복하여 성취하기 위해 자신의 환경을 바꾸려고<br />
+								노력합니다. 또한 자신을 포함한 사람들을 관리하기 위해 최대한의 자유를 요구하고, 승리를 위해 자신의 리더십 기술을 사용합니다.
+							</p>
+							<p>
+								주도형의 고집, 조급함, 강인함은 이들의 긍정적인 특성과 밀접하게 연관되어 있습니다. 주도형은 다른 사람들을 통제하는 경향이 있고 동료들과 부하직원의 감정, 태도,<br /> 
+								무능에 관대하지 않을 수 있습니다. 이들은 빠르게 움직이는 것을 좋아하고 지연되면 조급함을 느낍니다. 주도형이 당신에게 전화하여 인사도 없이 바로 대화에 착수하는 것은<br /> 
+								드문 일이 아닙니다. 누군가 이 속도를 따라가지 못할 때, 주도형은 그를 무능하다고 봅니다.<br />
+								주도형의 좌우명은 ＂제대로, 지금 당장 시작한다.” 또는 ＂나는 일을 어제 끝냈길 바란다!＂ 일지 모릅니다. 이들은 일을 처리하고 성사시킵니다. 이들은 많은 일을 동시에<br /> 
+								하는 것을 좋아합니다. 세 가지 일을 한꺼번에 시작하고, 그 세 가지에 편안함을 느낄 때, 그들은 네 번째 업무를 집어 듭니다. 주도형의 주제는 성과이기에, 성취동기가 매우 <br />
+								높아 일 중독 경향을 보이곤 합니다. <br />
+								주도형의 주요 강점은 일을 해낼 수 있는 능력, 리더십, 의사결정 능력입니다. 반면 이들의 약점은 융통성이 없고, 조급하며, 듣지 않고, 차근차근 준비하는데 시간을 들이지 <br />
+								못한다는 점입니다. 사실, 이들은 너무 경쟁적이어서, 다른 사람들에게 "오늘 난 12가지 일을 맡았는데, 당신은 몇 개나 맡았나요?"라고 물어볼 수 있습니다. 
+							</p>
+							<p>
+								주도형의 이상적인 직업은 신문 기자, 주식 중개인, 독립적 컨설턴트, CEO, 훈련교관 또는 감독자일 수 있습니다. 비즈니스 환경에서 이들은 남들이 결단력이 있고, 효율적이며,<br />
+								수용적이고, 현명하기를 바랍니다. 사회적 환경에서 그들은 남들이 빠르고, 자기-표현적이며, 재치가 있기를 원합니다.<br />
+								주도형의 책상 위엔 서류, 프로젝트, 자료들이 더미로 분리되어 있을 것이며, 그들의 사무실은 권위를 표현하는 방식으로 꾸며져 있을 것입니다. 그들은 격식을 차리며, 신체적, <br />
+								심리적으로 다른 이들과 거리를 유지합니다.<br />
+								지나치지 않고 균형을 이루기 위해 그들은 적극적으로 경청하는 연습을 하고, 더 편안한 이미지를 주기 위해 속도(페이스)를 스스로 조절하며, 참을성, 겸손, 다른 사람의 감정에 <br />
+								대한 민감성을 개발해야 합니다. 또한, 다른 이들에게 관심을 보이고, 더 조심하며, 자신의 결론에 대한 이유를 말로 표현하고, 팀플레이어로 더 많이 참여할 필요가 있습니다.
+							</p>
+						</dd>
+					</dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>15</div></div>
+            </div>
+            <div class="subpage break" id="spage16">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+					<div class="boxs1">
+						<h3 class="mvp_card_title type1"><span>RED</span> 주도형</h3>
+						<div class="mvp_card_area type1 abClear">
+							<dl>
+								<dt><div>지배적</div></dt>
+								<dd>
+									<ul>
+										<li>통제하기를 좋아함</li>
+										<li>행동하지 않는 것을 싫어함</li>
+										<li>자신이나 타인을 관리하는 최대한의 재량권 선호</li>
+										<li>정당한 대가를 요구함</li>
+										<li>업무완수나 결과 달성에 관심</li>
+										<li>목표를 세우고 단호한 행동을 좋아함</li>
+										<li>독립적</li>
+										<li>일을 빨리 해 치움</li>
+										<li>화를 내거나 적대감을 표출</li>
+										<li>목소리가 크고 오만</li>
+										<li>노려보거나 주먹을 쥐락펴락</li>
+										<li>상황대처에 대한 자신의 능력을 믿음</li>
+										<li>자기확신이 높음</li>
+										<li>단호한</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>자신을 내세우는</div></dt>
+								<dd>
+									<ul>
+										<li>결단력 있게 행동함</li>
+										<li>권위,책임, 지위, 명예에 높은 관심</li>
+										<li>어려운 일 수용</li>
+										<li>자신에 대해서는 신경 쓰되 다른 사람의 감정을 다치게 하는 데는 신경 쓰지 않음</li>
+										<li>나서기를 좋아함</li>
+										<li>문제해결가적인</li>
+										<li>직접적인</li>
+										<li>형식적인</li>
+										<li>과감한</li>
+										<li>대담한</li>
+										<li>앞장서는</li>
+										<li>자기 의견을 제시하는</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>외향적</div></dt>
+								<dd>
+									<ul>
+										<li>도전적이며 위험을 감수</li>
+										<li>즉각적으로 반응하고 행동함</li>
+										<li>열정적</li>
+										<li>감정을 공유하는</li>
+										<li>대화를 즐기는</li>
+										<li>쉽게 알 수 있는</li>
+										<li>얼굴표정이 생생한</li>
+										<li>주의력이 쉽게 분산되는</li>
+										<li>모험적인</li>
+										<li>결과 지향적인</li>
+										<li>행동지향적</li>
+										<li>견해나 원하는 것을 솔직히 표현</li>
+										<li>솔직히 의견차이를 표출</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>16</div></div>
+            </div>
+            <div class="subpage break" id="spage17">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <div class="boxs1">
+						<div class="mvp_card_top type1">
+							<h3 class="mvp_card_title type1"><span>RED</span> 유형 살펴보기</h3>
+							<dl>
+								<dt>
+									주도형&nbsp;&nbsp;
+									<span>지배적</span>
+									<span>자신을 내세우는</span>
+									<span>외향적</span>
+								</dt>
+								<dd>과제를 완수하거나 성과를 내기 위해 행동하며, 목표를 정하고 추진력 있게 행동한다.<br />또한 합당하게 인정 받기를 원한다.</dd>
+							</dl>
+						</div>
+						<div class="mvp_card_tb type1">
+							<table>
+								<caption class="hidden">MVP 동기가치유형 진단 결과 해석</caption>
+								<colgroup>
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">행동</th>
+										<th scope="col">편한 느낌과 이상적인 모습</th>
+										<th scope="col">갈등 요소</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<ul>
+												<li>권위, 책임감, 리더십의 위치를 차지하기 위해 행동한다.</li>
+												<li>성과를 내기 위해 권력과 통제력을 행사한다.</li>
+												<li>반대 의견을 가진 사람들에게 적극적으로 맞선다.</li>
+												<li>다른 사람들을 설득시키려고 한다.</li>
+												<li>목표와 기한을 정해 놓고 사람들에게 업무를 할당하여<br />일의 진행과정을 모니터링한다.</li>
+												<li>다른 사람이 놓친 기회를 찾아낸다.</li>
+												<li>빠르게 움직여서 즉각적인 결과를 얻는다.</li>
+												<li>성과가 있을 때는 그에 맞는 보상을 원한다.</li>
+												<li>스스로 이뤄낸 성과에 대해 다른 사람이 알아주길 기대한다.</li>
+												<li>필요하다면 위험을 감수한다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>리더십을 발휘하여 다른 사람들에게 목표와 더불어 행동지침을 제시해 줄 때 기분이 좋다.</li>
+												<li>힘과 통제력, 경쟁적인 상황이 성과를 만들어내는 것을 이해하는 사람과 함께 있을 때 편하다.</li>
+												<li>어떤 행동을 취하기 전에 충분히 생각하고 다른 사람들의 감정과 권리도 배려해야 될 것 같다.</li>
+												<li>잘 속아 넘어가며 우유부단하고 제 때 행동하지 않는 사람은 되고 싶지 않다.</li>
+												<li>강하고, 야망이 있는 사람이며, 리더십을 발휘하여 다른 사람들에게 방향을 제시해 주는 사람이라는 평판을 받는 것이 좋다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>나를 강하고 야망 있고 리더십의 위치에 있어도 될 만한 사람으로 여기지 않는 사람
+												<li>힘과 통제력를 통해 성과를 이뤄내는 것을 이해하지 못하는 사람</li>
+												<li>나의 경쟁 의식을 건강하지 않은 것으로만 보는 사람</li>
+												<li>잘 속고 우유부단하며 행동력이 없는 사람</li>
+												<li>주도적이지 않은 사람</li>
+												<li>내가 뚫고 들어갈 수 없는 방어막을 치고 있는 사람</li>
+												<li>나의 혁신적인 노력과 방식에 가치를 두지 않고 체제 순응적인 스타일로 일해야 할 때</li>
+												<li>모든 사람을 승리자로 만드는 행위</li>
+												<li>즉각적인 결과를 원하는 나의 욕구를 비이성적이고 못마땅하게 여기는 사람</li>
+												<li>사람들과의 관계는 문제를 혼란시키며 올바른 결정을 어렵게 하는 감정을 불러일으키는 것</li>
+												<li>감정의 낭비, 불필요하고 시간만 소모하게 만드는 협력으로 인해 목표를 잃어버리게 되는 것 </li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>17</div></div>
+            </div>
+			<div class="subpage break" id="spage18">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <dl class="mvp_result type2">
+						<dt>4가지 행동 유형 중 <span>수용형(Green)</span> 이 귀하의 동기가치유형에 가장 가깝게 나타났습니다.</dt>
+						<dd>
+							<p><span>수용형</span> 은 소극적이고 간접적입니다. 이들은 상대적으로 자기 표현적이지 않으며, 온순하고, 믿음직합니다.</p>
+							<p>
+								수용형은 때때로 다른 사람들에게 순종적이고, 마음씨가 따뜻하며, 묵인하는 사람처럼 보여집니다. 수용형은 안전을 추구합니다. <br />
+								이들은 천천히 행동하고 의사결정을 내립니다. 이 속도는 위험하거나 잘 모르는 상황을 최대한 피하려는 욕망에서 비롯된 것입니다. 
+							</p>
+							<p>
+								이들은 조치를 취하거나 결정을 내리기 전에, 자신의 결정에 대해 남들이 어떻게 느낄지 알려고 노력 합니다. 이들에게 가장 중요한 목표는 갈등을 표출하지 않는 <br />
+								평화로운 관계를 맺는 것입니다. 대인 갈등을 너무 싫어해서 때때로 다른 사람들이 의견을 듣고 싶다고 말합니다. 더 많은 균형을 이루고 행동적 유연성을 높이기 위해 <br />
+								수용형은 때론 "아니요"라고 말해야 합니다. 
+							</p>
+							<p>
+								다른 사람들의 감정에 너무 신경 쓰지 말고 업무 완수에 집중하려고 노력해야 합니다. 또한 자신의 안전지대를 벗어남으로써 위험할 수 있지만 동시에 더 과감한 목표 설정과 <br />
+								주도적 업무추진을 하도록 해야 합니다.
+							</p>
+						</dd>
+					</dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>18</div></div>
+            </div>
+            <div class="subpage break" id="spage19">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+					<div class="boxs1">
+						<h3 class="mvp_card_title type2"><span>GREEN</span> 수용형</h3>
+						<div class="mvp_card_area type2 abClear">
+							<dl>
+								<dt><div>내성적</div></dt>
+								<dd>
+									<ul>
+										<li>공정하며 결심이 굳음</li>
+										<li>행동하기전에 깊이 생각함</li>
+										<li>행동으로 옮기는게 늦음</li>
+										<li>다른 사람의견을 경청함</li>
+										<li>부끄러워함</li>
+										<li>말이 적음</li>
+										<li>자신을 잘 보여주지 않음</li>
+										<li>과묵한</li>
+										<li>집중하기 위해 시간이 필요함</li>
+										<li>행동을 되짚어 봄</li>
+										<li>자기 자신에 대해 잘 인식하고 있음</li>
+										<li>혼자 있을 때 마음이 편함</li>
+										<li>집단으로 일하는 것을 좋아하지 않음</li>
+										<li>말보다는 글, 문자로 소통</li>
+										<li>많은 사람들과 같이 있으면 피곤함</li>
+										<li>친구수가 적은 반면 깊이 사귀는</li>
+										<li>문제를 해결하기 위해 공상을 자극하는</li>
+										<li>마음이 쉬기 위한 시간을 찾는</li>
+										<li>감정을 거의 표현하지 않는</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>소심한</div></dt>
+								<dd>
+									<ul>
+										<li>정해진 원칙을 따름</li>
+										<li>감정을 조절하며 실용적이고 신중함</li>
+										<li>목표설정, 방향설정을 잘 못함</li>
+										<li>안전과 안정을 선호</li>
+										<li>일의 속도가 늦음</li>
+										<li>솔직하지 않음</li>
+										<li>지나치게 조심스러움</li>
+										<li>의사결정에 시간이 걸림</li>
+										<li>생각,느낌을 쉽게 알 수 없는</li>
+										<li>주저하는</li>
+										<li>위험부담을 싫어하는</li>
+										<li>차분한</li>
+										<li>자신감이 부족한</li>
+										<li>두려움이 많은</li>
+										<li>의견 불일치를 원치 않는다</li>
+										<li>갈등을 회피한다</li>
+										<li>눈을 아래로 깐다</li>
+										<li>‘내가 틀릴지 모르지만~’ , ‘괜찮으시다면~’등의 말을 많이 한다</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>온순한</div></dt>
+								<dd>
+									<ul>
+										<li>사려 깊은</li>
+										<li>개인적 갈등을 싫어함</li>
+										<li>원만하게 지내기 위해 노력함</li>
+										<li>조화를 중시</li>
+										<li>다루기 쉬움</li>
+										<li>지나치게 복종적</li>
+										<li>예의 바른</li>
+										<li>신사적</li>
+										<li>의무감</li>
+										<li>친근한</li>
+										<li>수동적</li>
+										<li>참을성이 있는</li>
+										<li>진지한</li>
+										<li>편안한</li>
+										<li>이해하는</li>
+										<li>차분한</li>
+										<li>주장을 강하게 하지 않는다</li>
+										<li>불쾌감이나 분노를 숨긴다</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>19</div></div>
+            </div>
+            <div class="subpage break" id="spage20">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <div class="boxs1">
+						<div class="mvp_card_top type2">
+							<h3 class="mvp_card_title type2"><span>GREEN</span> 유형 살펴보기</h3>
+							<dl>
+								<dt>
+									수용형&nbsp;&nbsp;
+									<span>내성적</span>
+									<span>소심한</span>
+									<span>온순한</span>
+								</dt>
+								<dd>유연성과 적응력을 발휘하며 서로 다른 의견과 관점에 개방적이고 <br />다른 사람과의 조화를 중요시 한다.</dd>
+							</dl>
+						</div>
+						<div class="mvp_card_tb type2">
+							<table>
+								<caption class="hidden">MVP 동기가치유형 진단 결과 해석</caption>
+								<colgroup>
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">행동</th>
+										<th scope="col">편한 느낌과 이상적인 모습</th>
+										<th scope="col">갈등 요소</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<ul>
+												<li>개방적이며 기꺼이 상황에 적응한다.</li>
+												<li>다른 사람의 생각과 감정에 호기심을 가지지 않는다.</li>
+												<li>중요한 결정은 합의를 통해 이루어지는 것이 좋다.</li>
+												<li>신중한 일처리를 위해서 시간을 더 필요로 한다.</li>
+												<li>확실한 명분이나 논리가 없으면 주장하지 않는다.</li>
+												<li>맡은 조직이나 개인적인 손실이 없다면 특별한 일이 아니면 수용하려고 애쓴다.</li>
+												<li>다양한 관점으로 상황을 파악한다.</li>
+												<li>주장해도 안 될 거라고 생각한다.</li>
+												<li>조용히 업무를 처리한다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>명확한 권한과 기회를 제공하는 조직에서 나의 노력과 공동의 목표를 조화시킬 수 있을 때 기분이 좋다.</li>
+												<li>어떠한 상황이든지 쉽게 적응하고 융통성 있게 행동하는 사람이 편하다.</li>
+												<li>상황에 따라 보다 단호하고, 꼼꼼하고, 또는 보다 예민한 사람이 되고 싶다.</li>
+												<li>다른 사람과 복종적인 관계를 맺거나 다른 사람 위에 군림하거나 다른 사람들로부터 고립되고 싶지 않다.</li>
+												<li>팀의 일원으로서 조화를 이루며, 권한을 적절히 활용할 줄 알며, 규칙을 준수하고, 판단력을 제대로 발휘할 줄 아는 사람이라는 평을 들을 때 기분이 좋다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>다른 사람의 의견을 충분히 알아볼 수 있는 시간이 주어지지 않는 환경에 있을 </li>
+												<li>한 가지 접근법이나 해결책만을 강요할 때</li>
+												<li>엄격하고 고집이 세거나 위압적인 사람들과의 관계</li>
+												<li>그룹에서 제외될 때</li>
+												<li>합의를 이루는 과정이 허락되지 않을 때</li>
+												<li>나의 의견을 들으려 하지 않고 받아주지 않는 상황</li>
+												<li>나의 의견을 고려하거나 재평가할 기회가 박탈당하고 엄격하고 단호한 상황에 갇힐 때 </li>
+												<li>동등한 가치를 가지고 있는 상호 배타적인 기회들 중 어떠한 것이 좋은 것인지 명확하지 않은 상황</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>20</div></div>
+            </div>
+			<div class="subpage break" id="spage21">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <dl class="mvp_result type3">
+						<dt>4가지 행동 유형 중 <span>방어형(Blue)</span> 이 귀하의 동기가치유형에 가장 가깝게 나타났습니다.</dt>
+						<dd>
+							<p><span>방어형</span> 은 분석 과정에 관심이 있으며, 끈질기고 체계적인 문제 해결사입니다.</p>
+							<p>
+								이들은 또한 냉담하고 까다로우며 비판적으로 비춰질 수 있습니다. <br />
+								이들은 보안에 매우 민감하며, 정확성에 대한 요구 수준이 높아 데이터 수집에 지나치게 의존적입니다. 이들은 자료 수집 과정에서 구체적으로 많이 질문하는 편입니다. 그들의 <br />
+								행동 및 결정은 느리고 극도로 조심스러운 편이지만, 마감일을 놓치는 경우는 거의 없을 것입니다. 이들은 훌륭한 문제 해결사지만, 더 나은 의사결정자가 될 수도 있습니다.
+							</p>
+							<p>
+								방어형은 완벽주의 성향이 있으며, 진지하고 질서정연한 편입니다. 이들은 세부 사항과 업무 과정에 집중하며 돌발 변수에 짜증을 냅니다.<br />
+								이들의 주제는 절차나 과정(Process)이며, 제품이나 서비스의 품질을 향상시키고자 기존 지침을 준수하며 일하는 데에 초점을 둡니다.  
+							</p>
+							<p>
+								방어형은 조직과 구조를 좋아하고 남들이 너무 많이 관여하는 것을 싫어합니다. 이들은 천천히 그리고 정확하게 혼자서 일하고, 시간을 지키길 원하며. <br />
+								지적 노동 환경을 선호합니다. 방어형은 자신의 성과에 비판적인 편이고, 회의적인 경향이 있으며, 사안을 서면으로 보는 것을 좋아합니다.
+							</p>
+							<p>
+								방어형의 주된 강점은 정확성, 신뢰성, 독립성, 마무리, 조직화입니다. 이들의 주된 약점은 자신의 목표달성을 위해 수단 방법을 가리지 않을 경우 교활하다는 평을 듣기 쉽습니다. <br />
+								또한 까다롭고 지나치게 조심스러운 경향을 띠게 됩니다. 방어형은 회계, 공학, 컴퓨터 프로그래밍, 자연과학(화학, 물리학, 수학), 시스템 분석 및 건축 분야에 <br />
+								직업적 관심이 있습니다. 
+							</p>
+							<p>
+								방어형에게는 무질서하고 비논리적인 사람들이 가장 짜증이 납니다. 비즈니스 환경에서 남들이 신뢰할 수 있고, 전문적이며, 예의 바르게 행동하길 원하며, <br />
+								사회적 환경에서 남들이 진실되기를 바랍니다. 
+							</p>
+							<p>
+								환경적 측면에서, 방어형의 책상은 매우 정돈되어 있으며 깨끗합니다. 그들의 사무실 벽에는 그들이 가장 좋아하는 종류의 예술 작품인 차트, 그래프, 전시물 또는 직업과 관련된 <br />
+								그림이 걸려 있습니다. 방어형은 거리두는 것을 선호하는 비 접촉 적 사람들입니다. 이러한 선호는 책상과 의자의 형식적이나 매력적이진 않은 배치에 반영되어 있습니다. <br />
+								이들은 포옹하거나 물리적으로 접촉하는 사람들을 좋아하지 않으며, 대신 차분한 악수나 짧은 전화를 선호합니다.<br />
+								균형감과 행동적 유연성을 높이기 위해 방어형은 타인에 대한 관심과 감사를 솔직하게 표현해야 합니다. 때때로 손 쉬운 방법을 사용하거나 시간을 절약하고, 변화와 해체에 더 <br />
+								쉽게 적응해야 합니다. 또한 새로운 프로젝트에 적시에 의사 결정을 내리고 시작할 수 있도록 합니다. 마지막으로, 반대에 타협하며 인기 없는 결정을 말하고, <br />
+								변경 불가한 법률보다 유연한 정책을 가이드 라인으로 더 많이 사용해야 합니다.
+							</p>
+						</dd>
+					</dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>21</div></div>
+            </div>
+            <div class="subpage break" id="spage22">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+					<div class="boxs1">
+						<h3 class="mvp_card_title type3"><span>BLUE</span> 방어형</h3>
+						<div class="mvp_card_area type3 abClear">
+							<dl>
+								<dt><div>거리를 두는</div></dt>
+								<dd>
+									<ul>
+										<li>객관적이다</li>
+										<li>절차지향적이다</li>
+										<li>이성적이다</li>
+										<li>주의를 끌려고 하지 않는다</li>
+										<li>독립적으로 일한다</li>
+										<li>분명하고 직접적이고 간략히 말한다</li>
+										<li>참여시키는 것을 싫어한다</li>
+										<li>먼저 말을 걸지 않는다</li>
+										<li>다른 사람이 말을 해야 아는 체 한다</li>
+										<li>다른 사람을 대할 때 거리를 둔다</li>
+										<li>조심하고 상대방을 경계한다</li>
+										<li>긴장한다</li>
+										<li>집단에 들어가기를 꺼려한다</li>
+										<li>만나고 나면 뭔가 허전하다</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>냉정한</div></dt>
+								<dd>
+									<ul>
+										<li>원칙을 중시한다</li>
+										<li>공정하다</li>
+										<li>공사가 분명하다</li>
+										<li>끈기 있다</li>
+										<li>일의 마무리를 끝까지 잘 한다</li>
+										<li>논리적이다</li>
+										<li>자제력이 있다</li>
+										<li>기준에 대하여 업격하다</li>
+										<li>차갑게 대한다</li>
+										<li>얼굴표정이 없다</li>
+										<li>매정하다. 인간미가 없다</li>
+										<li>상대방에 대해 묻지 않는다</li>
+										<li>편안함을 주지 못한다</li>
+										<li>상대가 인정하기 전까지 상대를 무시한다</li>
+										<li>질문에 아주 간단하게 답한다</li>
+										<li>다른 사람에게 관심이 없다</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>자기 중심적</div></dt>
+								<dd>
+									<ul>
+										<li>엄격하다</li>
+										<li>분석적이다</li>
+										<li>공감표시를 잘 한다</li>
+										<li>칭찬을 잘 해준다</li>
+										<li>사람 마음을 잘 조종한다</li>
+										<li>원하는 것을 얻기 위해 최선을 다 한다</li>
+										<li>아쉬울 때만 찾아온다</li>
+										<li>원하는 것이 이루어지지 않으면 뽀루통 하다</li>
+										<li>다음에는 해주겠다고 약속한다</li>
+										<li>상대방을 치켜세운다</li>
+										<li>위협한다</li>
+										<li>자기 중심적이다</li>
+										<li>감언이설로 유인한다</li>
+										<li>상대방을 누구와 비교하여 말한다</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>22</div></div>
+            </div>
+            <div class="subpage break" id="spage23">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <div class="boxs1">
+						<div class="mvp_card_top type3">
+							<h3 class="mvp_card_title type3"><span>BLUE</span> 유형 살펴보기</h3>
+							<dl>
+								<dt>
+									방어형&nbsp;&nbsp;
+									<span>무관심한</span>
+									<span>냉정한</span>
+									<span>자기 중심적인</span>
+								</dt>
+								<dd>질서와 체계를 만들고 깊이 있게 사고하며, 실용적이고 올바른 것, <br />개인적인 흥미와 관심사를 추구한다.</dd>
+							</dl>
+						</div>
+						<div class="mvp_card_tb type3">
+							<table>
+								<caption class="hidden">MVP 동기가치유형 진단 결과 해석</caption>
+								<colgroup>
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">행동</th>
+										<th scope="col">편한 느낌과 이상적인 모습</th>
+										<th scope="col">갈등 요소</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<ul>
+												<li>객관적이고 논리적이며, 행동하기 전에 숙고한다.</li>
+												<li>일이 질서 있고 효과적으로 진행되는 체계를 만들어 낸다.</li>
+												<li>조심성이 많고 철두철미하며 꼼꼼하게 일을 기록한다.</li>
+												<li>실용적이고 올바른 해결책이나 대안을 추구한다.</li>
+												<li>신중하고 꼼꼼하게 일을 확인하며 만일의 경우를 대비하여 플랜B를 계획해 놓는다.</li>
+												<li>어떤 계획이나 조치에 들어가는 비용을 계산한다.</li>
+												<li>가능하면 독립적으로 일하고자 한다.</li>
+												<li>상황과 관련된 모든 측면을 고려한다.</li>
+												<li>결과에 영향을 미칠 수 있는 감정을 조절하며 논리적인 대화를 추구한다.</li>
+												<li>결단력과 인내심을 가지고 계획을 실행한다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>주변 사람들에게 도움이나 지시를 받지 않고 자신의 확신에 따라 관심사를 추구해 나갈 수 있을 때 기분이 좋다.</li>
+												<li>다른 사람을 존중하고 공정하게 대우하며, 스스로 일처리를 알아서 잘 하는 사람과 함께 있을 때 편하게 느낀다.</li>
+												<li>다른 사람들을 더욱 신뢰하고 더 개방적으로 대하며 자신의 의견과 요구를 보다 자제력 있게 표현할 수 있는 사람이 되고 싶다.</li>
+												<li>지나치게 감정적이고 일관성 없이 행동하고 무모하게 행동하는 사람은 되고 싶지 않다.</li>
+												<li>공정하게 규칙에 따라 다른 사람을 대하고 명료하며 논리적·분석적인 사람이라는 평가를 받을 때에 인정을 받는다고 느낀다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>급하게 결정을 해야 하거나 세부사항들을 충분히 검토할 시간을 주지 않는 사람</li>
+												<li>논리적이고 신중하게 계획을 세우지 않는 사람</li>
+												<li>근거 없고 막연하고 벙벙한 말로 자신의 입장을 정당화하려는 사람</li>
+												<li>비논리적이고 감정에 치우친 주장</li>
+												<li>정당하지 않은 규칙을 지켜야 하거나 다른 사람의 의견을 받아들여야 하는 상황</li>
+												<li>충분한 시간과 고려해야 할 정보 없이 바로 결론을 내려야 하는 상황</li>
+												<li>내가 공정하지 않거나 원칙을 지키지 않는 것으로 보이는 상황</li>
+												<li>지나치게 친근하게 하거나 도움을 주려 하는 것</li>
+												<li>합당한 이유나 설명 없이 다른 사람의 방법을 따라야 하는 상황</li>
+												<li>합리적 근거와 절차의 중요성을 무시하거나 진지하지 않으며 쉽게 목표 의식을 잃어버리는 사람</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>23</div></div>
+            </div>
+			<div class="subpage break" id="spage24">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <dl class="mvp_result type4">
+						<dt>4가지 행동 유형 중 <span>우호형(Orange)</span> 이 귀하의 동기가치유형에 가장 가깝게 나타났습니다.</dt>
+						<dd>
+							<p><span>우호형</span> 은 매우 친근하고 개방적이기 때문에 활기, 배려, 명랑함과 같은 특성을 보입니다. </p>
+							<p>
+								이들은 사실과 세부사항을 거의 걱정하지 않고, 가능한 한 이런 것들을 피하려고 노력합니다. 이렇듯 세부사항을 무시하다 보니, 사실과 수치를 때로는 과장하고 일반화하기도<br />
+								합니다. 우호형은 정확하고 경험에 기반한 자료보다 어림짐작(추측)＂에 더 편안함을 느낍니다. 
+							</p>
+							<p>
+								우호형의 주된 강점은 배려, 상대에 대한 관심, 그리고 친화성에 있습니다. 그들은 자연스럽고 매우 지원적인 상담 기술을 가지고 있습니다. 그들의 주제는 ＂내가 얼마나 호감이 <br />
+								가는 사람인지 봐＂입니다. 우호형은 착하고 적극적인 청자이며 일반적으로 좋은 청자인 사람들과 관계를 발전시키는 편입니다. 그 결과, 우호형은 서로 지지하는 사람들과 강한 <br />
+								네트워크를 가지고 있습니다. 당신은 종종 우호형과 함께 있는 것만으로도 기분이 좋습니다. 
+							</p>
+							<p>
+								우호형은 친밀감을 얻고 신뢰를 쌓는 데 집중합니다. 이들은 강압적이고 공격적인 행동에 짜증이 납니다. <br />
+								그들은 ＂이 사안이 나의 개인사정과 집단의 동료애에 어떤 영향을 미칠까?＂를 질문합니다. 우호형은 협력적이고 한결 같은 직원이며 훌륭한 팀-플레이어입니다. 
+							</p>
+							<p>
+								우호형의 주된 강점은 남들과 관계 맺고, 사랑하며 다른 이들을 배려하는 데에 있습니다. 반면 우호형의 약점은 다소 자기 주장을 제대로 하지 못하고, 지나치게 감정에 민감하며, <br />
+								쉽게 스스로 괴롭힘을 당한다는 점입니다.  <br />
+								우호형의 이상적인 직업 분야는 상담, 교육, 사회 복지, 성직자, 심리학, 간호, 육아 및 인적 자원 개발 등입니다. <br />
+								비즈니스 환경에서 우호형은 남들이 예의 바르고, 친절하며, 자신의 책임을 다하길 바랍니다. 사회적 환경에서 우호형은 남들이 진실되고 친절하길 바랍니다.
+							</p>
+							<p>
+								우호형의 책상에는 가족사진과 다른 개인적인 물품들이 놓여 있습니다. 이들의 사무실 벽에는 개인적인 슬로건, 가족 또는 단체 사진, 평온한 그림 또는 기념품이 걸려 있습니다. <br />
+								우호형은 첨단 기술을 많이 사용하며, 사무실을 친절하고 따뜻한 분위기로 만들고, 좌석 역시 나란히, 협력적으로 배치합니다. 
+							</p>
+							<p>
+								균형 및 행동적 유연성을 높이기 위해 우호형은 시간과 감정을 통제하고, 보다 객관적인 사고방식을 개발하며, 더 많은 시간을 확인, 검증, 명시, 조직화하는 데 써야 합니다. <br />
+								또한 업무 중심적일 필요가 있으며 프로젝트 및 사안에 대해 더욱 논리적인 접근을 할 필요가 있습니다.
+							</p>
+						</dd>
+					</dl>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>24</div></div>
+            </div>
+            <div class="subpage break" id="spage25">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+					<div class="boxs1">
+						<h3 class="mvp_card_title type4"><span>ORANGE</span> 우호형</h3>
+						<div class="mvp_card_area type4 abClear">
+							<dl>
+								<dt><div>협조적</div></dt>
+								<dd>
+									<ul>
+										<li>팀 플레이를 지향함</li>
+										<li>공동의 목적이나 이익을 위해 함께 일함</li>
+										<li>조직에 대한 충성도가 높음</li>
+										<li>연대감, 결속력이 강함</li>
+										<li>조직 몰입이 높음</li>
+										<li>조직시민 행동을 잘 발휘함</li>
+										<li>정보,지식을 공유함</li>
+										<li>동료를 도와 줌 </li>
+										<li>시간외 근무에 익숙함</li>
+										<li>다른 사람들을 도와 주려 함</li>
+										<li>참여시키는 것을 좋아함</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>보살피는</div></dt>
+								<dd>
+									<ul>
+										<li>다른 사람의 요구에 빠르게 반응함</li>
+										<li>다른 사람들에게 피해를 주지 않으려고 노력함</li>
+										<li>다른 사람들의 권리를 지켜주려고 노력</li>
+										<li>다름 사람들 성장과 변화에 관심</li>
+										<li>다른 사람들을 편하게 해주려고 노력</li>
+										<li>다른 사람들의 요구나 관심사에 바로 대응</li>
+										<li>다른 사람들이 잠재력을 찾을 수 있도록 도와 줌</li>
+										<li>다른 사람들이 스스로 가치를 존중하도록 도와 줌</li>
+										<li>상대의 자존심을 살려주고 인정</li>
+										<li>상대가 원하는게 무엇인지 잘 알고 있음</li>
+										<li>상대의 감정을 인정하는</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><div>친밀감을 주는</div></dt>
+								<dd>
+									<ul>
+										<li>먼저 다가감</li>
+										<li>상대의 기분을 헤아림</li>
+										<li>타인에 대해 개방적이고 상대방의 반응을 재빨리 포착할 수 있으며, 상대방을 잘 지지해 줌</li>
+										<li>가족적인 분위기를 좋아함</li>
+										<li>편하게 해주려고 노력</li>
+										<li>설득을 잘함</li>
+										<li>따뜻하게 대함</li>
+										<li>밖으로 애정의 표시를 잘 나타냄</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>25</div></div>
+            </div>
+            <div class="subpage break" id="spage26">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 해석</div></h2>
+                    <div class="format2">홍길동님의 MVP 동기가치유형 진단 결과에 대한 해석을 확인할 수 있습니다.</div>
+                    <div class="boxs1">
+						<div class="mvp_card_top type4">
+							<h3 class="mvp_card_title type4"><span>ORANGE</span> 유형 살펴보기</h3>
+							<dl>
+								<dt>
+									우호형&nbsp;&nbsp;
+									<span>협조적</span>
+									<span>보살피는</span>
+									<span>친밀감을 주는</span>
+								</dt>
+								<dd>다른 사람들의 안정과 성장 및 복지에 관심이 많으며, <br />다른 사람이 도움을 받을 수 있도록 도와주려는 강한 동기를 가지고 있다.</dd>
+							</dl>
+						</div>
+						<div class="mvp_card_tb type4">
+							<table>
+								<caption class="hidden">MVP 동기가치유형 진단 결과 해석</caption>
+								<colgroup>
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">행동</th>
+										<th scope="col">편한 느낌과 이상적인 모습</th>
+										<th scope="col">갈등 요소</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<ul>
+												<li>다른 사람들의 요구에 빠르게 반응한다.</li>
+												<li>다른 사람들이 더 나은 삶을 살 수 있도록 도울 수 있는 방법을 찾는다.</li>
+												<li>자신의 권리가 무시되는 상황이 있기도 하지만, 타인의 권리를 주장한다.</li>
+												<li>때때로 자신의 개인적 성취를 낮추면서 타인의 성과를 칭찬하는 경향이 있다.</li>
+												<li>다른 사람의 인정을 거의 구하지 않으며 다른 사람을 매우 신뢰한다.</li>
+												<li>다른 사람의 요청이 있을 때 바로 도와준다.</li>
+												<li>다른 사람을 도와줌으로써 자신의 가치를 증명하며 다른 보상을 요구하지 않는다.</li>
+												<li>다른 사람이 그들의 가능성을 최대한 실현할 수 있도록 도와주길 원한다.</li>
+												<li>다른 사람에게 부담이 되고 싶지 않으며, 도움을 받기 보다는 주는 것이 좋다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>다른 사람에게 실질적인 도움을 주었을 때 기분이 좋다.</li>
+												<li>다른 사람들의 감정과 필요, 복지에 관심을 두는 사람들과 있을 때 가장 편안하다.</li>
+												<li>바라기는, 자신의의 권리와 요구를 보다 적극적으로 두려움 없이 주장하고 싶다.</li>
+												<li>뭔가 강요하는 사람에게 “No”라고 과감히 말하고 싶다.</li>
+												<li>이기적이거나 다른 사람에게 냉랭하게 대하는 사람이라고 여겨지는 것은 가급적 피하고 싶다.</li>
+												<li>사람들이 자신을 따뜻하게 대해줄 때 보상을 받는 느낌이 들며 도움을 고마워하는 사람에게서 친근함을 느낀다.</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>이기적이고 타인을 신경 쓰지 않는 사람</li>
+												<li>도움을 필요로 하지 않는 사람</li>
+												<li>나의 감정이 무시당하거나 비난 받는 상황</li>
+												<li>신의가 그때 그때 변하는 사람</li>
+												<li>다른 사람을 이용하기만 하는 사람</li>
+												<li>도움을 주는 것에 인색한 사람</li>
+												<li>사람에게 상처를 주는 경쟁적인 상황</li>
+												<li>무례하고 불친절한 사람</li>
+												<li>관계가 꾸준히 유지되지 않는 </li>
+												<li>문제들이 개인화되거나 공격적으로 바뀌는 상황</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>26</div></div>
+            </div>
+			<div class="subpage break" id="spage27">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>5</span></div>MVP 진단 결과 특징 요약</div></h2>
+                    <div class="format2">MVP에서 진단한 60개 항목 중 타인 평균 점수가 가장 높은 항목 10개와 가장 낮은 항목 10개를 확인할 수 있습니다.</div>
+                    <div class="boxs1">
+						<div class="mvp_tb3_wrap">
+							<div class="mvp_tb3_box type1">
+								<h3>타인 평균 점수가 가장 높은 항목 <span>Top 10</span></h3>
+								<div class="mvp_tb3">
+									<table>
+										<caption class="hidden">타인 평균 점수가 가장 높은 항목 10</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="*" />
+											<col width="15%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">순위</th>
+												<th scope="col">내용</th>
+												<th scope="col">점수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>많은 사람들과 어울리는 것을 좋아하지 않는다.</td>
+												<td>4.8</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>남의 의견에 잘 동조하는 편이다.</td>
+												<td>4.8</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">4</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">5</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">6</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">7</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">8</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">9</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">10</th>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="mvp_tb3_box type2">
+								<h3>타인 평균 점수가 가장 낮은 항목 <span>Bottom 10</span></h3>
+								<div class="mvp_tb3">
+									<table>
+										<caption class="hidden">타인 평균 점수가 가장 낮은 항목 10</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="*" />
+											<col width="15%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">순위</th>
+												<th scope="col">내용</th>
+												<th scope="col">점수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>자기주장이 강하다.</td>
+												<td>4.8</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>어떤 사람과도 이야기하는 것을 좋아한다.</td>
+												<td>4.8</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">4</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">5</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">6</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">7</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">8</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">9</th>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">10</th>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>27</div></div>
+            </div>
+			<div class="subpage break" id="spage28">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>6</span></div>동기가치 유형 비교 (참고)</div></h2>
+                    <div class="format2">동기가치유형을 가치 있게 여기는 행동과 최적 환경으로 비교한 내용은 아래와 같습니다.</div>
+                    <div class="boxs1">
+						<div class="mvp_tb4">
+							<table>
+								<caption class="hidden">동기가치 유형 비교 (참고)</caption>
+								<colgroup>
+									<col width="26%" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">동기가치  유형</th>
+										<th scope="col">가치 있게 여기는 행동</th>
+										<th scope="col">최적 환경</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="type1">
+										<th scope="row">
+											<div><span>RED</span> 주도형</div>
+											<ul>
+												<li>과업의 성취에 관심</li>
+												<li>결과를 달성하기 위해 사람, 시간, 돈 등의 자원의 조직화에 관심</li>
+											</ul>
+										</th>
+										<td>
+											<ul>
+												<li>리더로서 책임과 지위, 명예를 가지는 것</li>
+												<li>다른 사람들을 설득하는 것</li>
+												<li>기회를 민감하게 포착하는 것</li>
+												<li>정당한 대가를 요구하는 것</li>
+												<li>즉각적으로 반응하고 행동하는 것</li>
+												<li>도전적이며 위험을 감수하는 것</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>진보적이고, 혁신적이며, 긴장감이 넘치고, 도전적이며, 생동감 있고, 자극적·경쟁적이며, 창의적인 환경</li>
+												<li>새로운 기회와 개인의 발전 및 성장 잠재력을 북돋아주는 환경</li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="type2">
+										<th scope="row">
+											<div><span>GREEN</span> 수용형</div>
+											<ul>
+												<li>유연성을 중시</li>
+												<li>조직의 조화에 관심</li>
+												<li>조직의 구성원이 되는 것을 중시</li>
+											</ul>
+										</th>
+										<td>
+											<ul>
+												<li>다른 사람들의 생각과 감정에 대해 이해하고 받아들이는 것</li>
+												<li>평화로운 상태를 유지하는 것</li>
+												<li>조직의 구성원이 되어 팀워크를 갖는 것</li>
+												<li>자기주장을 자제하는 것</li>
+												<li>다른 사람들에게 융통성 있는 사람으로 인식되는 것</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>친근하며, 사교적이고, 민주적이고, 명랑하고, 역동적인 환경</li>
+												<li>상호작용이 있고, 서로 경청하며, 서로의 감정을 존중하며, 조화와 화합을 이루는 환경</li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="type3">
+										<th scope="row">
+											<div><span>BLUE</span> 방어형</div>
+											<ul>
+												<li>문제 해결에 관심</li>
+												<li>합리적 기준을 세우고 유지하는 데 관심</li>
+												<li>개인주의적이며 자기 신념과 확신을 중시</li>
+											</ul>
+										</th>
+										<td>
+											<ul>
+												<li>객관적이고 올바르며 원칙을 따르는 것</li>
+												<li>감정을 조절하며 실용적이고 신중한 것</li>
+												<li>철저하고 공정한 것</li>
+												<li>확고한 자기 기준을 가지고 결정을 내리며 주체성이 있는 것</li>
+												<li>행동하기 전에 깊이 생각하는 것</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>정확·명료하며 논리적·실용적이고, 효율적이며, 신뢰할 수 있고 조직화된 환경</li>
+												<li>독립적으로 의사결정 하는 환경</li>
+												<li>신뢰할 만한 기준을 가지고 의사결정 하는 환경</li>
+												<li>검증된 의견을 제시하고 신중히 대안을 검토하는 환경</li>
+												<li>경제성을 고려하는 환경</li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="type4">
+										<th scope="row">
+											<div><span>ORANGE</span> 우호형</div>
+											<ul>
+												<li>다른 사람들의 안정과 성장 및 복지에 관심</li>
+											</ul>
+										</th>
+										<td>
+											<ul>
+												<li>다른 사람들의 요구에 빠르게 반응하는 것</li>
+												<li>다른 사람들을 도와주려 하는 것</li>
+												<li>다른 사람들이 더 나은 삶을 영위하도록 노력하는 것</li>
+												<li>다른 사람들에게 피해를 주지 않으려 노력하는 것</li>
+												<li>다른 사람들이 자신의 잠재력을 찾을 수 있도록 지원하는 것</li>
+												<li>다른 사람들이 스스로의 가치를 존중하도록 도와주는 것</li>
+												<li>다른 사람들의 권리를 존중하고 보장해주는 것</li>
+											</ul>
+										</td>
+										<td>
+											<ul>
+												<li>개방적이고, 친근하며, 다른 사람들을 돕고 배려하며, 신뢰하며, 진실하게 대하며, 존중하는 환경</li>
+												<li>자신을 필요로 하고 인정해 주는 환경</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>28</div></div>
+            </div>
+			<div class="subpage break" id="spage29">
+                <div class="name">홍길동 님</div>
+                <div class="cont">
+                    <h2><div class="inner"><div><span>6</span></div>동기가치 유형 비교 (참고)</div></h2>
+                    <div class="format2">동기가치 유형별로 비교한 내용은 아래와 같습니다.</div>
+                    <div class="boxs1">
+						<div class="mvp_tb5">
+							<table>
+								<caption class="hidden">동기가치 유형 비교 (참고)</caption>
+								<colgroup>
+									<col width="16%" />
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col" class="type1">RED: 주장형</th>
+										<th scope="col" class="type2">GREEN: 수용형</th>
+										<th scope="col" class="type3">BLUE: 방어형</th>
+										<th scope="col" class="type4">ORANGE: 우호형</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">자신이 하는 일에 있어 <br />기분 좋은 순간</th>
+										<td class="type1">
+											<ul>
+												<li>다른 사람과 경쟁하여 이겼을 때</li>
+												<li>리더십을 발휘하여 다른 사람들에게 목표와 더불어 행동지침을 제시해 줄 때</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>상황에 따라 융통성 있게 적응하고 대응할 때</li>
+												<li>이것 저것 눈치보지 않고 개인적 자유와 안전감을 느낄 수 있을 때</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>주변 사람들에게 도움이나 지시를 받지 않고 나의 확신에 따라 관심사를 추구해 나갈 수 있을 때</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>자신의 도움을 필요로 하는 사람들을 도울 수 있을 때</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">다른 사람들로부터<br />인정을 받는다고 느끼는 때</th>
+										<td class="type1">
+											<ul>
+												<li>강하고, 야심찬 사람이며, 리더십을 발휘하여 다른 사람들에게 방향을 제시해 주는 사람이라는 평판을 받을 때</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>팀의 조화에 기여하며, 규칙을 준수하며, 타협과 팀워크를 중시하는 사람이라는 평을 들을 때</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>공정하게 규칙에 따라 다른 사람을 대하고 명료하며 논리적·분석적인 사람이라는 평가를 받을 때</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>다른 사람들이 당신을 따듯하고 친근한 사람으로 여길 때</li>
+												<li>당신의 도움에 대해 감사의 표시를 할 때</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">같이 있기에 편안하다고 <br />느끼는 사람</th>
+										<td class="type1">
+											<ul>
+												<li>힘과 통제력, 경쟁심을 적절히 조절하며, 효율적으로 일을 처리하는 사람</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>이해력 있고 양보심이 있으며, 다른 사람에 대해 개방적인 사람</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>다른 사람들을 존중하고 공정하게 대우하며, 스스로 일처리를 알아서 잘 하는 사람</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>다른 사람의 생각과 감정에 귀를 기울이고 신경 써주는 사람</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">흥미와 매력을 느끼는 사람</th>
+										<td class="type1">
+											<ul>
+												<li>관대하며 당신의 관심사에 귀 기울이며 성공하는 데 도움을 주는 사람</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>추진력 있고 진취적이며 결단력 있어서 시원시원 하지만 일방적이지 않은 사람</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>자신의 의견이나 감정을 강요하지 않고, 자신의 의견과 감정을 솔직하고 개방적으로 표현하는 사람</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>진취적이고 결단력 있으며 당신의 도움을 필요로 하는 사람</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">되고 싶은 이상적인 사람</th>
+										<td class="type1">
+											<ul>
+												<li>다른 사람들의 감정과 권리에 더 관심을 가진 사람</li>
+												<li>행동하기 전에 먼저 신중하게 생각하는 사람</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>융통성 있게 행동할 수 있는 조화로운 성격의 소유자</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>다른 사람들을 더욱 신뢰하고 더 개방적으로 대하며 자신의 의견과 요구를 보다 자제력 있게 표현할 수 있는 사람</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>자신의 권리와 요구를 명확하게 주장할 수 있고 결단력 있는 사람</li>
+												<li>다른 사람의 강요를 ‘No’라고 거절할 줄 아는 사람</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">되고 싶지 않은 사람</th>
+										<td class="type1">
+											<ul>
+												<li>쉽게 속고, 우유부단해서 제 때 행동하지 못하는 사람</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>다른 사람에게 강요하거나, 융통성이 없거나, 지나치게 의존적인 사람</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>지나치게 감정적이고 일관성 없이 행동하고, 무모하게 행동하는 사람</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>자기 중심적이고 다른 사람들에 대해 냉정하고 무관심한 사람</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">싫어하며, 가까이 하고 싶지 <br />않은 사람</th>
+										<td class="type1">
+											<ul>
+												<li>늘 실패하고 자신의 의견을 밖으로 드러내지 않는 사람</li>
+												<li>서론이 길고, 핵심 파악을 못하는 사람</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>자기 밖에 모르는 사람</li>
+												<li>다른 사람의 노력이나 지원에도 불구하고 독불장군이나  방관자로 남아 있는 사람</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>다른 의견을 신중하게 받아들이지 않는 사람</li>
+												<li>당신의 일에 간섭하고 자기의 방식대로 하기를 강요하는 사람</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>늘 경쟁하며 다른 사람들을 이용하려는 사람</li>
+												<li>호감을 나타내는 사람에게 냉정하고 무관심한 사람</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">심하게 불편을 느끼는 사람</th>
+										<td class="type1">
+											<ul>
+												<li>모든 것을 이해하고 절대로 논쟁하지 않는 사람</li>
+												<li>자신에 대해 기대하는 바를 명확히 하지 않으면서 뒤에서 배신하거나 속이는 사람</li>
+											</ul>
+										</td>
+										<td class="type2">
+											<ul>
+												<li>약속과 신뢰를 깨뜨리며, 뭐든지 참견하려 하고, 새로운 것에 대한 호기심도 없는 사람</li>
+											</ul>
+										</td>
+										<td class="type3">
+											<ul>
+												<li>자신을 편파적이고 완고한 사람으로 간주하는 사람</li>
+												<li>필요하지 않은 도움과 친절을 계속해서 베푸는 사람</li>
+											</ul>
+										</td>
+										<td class="type4">
+											<ul>
+												<li>분노와 적대감을 가지고 대하며 '당신 일이나 신경 쓰라'라는 식으로 말하거나, 도움을 준 사람의 노력을 인정하지 않는 사람</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+                <div class="paging">Motivational Value Profile   ㅣ<div>29</div></div>
+            </div>
+            <div class="subpage break">
+                <div class="lastpage">
+                    <div class="lastlogo"><img src="./resources/admin/images/report_mvp_last_02.png" alt="psi컨설팅" /></div>
+                    <div class="company">
+                        <div class="adr">133-120 서울시 성동구 성수이로 51 한라시그마밸리 9층</div>
+                        <div class="info">
+                            <span>T.</span> 02-783-5432, 070-7525-5434&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>F.</span> 02-783-5433<br />
+                            <span>E.</span> assess@psi.co.kr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>H.</span> www.psi.co.kr
+                        </div>
+                        <div class="copy">Copyright © PSI Consulting, Inc. All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<!-- DEBUG-VIEW ENDED 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+
+<!-- DEBUG-VIEW ENDED 2 1 APPPATH/Config/../Views/common/layout/report-blank.php -->

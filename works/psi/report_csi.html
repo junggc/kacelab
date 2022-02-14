@@ -1,0 +1,719 @@
+
+<!-- DEBUG-VIEW START 2 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!-- DEBUG-VIEW START 1 APPPATH/Config/../Views/common/layout/report-blank.php -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>PSI Management System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=1550"/>
+    <meta name="keywords" content="PSI"/>
+    <meta name="format-detection" content="telephone=no, address=no, email=no"/>
+    <meta property="og:title" content="PSI"/>
+    <meta property="og:site_name" content="PSI"/>
+    <link href="./resources/admin/css/KoPubDotum.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/print.css" rel="stylesheet" type="text/css">
+    <link href="./resources/admin/css/Chart.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./resources/admin/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/Chart.min.js"></script>
+    <script type="text/javascript" src="./resources/admin/js/chartjs-plugin-datalabels.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <div id="browser" style="display:none;">
+        <div class="infobox">
+            <a href="#none" onclick="$('#browser').hide();$.cookie('browser', 'done', {expires:1});" title="브라우저 관련 팝업 닫기" class="brower_close"><span>닫기</span></a>
+            <h2>브라우저를 <span>업그레이드</span> 해주세요</h2>
+            <p>본 사이트는 익스플로러11, 크롬, 파이어폭스 브라우저에 최적화 되어 있습니다. <br/>지금 사용하고 계시는 브라우저는 곧 지원이 중단되므로<br/>최신 버전으로 업그레이드하시거나 최신
+                브라우저를 이용해 주세요.</p>
+            <ul>
+                <li class="ie">
+                    <a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank" title="새창이동"><span>인터넷익스플로러11</span></a>
+                </li>
+                <li class="ff"><a href="http://www.mozilla.or.kr/" target="_blank" title="새창이동"><span>파이어폭스</span></a>
+                </li>
+                <li class="cr">
+                    <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank" title="새창이동"><span>크롬</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="report">
+		<div class="reportType9">
+			<div class="page">
+				<div class="subpage" id="cover">
+					<div class="coverpage">
+						<div class="coverlogo">
+							<img src="./resources/admin/images/report_csi_cover_01.png" alt="csi report" />
+						</div>
+						<div class="perInfo">
+							<div class="inner">
+								<div>20YY. MM. DD</div>
+								<div>회사</div>
+								<div>부서/팀</div>
+								<div>이름</div>
+							</div>
+						</div>
+						<div class="confi2">
+							본 보고서는 ㈜피에스아이컨설팅이 허가한 전문가에게만 사용이 제한되며, 모든 지적 재산권은 ㈜피에스아이컨설팅에 있습니다.  
+							<div class="copy">Copyright ⓒ PSI Consulting All Rights Reserved</div>
+						</div>
+					</div>
+				</div>
+				<div class="subpage break" id="spage1">
+					<div class="cont">
+						<div class="contentsBox">
+							<h2><img src="./resources/admin/images/report_csi_contitle.png" alt="CONTENTS" /></h2>
+							<ul>
+								<li>
+									<div><span>1</span>갈등관리 스타일이란?</div>
+								</li>
+								<li>
+									<div><span>2</span>5가지 갈등관리 스타일</div>
+								</li>
+								<li>
+									<div><span>3</span>갈등관리 스타일 진단 참고사항</div>
+								</li>
+								<li>
+									<div><span>4</span>나의 갈등관리 스타일</div>
+								</li>
+								<li>
+									<div><span>5</span>갈등관리 스타일 적용</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="paging">Conflict Management Styles Inventory   ㅣ<div>1</div></div>
+				</div>
+				<div class="subpage break" id="spage2">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>1</span></div>갈등관리 스타일이란?</div></h2>
+						<div class="format2">
+							우리가 살아가는 일상, 조직 상황에서 갈등은 피할 수 없는 현실입니다. 플라톤과 아리스토텔레스가 활동한 고대 시대부터 <br />
+							철학자들은 갈등을 해결하기 위한 방법을 계속해서 고민하여 어떻게 하면 갈등을 없애고 최소화하거나 통제할 수 있는지 <br />
+							연구해왔습니다. 현대에 들어 더 이상 갈등을 피할 수만은 없다는 것을 인정하게 되면서 이를 관리하는 것이 중요해졌습니다. <br />
+							갈등관리는 갈등 자체를 없애려고 하기 보다는 갈등을 당연한 것으로 받아들이고 생산적으로 활용하는 것 입니다.
+						</div>
+						<div class="format2">
+							갈등에 관한 대부분의 현대 이론들은 1960년대 Blake와 Mouton 교수의 갈등 관리 연구를 기반으로 하고 있습니다. <br />
+							30년 동안 축적된 갈등의 행동과학연구를 토대로 연구자들은 사람들이 갈등에 대응하는 5가지 특징을 ‘스타일’로 구분하였습니다. <br />
+							<span class="pcolor">갈등관리 스타일</span>은 갈등 상황에서 자기 중심/상대방 중심 행동을 바탕으로 사람들의 갈등 대응 유형을 파악하여 이를 상황에 따라 <br />
+							유용하게 활용할 수 있는 방안을 제언해줍니다. 
+						</div>
+						<div class="csi_sqaure">
+							<div class="square_axis y_axis">
+								<dl>
+									<dt>자기 중심</dt>
+									<dd><div>낮은 자기주장</div><div>높은 자기주장</div></dd>									
+								</dl>
+							</div>
+							<div class="square_axis x_axis">
+								<dl>
+									<dd><div>비협조적</div><div>협조적</div></dd>
+									<dt>상대 중심</dt>
+								</dl>
+							</div>
+							<div class="xy_cont">
+								<div class="csi_type type1">
+									<img src="./resources/admin/images/report_csi_logo_01.png" alt="강요" />
+									<div>강요</div>
+								</div>
+								<div class="csi_type type2">
+									<img src="./resources/admin/images/report_csi_logo_02.png" alt="협력" />
+									<div>협력</div>
+								</div>
+								<div class="csi_type type3">
+									<img src="./resources/admin/images/report_csi_logo_03.png" alt="타협" />
+									<div>타협</div>
+								</div>
+								<div class="csi_type type4">
+									<img src="./resources/admin/images/report_csi_logo_04.png" alt="회피" />
+									<div>회피</div>
+								</div>
+								<div class="csi_type type5">
+									<img src="./resources/admin/images/report_csi_logo_05.png" alt="양보" />
+									<div>양보</div>
+								</div>
+							</div>
+						</div>
+						<div class="format2">
+							갈등은 사람들 간의 불신과 팀워크 저해, 스트레스 증가, 일 처리의 지연과 같은 부정적인 결과로 이어질 수 있습니다.  <br />
+							그렇다고 갈등이 항상 부정적인 것만은 아닙니다. 갈등 상황을 해결해가는 과정을 통해 상호 신뢰를 얻거나 새로운 관점을 발견하는  <br />
+							긍정적인 결과로 이어질 수도 있습니다. 따라서 갈등을 무조건 부정적으로 보기보다 현명하게 대처하는 것이 필요합니다.  
+						</div>
+					</div>
+					<div class="paging">Conflict Management Styles Inventory   ㅣ<div>2</div></div>
+				</div>
+				<div class="subpage break" id="spage3">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>2</span></div>5가지 갈등관리 스타일</div></h2>
+						<div class="csiTb">
+							<table>
+								<caption class="hidden">5가지 갈등관리 스타일</caption>
+								<colgroup>
+									<col width="*" />
+									<col width="20%" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">스타일</th>
+										<th scope="col">목적</th>
+										<th scope="col">자세</th>
+										<th scope="col">결과</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<div class="csi_type type1">
+												<img src="./resources/admin/images/report_csi_logo_01.png" alt="강요" />
+												<div>강요</div>
+											</div>
+										</th>
+										<td>자신의 관점과 방식을 <br />취하는 것</td>
+										<td>“뭐가 옳은지 알고 있어, <br /> 내 판단과 권위에 대해 <br /> 더 이상 묻지마!”</td>
+										<td>
+											<ul>
+												<li>한쪽의 일방적인 주장으로 <br />갈등 상황이 무마된다.</li>
+												<li>I Win-You Lose</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="csi_type type4">
+												<img src="./resources/admin/images/report_csi_logo_04.png" alt="회피" />
+												<div>회피</div>
+											</div>
+										</th>
+										<td>갈등을 관리, <br />처리하지 않는 것</td>
+										<td>“나는 그것에 대해 중립적이야. <br /> 생각 좀 해볼게.”</td>
+										<td>
+											<ul>
+												<li>발생한 문제에 대해 <br />부정하거나 외면하여 갈등은 <br />해결되지 않은 채 남아있다.</li>
+												<li>I Lose-You Lose</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="csi_type type3">
+												<img src="./resources/admin/images/report_csi_logo_03.png" alt="타협" />
+												<div>타협</div>
+											</div>
+										</th>
+										<td>신속히 합의에 <br />이르는 것</td>
+										<td>“상호 동의할 만한 해결책을 <br />찾아보자.”</td>
+										<td>
+											<ul>
+												<li>서로의 입장 차를 좁히기 <br />위해 합의할 수 있는 중간 <br />지점에서 자기 주장의 <br /> 일부를 포기한다.</li>
+												<li>약간의 Win, 약간의 Lose</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="csi_type type5">
+												<img src="./resources/admin/images/report_csi_logo_05.png" alt="양보" />
+												<div>양보</div>
+											</div>
+										</th>
+										<td>상대방과의 관계를 <br />유지하려고 <br />자신의 주장을 <br />보류하는 것</td>
+										<td>“이 문제에 관해서 어떻게 <br />하면 상대가 기분 나쁘지 <br />않도록 할 수 있을까? <br />내 입장은 우리 사이에 <br />기분 나쁜 감정을 계속 가져야 <br />할 만큼 중요하지 않아.”</td>
+										<td>
+											<ul>
+												<li>겉으로는 의견 차이가 <br />줄어든 것처럼 보이지만 <br />실제로는 그 차이가 <br />여전히 존재한다.</li>
+												<li>I Lose-You Win</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="csi_type type2">
+												<img src="./resources/admin/images/report_csi_logo_02.png" alt="협력" />
+												<div>협력</div>
+											</div>
+										</th>
+										<td>쌍방의 이슈를 <br />모두 충족시킬 수 있는 <br />해결안을 도출하는 것</td>
+										<td>“내 입장은 이런데 당신의 <br />입장은 어때?” <br />“함께 최선의 해결책을 <br />찾고 싶어.”</td>
+										<td>
+											<ul>
+												<li>각자의 입장을 명확히 <br />밝히고 의견을 존중하며 <br />해결책을 함께 고민한다.</li>
+												<li>I win-You Win</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="paging">Conflict Management Styles Inventory   ㅣ<div>3</div></div>
+				</div>
+				<div class="subpage break" id="spage4">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>3</span></div>갈등관리 스타일 진단 참고사항</div></h2>
+						<div class="format2">
+							본 리포트는 다양한 사람들의 관점에서 귀하의 갈등관리 스타일을 분석한 결과이며, 결과 해석에 대한 올바른 이해를 돕기 위한 <br />
+							기본 정보는 아래와 같습니다. 본 진단 결과를 바탕으로 귀하의 전반적 갈등관리 스타일 및 강점과 개발 필요점을 이해할 수 있습니다. <br />
+							조직 효과성 향상 및 상호신뢰 증진을 위해 갈등관리 스타일을 효과적으로 활용하시기 바랍니다.
+						</div>
+						<dl class="format">
+							<dt>갈등관리 스타일 진단결과 관련 정보 수집</dt>
+							<dd>
+								<p>본 리포트는 진단대상자 본인을 포함하여 귀하와 업무상 밀접하게 상호작용하는 다양한 이해관계자로부터 수집된 정보를 분석한 결과입니다. 리포트에 표현된 다양한 정보제공자는 다음을 의미합니다. </p>
+								<div class="list01">이해관계자 : 상사, 동료, 구성원 모두를 포괄하는 의미합니다.</div>
+								<dl>
+									<dt class="list01">점수 결과에 사용된 정보제공자는 다음과 같이 표현되었습니다.  </dt>
+									<dd>
+										<ul class="list02">
+											<li>본인 : 귀하가 스스로에 대하여 응답한 결과입니다</li>
+											<li>타인 : 상사, 동료, 구성원 등 이해관계자 집단 모두의 응답 평균값입니다</li>
+										</ul>
+									</dd>
+								</dl>
+							</dd>
+							<dt>점수의 의미</dt>
+							<dd>
+								<p>
+									본 리포트를 통해, 일반적인 상황 뿐 아니라 일대일 상황과 집단 및 팀 갈등 상황에서 귀하가 가장 자주 또는 드물게 사용하는 <br />
+									갈등관리 스타일이 무엇인지 확인할 수 있습니다.<br />
+									특정 스타일에서 국내 평균보다 높은 점수를 받았다면 귀하가 대다수의 사람들보다 해당 스타일을 많이 사용한다는 뜻입니다. <br />
+									만약 반대로 국내 평균보다 점수가 낮다면 해당 스타일을 별로 사용하지 않는다는 것을 의미합니다.
+								</p>
+							</dd>
+							<dt>사내·외 기준집단</dt>
+							<dd>
+								<p>본 리포트에는 귀하의 갈등관리 점수를 사내·외 기준 집단과 비교한 점수를 제시하고 있습니다. <br />비교 대상이 되는 사내·외 기준집단의 의미는 다음과 같습니다.</p>
+								<div class="list03">
+									<span>사내 기준 : </span>
+									<div>리포트에는 ‘사내 평균’으로 표현되며, 귀하와 함께 금번 갈등관리 스타일 진단에 참여한 동일 조직 구성원들의 <br />평균을 의미합니다. 소속 조직에서 진단에 참여한 대상자가 1인인 경우에는 사내 평균은 제시되지 않습니다.</div>
+								</div>
+								<div class="list03">
+									<span>사외 기준 : </span>
+									<div>리포트에는 ‘국내 평균’으로 표현되며, 그 동안 본 진단에 참여한 국내 전체 진단참여자들의 평균 값을 표에 제시<br />하고 있습니다.
+</div>
+								</div>
+							</dd>
+						</dl>
+						<div class="parti">
+							<div>귀하의 갈등관리 스타일 진단을 위해 본인 외 <strong>총 <span>00</span> 명</strong> 의 이해관계자들이 참여하였습니다.</div>
+							<span>상사 <strong><span>00</span> 명</strong></span>
+							<span>동료 <strong><span>00</span> 명</strong></span>
+							<span>구성원 <strong><span>00</span> 명</strong></span>
+						</div>
+					</div>
+					<div class="paging">Conflict Management Styles Inventory   ㅣ<div>4</div></div>
+				</div>
+				<div class="subpage break" id="spage5">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>4</span></div>나의 갈등관리 스타일</div></h2>
+						<div class="five_indi">
+							<ul>
+								<li><div class="findi type1"></div> :  가장 높은 점수의 스타일</li>
+								<li><div class="findi type2"></div> :  가장 높은 점수의 스타일과 2점 이내 차이나는 스타일</li>
+								<li><div class="findi type3"></div> :  비교적 낮은 점수의 스타일</li>
+							</ul>
+						</div>
+						<div class="boxfive_wrap">
+							<div class="boxfive_box">
+								<h3>&lt; 내가 생각하는 스타일 &gt;</h3>
+								<div class="boxfive">
+									<div class="box">
+										<div class="box1 first">
+											<h4>강요</h4>
+										</div>
+										<div class="box2">
+											<h4>협력</h4>
+										</div>
+										<div class="box3 second">
+											<h4>회피</h4>
+										</div>
+										<div class="box4">
+											<h4>양보</h4>
+										</div>
+										<div class="box5">
+											<h4>타협</h4>
+										</div>
+									</div>
+									<div class="square_axis y_axis">
+										<dl>
+											<dt>자기 중심</dt>
+											<dd><div>low</div><div>high</div></dd>									
+										</dl>
+									</div>
+									<div class="square_axis x_axis">
+										<dl>
+											<dd><div>low</div><div>high</div></dd>
+											<dt>상대 중심</dt>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<div class="boxfive_box">
+								<h3>&lt; 타인들이 생각하는 스타일 &gt;</h3>
+								<div class="boxfive">
+									<div class="box">
+										<div class="box1">
+											<h4>강요</h4>
+										</div>
+										<div class="box2">
+											<h4>협력</h4>
+										</div>
+										<div class="box3">
+											<h4>회피</h4>
+										</div>
+										<div class="box4 second">
+											<h4>양보</h4>
+										</div>
+										<div class="box5 first">
+											<h4>타협</h4>
+										</div>
+									</div>
+									<div class="square_axis y_axis">
+										<dl>
+											<dt>자기 중심</dt>
+											<dd><div>low</div><div>high</div></dd>									
+										</dl>
+									</div>
+									<div class="square_axis x_axis">
+										<dl>
+											<dd><div>low</div><div>high</div></dd>
+											<dt>상대 중심</dt>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="compChart">
+							<div class="gageBox">
+								<div class="gageEx ex5">
+									<div class="ex"><div></div></div>
+									<div>본인</div>
+								</div>
+								<div class="gageEx ex3">
+									<div class="ex"><div></div></div>
+									<div>타인평균</div>
+								</div>
+								<div class="gageEx ex4">
+									<div class="ex"><div></div></div>
+									<div>국내평균</div>
+								</div>	
+							</div>
+                            <div class="chartWrap">
+                                <div class="chartBox">
+                                    <canvas id="csiChart1" class="chart" width="680"height="250"></canvas>
+                                    <script>
+                                        var ctx = document.getElementById('csiChart1').getContext('2d');
+                                        var myLineChart = new Chart(ctx, {
+                                            type: 'line',
+                                            data: {
+                                                labels: ['','강요', '회피', '타협', '양보', '협력',''],
+                                                datasets: [
+                                                    {
+                                                        label: "본인",
+                                                        fill: false,
+                                                        data: [null, 1, 1.25, 2, 2.1, 3.1, null],
+                                                        lineTension : 0,
+                                                        borderColor: 'rgba(174, 38, 65, 1)',
+														pointBackgroundColor: 'rgba(174, 38, 65, 1)',
+                                                        pointStyle: 'rectRot',
+                                                        pointRadius: 5,
+                                                        borderWidth: 2
+                                                    },
+                                                    {
+                                                        label: "타인평균",
+                                                        fill: false,
+                                                        data: [null, 0.5, 4.9, 3.1, 4.0, 9, null],
+                                                        lineTension : 0,
+                                                        borderColor: 'rgba(0, 110, 139, 1)',
+                                                        pointBackgroundColor: 'rgba(0, 110, 139, 1)',
+                                                        pointStyle: 'rectRot',
+                                                        pointRadius: 5
+                                                    },
+                                                    {
+                                                        label: "국내평균",
+                                                        fill: false,
+                                                        data: [null, 5.0, 1.5, 8.3, 5.5, 5.0, null],
+                                                        lineTension : 0,
+                                                        borderColor: 'rgba(156, 187, 89, 1)',
+                                                        pointBackgroundColor: 'rgba(156, 187, 89, 1)',
+														borderDash: [7,3],
+                                                        pointStyle: 'circle',
+                                                        pointRadius:5
+
+                                                    }
+                                                ]
+                                            },
+                                            options: {
+												responsive: false,
+                                                legend: {
+                                                    display: false
+                                                },
+                                                scales: {
+                                                    xAxes : [{
+                                                        gridLines: {
+                                                            drawOnChartArea: true
+                                                        },
+                                                        stacked: true,
+                                                        ticks : {
+                                                            //display: false
+															//labelOffset: 10,
+                                                        }
+                                                    }],
+                                                    yAxes : [{
+														//gridLines: {display:false},
+                                                        ticks : {
+                                                            max : 10.00,
+                                                            min : 0,
+                                                            stepSize : 2,
+                                                            fontSize : 14,
+                                                        }
+                                                    }]
+                                                }
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+						<div class="csiTb">
+							<table>
+								<caption class="hidden">나의 갈등관리 스타일</caption>
+								<colgroup>
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">강요</th>
+										<th scope="col">회피</th>
+										<th scope="col">타협</th>
+										<th scope="col">양보</th>
+										<th scope="col">협력</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">본인평균</th>
+										<td>4.5</td>
+										<td>5.5</td>
+										<td>6.5</td>
+										<td>7.5</td>
+										<td class="high">8.5</td>
+									</tr>
+									<tr>
+										<th scope="row">타인평균</th>
+										<td class="high">8.5</td>
+										<td>4.5</td>
+										<td>5.5</td>
+										<td>6.5</td>
+										<td>7.5</td>
+									</tr>
+									<tr class="average1">
+										<th scope="row">사내평균</th>
+										<td>8.5</td>
+										<td>4.5</td>
+										<td>5.5</td>
+										<td>6.5</td>
+										<td>7.5</td>
+									</tr>
+									<tr class="average2">
+										<th scope="row">국내평균</th>
+										<td>8.5</td>
+										<td>4.5</td>
+										<td>5.5</td>
+										<td>6.5</td>
+										<td>7.5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="paging">Conflict Management Styles Inventory   ㅣ<div>5</div></div>
+				</div>
+				<div class="subpage break" id="spage6">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>5</span></div>갈등관리 스타일 적용 (1/2)</div></h2>
+						<div class="format2">
+							다섯 가지 스타일 중 어떤 것이 다른 것보다 좋은 스타일인지 궁금할 수 있습니다.<br />
+							하지만 어떤 상황에서나 효과가 높은 하나의 스타일은 존재하지 않으며 다섯 가지 갈등관리 스타일은 각각 유용하게 사용될 수 있는<br />
+							최적의 조건이 있습니다. 예를 들어, 갈등 상황이 심각하지 않거나 갈등으로 생긴 관계의 단절이 모두에게 해가 될 때는<br />
+							양보가 효과적일 수 있습니다. 양보는 감정을 진정시켜주고 상황에 대해 더 많은 정보를 알아낼 시간을 벌어줄 수 있습니다.<br />
+							이처럼 언제, 어떤 스타일을 사용하는가에 따라 긍정적이거나 부정적인 결과가 나타날 수 있습니다.
+						</div>
+						<div class="boxfive_title">언제, 어떤 갈등관리 스타일이 필요할까?</div>
+						<div class="boxfive_wrap">
+							<div class="boxfive_box">
+								<div class="boxfive">
+									<div class="box box_big">
+										<div class="box1">
+											<h4>강요</h4>
+											<ul>
+												<li>신속하고 단호한 행동이 필요할 때 </li>
+												<li>인기 없는 대안이지만 끝까지 밀고 나가는 것이<div>필요할 때</div></li>
+												<li>적극적으로 참여하지 않는 사람들이<div>이익을 얻는 것을 방지할 필요가 있을 때</div></li>
+											</ul>
+										</div>
+										<div class="box2">
+											<h4>협력</h4>
+											<ul>
+												<li>장기적으로 근본적인 문제해결이 필요할 때</li>
+												<li>두 주장이 모두 중요해서 타협할 일이 아닐 때</li>
+												<li>문제에 대한 상이한 시각을 가지고 있는<div>사람들의 견해를 통합시킬 필요가 있을 때</div></li>
+											</ul>
+										</div>
+										<div class="box3">
+											<h4>회피</h4>
+											<ul>
+												<li>쟁점이 중요하지 않을 <div>경우</li>
+												<li>원하는 바를 <div>이룰 수 있는 기회가 </div><div>전혀 없을 때</div></li>
+												<li>갈등 충돌로 발생하는 손실이 해결하여 <div>발생하는 이득보다 더 클 때</div></li>
+												<li>긴장을 풀고 평정을 되찾을 필요가 있을 때</li>
+												<li>다른 사람들이 그 갈등을 보다 효과적으로 <div>해결할 수 있을 때</div></li>
+											</ul>
+										</div>
+										<div class="box4">
+											<h4>양보</h4>
+											<ul>
+												<li>자신이 잘못되었음을<div>인식하는 경우</div></li>
+												<li>쟁점이 상대방에게 더<div>중요한 경우</div></li>
+												<li>더 중요한 사안을<div>위해서 ‘신뢰감’을 축적할 필요가 있을 경우</div></li>
+												<li>경쟁, 대립의 지속이 서로에게 손해일 경우</li>
+												<li>문제에서 벗어나 서로 화합하는 것이<div>무엇보다 중요할 경우</div></li>
+											</ul>
+										</div>
+										<div class="box5">
+											<h4>타협</h4>
+											<ul>
+												<li>동등한 힘을 가지고 있는 두 대립자가 <div>상호 배타적인 목표를 강력하게 고집할 경우</div></li>
+												<li>복합적 쟁점에 대한 잠정적 해결이 <div>필요한 경우</div></li>
+												<li>시간이 촉박하여 임시 해결책이 필요한 경우</li>
+												<li>문제해결에 실패해서 대안이 필요한 경우</li>
+											</ul>
+										</div>
+									</div>
+									<div class="square_axis y_axis big_axis">
+										<dl>
+											<dt>자기 중심</dt>
+											<dd><div><span>low</span></div><div><span>high</span></div></dd>									
+										</dl>
+									</div>
+									<div class="square_axis x_axis big_axis">
+										<dl>
+											<dd><div><span>low</span></div><div><span>high</span></div></dd>
+											<dt>상대 중심</dt>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="paging">Conflict Management Styles Inventory   ㅣ<div>6</div></div>
+				</div>
+				<div class="subpage break" id="spage7">
+					<div class="name">홍길동 님</div>
+					<div class="cont">
+						<h2><div class="inner"><div><span>5</span></div>갈등관리 스타일 적용 (2/2)</div></h2>
+						<div class="boxfive_title">각 스타일 별로 경계해야 할 사항은 무엇일까?</div>
+						<div class="boxfive_wrap">
+							<div class="boxfive_box">
+								<div class="boxfive">
+									<div class="box box_big">
+										<div class="box1">
+											<h4>강요</h4>
+											<ul>
+												<li>다른 사람들이 함께하기를 꺼려한다.</li>
+												<li>자신의 오류를 인정하지 않는다.</li>
+												<li>다른 사람들과 소통이 줄어든다.</li>
+												<li>신뢰관계가 깨진다.</li>
+												<li>차츰 ‘Yes Man’에 둘러싸인다. </li>
+											</ul>
+										</div>
+										<div class="box2">
+											<h4>협력</h4>
+											<ul>
+												<li>별로 중요하지 않은 일에 시간을 소비하게 된다.</li>
+												<li>상황을 잘 모르는 사람들의 의견을 수렴하면서 <div>효과적이지 않은 결정이 내려질 수 있다.</div></li>
+											</ul>
+										</div>
+										<div class="box3">
+											<h4>회피</h4>
+											<ul>
+												<li>쟁점이 해결되지 않는다.</li>
+												<li>문제를 해결하는 <div>다른 시각과 개선안</div>제시가 부족해진다.</li>
+												<li>아웃사이더가 될 <div>가능성이 있다.</div></li>
+												<li>결정된 사항에 대한 불평이 생긴다.</li>
+												<li>조직에 대한 개인의 기여가 감소하게 된다.</li>
+											</ul>
+										</div>
+										<div class="box4">
+											<h4>양보</h4>
+										<ul>
+											<li>지나친 자기주장,<div>입장 포기로 영향력을 </div><div>상실하게 된다.<div>
+											<li>개인적 스트레스가 <div>높아질 수 있다.</div></li>
+											<li>최선책을 포기하게 된다,</li></li>
+											<li>다른 사람들이 <div>‘Yes Man’이라고 여긴다.</div></li>
+											</ul>
+										</div>
+										<div class="box5">
+											<h4>타협</h4>
+											<ul>
+												<li>아무도 완전히 만족하지 못한다.</li>
+												<li>단기적, 일시적인 해결에 불과하다.</li>
+												<li>실리를 추구함으로써 보다 큰 이슈, 원칙, <div>장기목표를 망각할 우려가 있다.</div></li>
+											</ul>
+										</div>
+									</div>
+									<div class="square_axis y_axis big_axis">
+										<dl>
+											<dt>자기 중심</dt>
+											<dd><div><span>low</span></div><div><span>high</span></div></dd>									
+										</dl>
+									</div>
+									<div class="square_axis x_axis big_axis">
+										<dl>
+											<dd><div><span>low</span></div><div><span>high</span></div></dd>
+											<dt>상대 중심</dt>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="paging">Conflict Management Styles Inventory   ㅣ<div>7</div></div>
+				</div>
+				<div class="subpage break">
+					<div class="lastpage">
+						<div class="lastlogo"><img src="./resources/admin/images/report_csi_last_02.png" alt="psi컨설팅" /></div>
+						<div class="company">
+							<div class="adr">133-120 서울시 성동구 성수이로 51 한라시그마밸리 9층</div>
+							<div class="info">
+								<span>T.</span> 02-783-5432, 070-7525-5434&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>F.</span> 02-783-5433<br />
+								<span>E.</span> assess@psi.co.kr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>H.</span> www.psi.co.kr
+							</div>
+							<div class="copy">Copyright © PSI Consulting, Inc. All rights reserved.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

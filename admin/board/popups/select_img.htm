@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+<TITLE>이미지삽입</TITLE>
+<script language="JavaScript">
+<!--
+	function img_loading()
+	{
+		if (document.select_image_frm.img_preview.width >= 320)
+			{
+				document.select_image_frm.img_preview.width = 320;
+			}
+		if (document.select_image_frm.img_preview.height >= 300)
+			{
+				document.select_image_frm.img_preview.height = 300;
+			}
+	}
+//-->
+</script>
+<SCRIPT language=JavaScript for=Ok event=onclick>  
+<!--
+	if (document.select_image_frm.img_preview.value == "" )
+	{
+		alert("이미지를 선택하세요 !!");
+        document.select_image_frm.img_preview.focus();
+		return;
+		}
+
+	document.select_image_frm.target="tpa";
+	document.select_image_frm.submit();
+
+// -->
+</SCRIPT>
+<script language="JavaScript">
+<!--
+//function img_up(tmp_upfilename)
+//{
+//  window.returnValue = tmp_upfilename;
+//  window.close();
+//}
+
+function img_add()
+{
+  if(!document.select_image_frm.iupfilename.value) {
+
+      alert('이미지경로를을 입력하세요!');
+
+      document.select_image_frm.iupfilename.focus();
+
+      return;
+
+   }
+	
+//var	imgurl=document.select_image_frm.iupfilename.value;
+//	top.img_up(imgurl);
+//	self.close();
+}
+
+//function img_addin(imgurl)
+//{
+//	top.img_up(imgurl);
+//	self.close();
+//}
+
+
+function anchorDeleteOnClick()
+{
+	if (confirm("삭제하시겠습니까? \n\n 삭제된 이미지파일은 복구할수없습니다.!! ")) {
+		return true;
+	}
+	return false;
+}
+
+
+//-->
+</script>
+
+<LINK rel="stylesheet" type="text/css" href="./inc/shop.css">
+<style type="text/css">
+<!--
+Button
+{
+	BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #eeeeee;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #536068;
+    PADDING-TOP: 0pt;
+    BORDER-BOTTOM: #999999 1px outset;
+    HEIGHT: 20px
+}
+A:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red; TEXT-DECORATION: none ;text-decoration:underline; top:2px; position: relative; left: 1px; top: 1px;
+}
+
+ -->
+</style>
+
+</HEAD>
+<BODY topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" bgcolor="#D0D0D0">
+<CENTER>
+<FORM name="select_image_frm" action='./sel_imgok.php' method=post enctype='multipart/form-data'>
+<table width="350" border="0" cellpadding="0" cellspacing="0">
+<tr align="center" bgcolor="#000000">
+	<td colspan="2" height="25" ><font color="#FFFFFF"><strong>파일 업로드</strong></font></td>
+</tr>
+	 
+	 <tr><td colspan="2">
+ 
+	 
+	 <fieldset> <legend> &nbsp;이미지 업로드 폼&nbsp; </legend>
+<table width='100%' cellpadding='3' cellspacing='0'>
+	  <tr height="23"> 
+        <td align="right" >원본 :</td>
+        <td align="left" style="padding-left:5px;"><input type=file name=Mfile size=20  class="Button" onChange="javascript:document.select_image_frm.img_preview.src=document.select_image_frm.Mfile.value;"></td>
+      </tr>
+      <tr>
+        <td colspan="2" background="./images/nn.gif"></td>
+      </tr>
+      <tr height="23">
+        <td colspan="2" align="center"><BUTTON id=Ok > 확 인 </BUTTON>
+          &nbsp;&nbsp;&nbsp;
+          <BUTTON onClick="window.close();"> 취 소 </BUTTON></td>
+      </tr>
+      <tr>
+        <td colspan="2" background="./images/nn.gif"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center" valign="center" style="padding-top:3px;padding-bottom:3px;"><img id="img_preview" src="./images/noimage.gif" border="0" align="absmiddle" onload="img_loading();"></td>
+      </tr>
+	  </fieldset>
+	  	 </table>
+		 
+		 
+	 </td></tr>
+    
+      <tr>
+        <td colspan="2" ></td>
+      </tr>
+      
+	  
+	  
+    </table>
+		
+</FORM>
+<iframe frameborder=0 width=0 height=0 name=tpa></iframe>
+</CENTER>
+</BODY>
+</HTML>
+
